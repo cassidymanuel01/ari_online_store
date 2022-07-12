@@ -1,0 +1,62 @@
+{
+    "albums" : [
+    {
+        "id":1,
+        "title": "Positions",
+        "price": "price",
+        "releaseYear": 2020,
+        "songList": ["Shut Up (explicit)","34 + 35 (explicit)", "Motive (with Doja Cat) (explicit)", "Just Like Magic (explicit)", "Off the Table (with The Weeknd)", "Six Thirty (explicit)", "Safety Net (feat. Ty Dolla $ign)", "My Hair", "Nasty (explicit)", "Westside", "Love Language (explicit)", "Positions (explicit)", "Obvious (explicit)", "POV"],
+        "songAmount": 14
+    },{
+        "id":2,
+        "title": "Positions (Deluxe)",
+        "price": "price",
+        "releaseYear": 2021,
+        "songList": ["Shut Up (explicit)","34 + 35 (explicit)", "Motive (with Doja Cat) (explicit)", "Just Like Magic (explicit)", "Off the Table (with The Weeknd)", "Six Thirty (explicit)", "Safety Net (feat. Ty Dolla $ign)", "My Hair", "Nasty (explicit)", "Westside", "Love Language (explicit)", "Positions (explicit)", "Obvious (explicit)", "POV", "Someone Like u - Interlude", "Test Drive", "34 + 35 (feat. Doja Cat, Megan Thee Stallion)(explicit)", "Worst Behaviour (explicit)", "Main Thing"],
+        "songAmount": 19
+    },{
+        "id":3,
+        "title": "Thank u, next",
+        "price": "price",
+        "releaseYear": 2019,
+        "songList": ["Imagine (explicit)","Needy (explicit)", "NASA", "Bloodline (explicit)", "Fake Smile (explicit)", "Bad Idea", "Make Up (explicit)", "Ghostin", "In My Head (explicit)", "Thank u, next", "Break Up With Your Girlfriend, I'm Bored (explicit)"],
+        "songAmount": 12
+        
+    },{
+        "id":4,
+        "title": "Sweetner",
+        "price": "price",
+        "releaseYear": 2018,
+        "songList": ["Raindrops (an angel cried) (explicit)","blazed (feat. Pharrell Williams)", "R.E.M (explicit)", "God is a Woman (explicit)", "Sweetner", "Successful (explicit)", "Everytime (explicit)","Breathin (explicit)", "No Tears Left to Cry", "Better Off (explicit)", "Goodnight n Go (explicit)", "Pete Davidson (explicit)", "Get Well Soon (explicit)"],
+        "songAmount": 13
+    },{
+        "id":5,
+        "title": "Dangerous Woman",
+        "price": "price",
+        "releaseYear": 2016,
+        "songList": ["Moonlight","Dangerous Woman", "Be Alright", "Into You", "Side To Side (explicit)", "Let Me Love You", "Greedy", "Leave Me Lonely", "Everyday (explicit)", "Sometimes","I Don't Care (explicit)","Bad Decisions (explicit)","Touch It","Knew Better / Forever Boy","Thinking Bout You (explicit)"],
+        "songAmount": 15
+    },{
+        "id":6,
+        "title": "My Everything",
+        "price": "price",
+        "releaseYear": 2014,
+        "songList": ["Intro","Problem", "One Last Time", "Why Try", "Break Free", "Best Mistake", "Be My Baby", "Break Your Heart Right Back", "Love Me Harder", "Just A Little Bit of Your Heart", "Hands on Me","My Everything"],
+        "songAmount": 12
+    },{
+        "id":7,
+        "title": "My Everything (Deluxe)",
+        "price": "price",
+        "releaseYear": 2014,
+        "songList": ["Intro","Problem", "One Last Time", "Why Try", "Break Free", "Best Mistake", "Be My Baby", "Break Your Heart Right Back", "Love Me Harder", "Just A Little Bit of Your Heart", "Hands on Me","My Everything", "Bang Bang", "Only 1", "You Don't Know Me"],
+        "songAmount": 15
+    },{
+        "id":8,
+        "title": "Your's truly",
+        "price": "price",
+        "releaseYear": 2013,
+        "songList": ["Honeymoon Avenue","Baby I", "Right There", "Tattooed Heart", "Lovin' It","Piano", "Daydreamin'", "The Way", "You'll Never Know", "Almost is Never Enough", "Popular Song", "Better Left Unsaid"],
+        "songAmount": 12
+    }
+]
+}
