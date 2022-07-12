@@ -1,39 +1,39 @@
 <template>
   <div class="AllProperties">
-    <div class="container">
-        <div v-if="props">
+    <div class="container mx-auto">
+        <div v-if="albums">
             <div class="row">
                 <div class="col-md-4">
-                    <div id="projectZoom" class="imgContainer">
-                        <img class="w-100 img-fluid" src="https://picsum.photos/500" alt="Makeup">
+                    <div class="imgContainer">
+                        <img class="img-fluid" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F11%2F03%2Frem-beauty.jpg" alt="Makeup">
                         <div class="onHover">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <span id="hoverInfo">Information</span>
+                                    <span id="hoverInfo">Makeup</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div id="projectZoom" class="imgContainer">
-                        <img class="w-100 img-fluid" src="https://picsum.photos/500" alt="Makeup">
+                    <div class="imgContainer">
+                        <img class="img-fluid" src="https://pbs.twimg.com/media/FFuVnvyWUAoiKMO.jpg:large" alt="Albums">
                         <div class="onHover">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <span id="hoverInfo">Information</span>
+                                    <span id="hoverInfo">Albums</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div id="projectZoom" class="imgContainer">
-                        <img class="w-100 img-fluid" src="https://picsum.photos/500" alt="Makeup">
+                    <div class="imgContainer">
+                        <img class="img-fluid" src="https://vioralondon.com/wp-content/uploads/2020/10/Best-Ariana-Grande-Perfumes-Reviewed-image.jpg" alt="Fragrances">
                         <div class="onHover">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <span id="hoverInfo">Information</span>
+                                    <span id="hoverInfo">Fragrances</span>
                                 </div>
                             </div>
                         </div>
@@ -46,21 +46,23 @@
                 </div>
             </div>
             <div class="row my-5 pb-5">
-                <div class="col-md-4">
-                    <div class="itemContainer px-4">
-                        <div class="row">
-                            <div id="titles" class="col-md-4 pt-2">
-                                <h6>Subtitle</h6>
-                                <h5>Title</h5>
+                <div v-for="album in albums" :key="album.id" class="col-md-4 p-1">
+                    <router-link style="text-decoration:none;color:inherit;" :to="{name:'single', params:{id: album.id}}">
+                    <div class="itemContainer">
+                        <div class="row mx-auto">
+                            <div id="titles" class="col-6 ps-2 pt-3">
+                                <h6>{{album.releaseYear}}</h6>
+                                <h5 style="height:48px">{{album.title}}</h5>
                             </div>
                         </div>
-                        <img class="img-fluid" src="../assets/positionsvinyl.webp" alt="Makeup">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <span id="hoverInfo">Information</span>
+                        <img class="px-3 img-fluid" :src="album.coverImage" alt="Makeup">
+                        <div class="row mx-auto">
+                            <div class="col-md-12 d-flex justify-content-end w-100">
+                                <button id="cartButton" class="px-2 py-1 mb-3 me-2"><i class="bi bi-cart pe-1"></i> {{album.price}}</button>
                             </div>
                         </div>
                     </div>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -74,17 +76,38 @@
 <script>
 export default {
     mounted(){
-        this.$store.dispatch('getProperties');
+        this.$store.dispatch('getAlbums');
     },
     computed:{
-        props(){
+        albums(){
             return this.$store.state.albums;
         }
     }
 }
 </script>
 
-<style>
+<style scoped>
+    .itemContainer:hover img{
+        transform:translate(0px,-20px);
+    }
+    .itemContainer img{
+        transition:all 1s ease;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    #cartButton{
+        border: 1px solid white;
+        background-color:transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    #cartButton:hover{
+        background-color:white;
+    }
 
     #titles h6{
         font-style: italic;
@@ -103,20 +126,20 @@ export default {
     }
 
     .imgContainer{
+        overflow: hidden;
         position: relative;
     }
 
-    .itemContainer{
-        background-color: grey;
-    }
-
-    #projectZoom{
-        transition: all 0.5s ease;
-    }
-
-    #projectZoom:hover{
+    .imgContainer:hover img{
         transform:scale(1.1);
-        z-index: 3;
+    }
+
+    .imgContainer img{
+        transition:all 1s ease;
+    }
+
+    .itemContainer{
+        background-color: rgba(185, 185, 185, 0.7);
     }
     .onHover{
         /* background-color: rgba(95, 95, 95, 0.2); */
