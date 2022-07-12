@@ -1,5 +1,150 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div id="body" class="about container">
+    <div id="about-section" class="container row mx-auto">
+    <div id="about" class="col-sm-6 mx-auto">
+      <p class="text-start">About...</p>
+      <h1>"Just Like Magic"</h1>
+      <p>In the winter of 2022 4 goated developers noticed a gap in the Ariana Grande paraphernalia market, with the extremely high demand for these products 'The Goats' created an online store to sell strictly Ariana Grande products. Why? you may ask... for the love of code.</p>
+    </div>
+    <div id="polaroid" class="card col-sm-6 mx-auto">
+      <i class="bi bi-instagram"></i>
+      <a target="blank" href="https://www.instagram.com/arianagrande"><img id="image" src="../assets/About-Images/Polaroid-of-ari.jpg" 
+      class="card-img-top" alt=""></a>
+      <div class="card-body">
+        <h5 class="fw-bold">ARIANA GRANDE</h5> 
+      </div>
+    </div>
+    </div>
+    
+    <h2>Happy customers</h2>
+    <div id="carousel" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h3>'John Doe'</h3>
+          <p>I came here to look for a gift my girlfriend and my experience on this site was extremely pleasant i had no idea what to look for as i am not an ariana fan but the easy to navigate website made my job much easier and delivery was extremely fast. ps. The about section looks amazing.</p>
+          <span>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <h3>'Jane Doe'</h3>
+          <p>Quality products. Does not feel at all like I'm missing out on make-up or fragrances. There is also nearly always a terrific deal on, so the savings are a big help and the items are always updated so i subscribed.</p>
+          <span>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <h3>'Jackie Goe'</h3>
+          <p>I had always tried to shop locally and had used the same music store for years. when it started to get more and more difficult to find what i was actually looking for i turned to the internet I found the site and it had everything i was looking for.</p>
+          <span>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <h3>'Lee Pho'</h3>
+          <p>This is one of my favorite websites to use due to its responsiveness and beautiful about section.I am a web developer and have come accross some horrendeous websites so to see one so elegantly executed it brings joy to my heart. The product I purchased was an album that came out in 2013 and it was deliverd on time within a week i would definately reccomend it to a friend.</p>
+          <span>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+          </span>
+        </div>
+      </div>
+      <div id="button" class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
   </div>
 </template>
+// style //
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Righteous&display=swap');
+
+#body{
+  font-family: 'Kalam', cursive;
+  background-image: url('../assets/About-Images/e3fe0075268b7ec798d7e1242d0cfe09.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+}
+#about-section{
+  padding-top: 30px;
+  border-top: solid 10px;
+  border-top-color: black;
+}
+#about h1{
+  font-size: 50px;
+}
+#about p{
+  font-size: 19px;
+}
+#polaroid{
+  max-width: 260px;
+  height: 380px;
+  min-height: 360px;
+  border: solid;
+  border-radius: 0px;
+  box-shadow: 3px 3px 3px;
+  background-color: whitesmoke;
+  font-family: 'Cedarville Cursive', cursive;
+}
+#polaroid:hover{
+  color: black;
+}
+#polaroid i{
+  margin-top: 10px;
+  color: #28D084;
+}
+#image{
+  max-height: 300px;
+  max-width: 240px;
+  margin-top: 10px;
+  border: solid;
+  border-radius: 0px;
+  border-color: black;
+}
+
+h2{
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 50px;
+}
+h3{
+  margin: 10px;
+}
+#carousel{
+  margin-bottom: 20px;
+  min-height: 200px;
+  padding-bottom: 50px;
+}
+#carousel p{
+  font-size: 19px;
+}
+#carousel i{
+  color: gold;
+}
+#button button{
+  background-color: black;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  }
+</style>
