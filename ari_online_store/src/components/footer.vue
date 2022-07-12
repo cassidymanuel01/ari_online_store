@@ -1,14 +1,9 @@
 <template>
-
-  <router-view/>
+    <footer>
+    </footer>
 </template>
-
-<style>
-
-</style>
-
 <script>
 export default {
-  
+    
 }
 </script>
