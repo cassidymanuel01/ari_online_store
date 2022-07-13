@@ -3,7 +3,6 @@
     <div id="form" class="form mx-auto">
       <img src="" alt="">
       <h3>LOG IN</h3>
-        <label for="email">Email</label>
         <input v-model="email" name="email" type="email" placeHolder="Enter your Email" class="form-control w-50 mx-auto">
         <br>
         <input v-model="password" name="password" type="text" placeHolder=" Password" class="form-control w-50 mx-auto">
