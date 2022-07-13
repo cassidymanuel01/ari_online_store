@@ -71,15 +71,117 @@
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
     </div>
+    <div>
+      <!-- Modals -->
+    <h1>THE TEAM</h1>
+    <div id="modals">
+    <!-- modal 1 -->
+    <div class="btn" data-bs-toggle="modal" data-bs-target="#modal-1">
+      <p>ping 1</p>
+    </div>
+      <div id="modal-1" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Cassidy Manuel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body col-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+        <img class="col-6" src="" alt="">
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-primary"><a target="blank" href=""><i class="bi bi-linkedin"></i></a></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="blank" href=""><i class="bi bi-github"></i></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal 2 -->
+<div class="btn" data-bs-toggle="modal" data-bs-target="#modal-1">
+      <p>ping 2</p>
+    </div>
+      <div id="modal-1" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Cassidy Manuel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body col-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+        <img class="col-6" src="" alt="">
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-primary"><a target="blank" href=""><i class="bi bi-linkedin"></i></a></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="blank" href=""><i class="bi bi-github"></i></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal 3 -->
+<div class="btn" data-bs-toggle="modal" data-bs-target="#modal-1">
+      <p>ping 3</p>
+    </div>
+      <div id="modal-1" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Cassidy Manuel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body col-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+        <img class="col-6" src="" alt="">
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-primary"><a target="blank" href=""><i class="bi bi-linkedin"></i></a></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="blank" href=""><i class="bi bi-github"></i></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal 4 -->
+<div class="btn" data-bs-toggle="modal" data-bs-target="#modal-1">
+      <p>ping 4</p>
+    </div>
+      <div id="modal-1" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Cassidy Manuel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body col-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+        <img class="col-6" src="" alt="">
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-primary"><a target="blank" href=""><i class="bi bi-linkedin"></i></a></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="blank" href=""><i class="bi bi-github"></i></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
   </div>
 </template>
 // style //
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Righteous&display=swap');
 
 #body{
-  font-family: 'Kalam', cursive;
+  font-family: 'Nunito', sans-serif;
   background-image: url('../assets/About-Images/e3fe0075268b7ec798d7e1242d0cfe09.jpg');
   background-size: cover;
   background-position: center;
@@ -99,7 +201,7 @@
 #polaroid{
   max-width: 260px;
   height: 380px;
-  min-height: 360px;
+  min-height: 370px;
   border: solid;
   border-radius: 0px;
   box-shadow: 3px 3px 3px;
@@ -132,7 +234,7 @@ h3{
 }
 #carousel{
   margin-bottom: 20px;
-  min-height: 200px;
+  min-height: 340px;
   padding-bottom: 50px;
 }
 #carousel p{
@@ -146,5 +248,8 @@ h3{
   border-radius: 50%;
   height: 10px;
   width: 10px;
+  }
+  a{
+    color: black;
   }
 </style>
