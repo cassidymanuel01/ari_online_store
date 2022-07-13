@@ -15,88 +15,21 @@
       "id": 2
     }
   ],
-  "albums": [
+  "allInfo": [
     {
-      "id": 1,
-      "title": "Positions",
-      "price": "price",
-      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
       "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
-      "releaseYear": 2020,
-      "songList": [
-        "Shut Up (explicit)",
-        "34 + 35 (explicit)",
-        "Motive (with Doja Cat) (explicit)",
-        "Just Like Magic (explicit)",
-        "Off the Table (with The Weeknd)",
-        "Six Thirty (explicit)",
-        "Safety Net (feat. Ty Dolla $ign)",
-        "My Hair",
-        "Nasty (explicit)",
-        "Westside",
-        "Love Language (explicit)",
-        "Positions (explicit)",
-        "Obvious (explicit)",
-        "POV"
-      ],
-      "songAmount": 14
-    },
-    {
-      "id": 2,
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
       "title": "Positions (Deluxe)",
-      "price": "price",
-      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
-      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+      "price": 102020,
       "releaseYear": 2021,
-      "songList": [
-        "Shut Up (explicit)",
-        "34 + 35 (explicit)",
-        "Motive (with Doja Cat) (explicit)",
-        "Just Like Magic (explicit)",
-        "Off the Table (with The Weeknd)",
-        "Six Thirty (explicit)",
-        "Safety Net (feat. Ty Dolla $ign)",
-        "My Hair",
-        "Nasty (explicit)",
-        "Westside",
-        "Love Language (explicit)",
-        "Positions (explicit)",
-        "Obvious (explicit)",
-        "POV",
-        "Someone Like u - Interlude",
-        "Test Drive",
-        "34 + 35 (feat. Doja Cat, Megan Thee Stallion)(explicit)",
-        "Worst Behaviour (explicit)",
-        "Main Thing"
-      ],
-      "songAmount": 19
-    },
-    {
-      "id": 3,
-      "title": "Thank u, next",
-      "price": "price",
-      "releaseYear": 2019,
-      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fSob7QVX/SharedImage-110618.png?t=290487e4116e5ee7a527",
-      "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
-      "songList": [
-        "Imagine (explicit)",
-        "Needy (explicit)",
-        "NASA",
-        "Bloodline (explicit)",
-        "Fake Smile (explicit)",
-        "Bad Idea",
-        "Make Up (explicit)",
-        "Ghostin",
-        "In My Head (explicit)",
-        "Thank u, next",
-        "Break Up With Your Girlfriend, I'm Bored (explicit)"
-      ],
-      "songAmount": 12
+      "songAmount": 19,
+      "id": 2,
+      "category": "Album"
     },
     {
       "id": 4,
-      "title": "Sweetner",
-      "price": "price",
+      "title": "Sweetener",
+      "price": 100,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fvli9QVX/SharedImage-110621.png?t=f3d5b7429800867398db",
       "img": "https://i.scdn.co/image/ab67616d0000b273c3af0c2355c24ed7023cd394",
       "releaseYear": 2018,
@@ -115,12 +48,13 @@
         "Pete Davidson (explicit)",
         "Get Well Soon (explicit)"
       ],
-      "songAmount": 13
+      "songAmount": 13,
+      "category": "Album"
     },
     {
       "id": 5,
       "title": "Dangerous Woman",
-      "price": "price",
+      "price": 100,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fJ0J9QVX/SharedImage-110620.png?t=ae27a2b6a60dff035c73",
       "img": "https://i.scdn.co/image/ab67616d0000b273c80df9fb1b8755271cec9785",
       "releaseYear": 2016,
@@ -141,12 +75,13 @@
         "Knew Better / Forever Boy",
         "Thinking Bout You (explicit)"
       ],
-      "songAmount": 15
+      "songAmount": 15,
+      "category": "Album"
     },
     {
       "id": 6,
       "title": "My Everything",
-      "price": "price",
+      "price": 100,
       "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
       "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
       "releaseYear": 2014,
@@ -164,12 +99,13 @@
         "Hands on Me",
         "My Everything"
       ],
-      "songAmount": 12
+      "songAmount": 12,
+      "category": "Album"
     },
     {
       "id": 7,
       "title": "My Everything (Deluxe)",
-      "price": "price",
+      "price": 100,
       "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
       "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
       "releaseYear": 2014,
@@ -190,12 +126,13 @@
         "Only 1",
         "You Don't Know Me"
       ],
-      "songAmount": 15
+      "songAmount": 15,
+      "category": "Album"
     },
     {
       "id": 8,
       "title": "Your's truly",
-      "price": "price",
+      "price": 100,
       "coverImage": "https://cdn.shopify.com/s/files/1/0491/7398/7484/products/P0602577974557_1_1445x.png?v=1643990442",
       "img": "https://i.scdn.co/image/ab67616d0000b2734bb9f35da9ff34b1e2314d8e",
       "releaseYear": 2013,
@@ -213,7 +150,211 @@
         "Popular Song",
         "Better Left Unsaid"
       ],
-      "songAmount": 12
+      "songAmount": 12,
+      "category": "Album"
+    },{
+        "id":9,
+        "title": "Plumping Lip Gloss",
+        "subtitle": "on your collar",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipGloss_PDP_Closed_jellysandals_left_51dbc4d1-8293-42e4-9c66-e3d5981d5299.png?v=1652280205",
+        "img" : "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipGloss_PDP_Closed_jellysandals_left_51dbc4d1-8293-42e4-9c66-e3d5981d5299.png?v=1652280205",
+        "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, high-shine finish.",
+        "price": 345,
+        "category": "Makeup"
+    },{
+        "id":10,
+        "title": "Matte Lipstick",
+        "subtitle": "on your collar",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_MatteLipstick_PDP_Closed_driveinmovie_left_bdb34caa-efcb-4746-85bf-17a2f929ef56.png?v=1639765563",
+        "img" : "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_MatteLipstick_PDP_Closed_driveinmovie_left_bdb34caa-efcb-4746-85bf-17a2f929ef56.png?v=1639765563",
+        "description": "An ultra-smooth matte formula with rich colors that delivers an instant, longlasting color that stays comfortably in place.",
+        "price": 350,
+        "category": "Makeup"
+    },{
+        "id":11,
+        "title": "01_Eyeshadow Palette",
+        "subtitle": "midnight shadows",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Palette_PDP_Open_principessa_58cbc22f-7fd2-47e8-a7b3-8ac8581604b4.png?v=1639765267",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Palette_PDP_Open_principessa_58cbc22f-7fd2-47e8-a7b3-8ac8581604b4.png?v=1639765267",
+        "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
+        "price": 440,
+        "category": "Makeup"
+    },{
+        "id":12,
+        "title": "Highlighter Topper",
+        "subtitle": "interstellar",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Highlighter_PDP_Open_misssaturn_f20c85cf-ea5e-45c8-97b3-9a65a5d426fa.png?v=1652996537",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Highlighter_PDP_Open_misssaturn_f20c85cf-ea5e-45c8-97b3-9a65a5d426fa.png?v=1652996537",
+        "description": "A next level highlighter, used on the cheeks, eyes and body. Infused with vegetable driven emollients, this product applies like a second skin and leaves a dewy luminous highlight that will last.",
+        "price": 405,
+        "category": "Makeup"
+    },{
+        "id":13,
+        "title": "Eyeliner Marker",
+        "subtitle": "at the borderline",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_EyeMarker_PDP_Open_MidnightBlack_left_269b2d11-399c-4860-b9ce-b714cdb5e873.png?v=1639762725",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_EyeMarker_PDP_Open_MidnightBlack_left_269b2d11-399c-4860-b9ce-b714cdb5e873.png?v=1639762725",
+        "description": "Long wearing eyeliner inspired by Ariana's signature bold look.",
+        "price": 350,
+        "category": "Makeup"
+    },{
+        "id":14,
+        "title": "Lip Stain Marker",
+        "subtitle": "practically permanent",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipMarker_PDP_Open_bookednbusy_77ea0dba-1a33-4694-bcb6-8c0dc64af2c0.png?v=1639766462",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipMarker_PDP_Open_bookednbusy_77ea0dba-1a33-4694-bcb6-8c0dc64af2c0.png?v=1639766462",
+        "description": "A longwearing color with a modern take and natural finish.",
+        "price": 295,
+        "category": "Album"
+    },{
+        "id":15,
+        "title": "Volumizing Mascara",
+        "subtitle": "flourishing",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Mascara_PDP_Open_Volumizing_left_21688645-484d-4667-97f7-b35a8ad5c007.png?v=1639766058",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Mascara_PDP_Open_Volumizing_left_21688645-484d-4667-97f7-b35a8ad5c007.png?v=1639766058",
+        "description": "Infused with a 100% naturally derived bamboo powder this mascarra will volumize and nourish your lashes. An all new clean flourshing lengthening mascara.",
+        "price": 275,
+        "category": "Makeup"
+    },{
+        "id":16,
+        "title": "Kohl Eyeliner Pencil",
+        "subtitle": "at the borderline",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_KohlEyeliner_PDP_Open_somod_right_f32983f4-4f50-4610-9652-4c785f53e9df.png?v=1639763653",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_KohlEyeliner_PDP_Open_somod_right_f32983f4-4f50-4610-9652-4c785f53e9df.png?v=1639763653",
+        "description": "Longwearing, ultra-creamy and smudge-free Kohl eyeliner pencil, inspired by Ariana.",
+        "price": 315,
+        "category": "Makeup"
+    },{
+        "id":17,
+        "title": "Plumping Lip Gloss",
+        "subtitle": "utmost importance",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_UtmostLipGloss_PDP_Closed_clear_left_5dcca65f-d11a-4869-9824-f38a3f7261da.png?v=1639765133",
+        "img":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_UtmostLipGloss_PDP_Closed_clear_left_5dcca65f-d11a-4869-9824-f38a3f7261da.png?v=1639765133",
+        "description": "Super comfortable and crystal clear, this lip gloss delivers fuller-looking lips. Wear with a lip color or alone for the ultimate wet look.",
+        "price": 315,
+        "category": "Makeup"
+    },{
+        "id":18,
+        "title": "Matte Liquid Eyeshadow",
+        "subtitle": "midnight shadows",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LiquidShadow_Matte_PDP_Closed_totes_right_9f1a5d6c-640c-4f4e-97b3-0d67b569d8e7.png?v=1639767262",
+        "img":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LiquidShadow_Matte_PDP_Closed_totes_right_9f1a5d6c-640c-4f4e-97b3-0d67b569d8e7.png?v=1639767262",
+        "description": "Longwearing, powerfully pigmented,water proof and in a range of matte finishes. The luxe liquid",
+        "price": 295,
+        "category": "Makeup"
+    },{
+        "id":19,
+        "title": "01_Dream Lashes",
+        "subtitle": "r.e.m",
+        "coverImage":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Lashes_PDP_Closed_EternallyMeowing_right_390a03b9-1c73-4313-9fa0-9fe2351508e4.png?v=1639763777",
+        "img":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Lashes_PDP_Closed_EternallyMeowing_right_390a03b9-1c73-4313-9fa0-9fe2351508e4.png?v=1639763777",
+        "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
+        "price": 295,
+        "category": "Makeup"
+    },{
+        "id":20,
+        "title": "02_Eyeshadow Palette",
+        "subtitle": "midnight shadow",
+        "coverImage":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_Palette_PDP_Open_GroovyBaby.png?v=1647622357",
+        "img":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_Palette_PDP_Open_GroovyBaby.png?v=1647622357",
+        "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
+        "price": 445
+    },{
+        "id":21,
+        "title": "02_Dream Lashes",
+        "subtitle": "r.e.m",
+        "coverImage":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_DreamLashes_PDP_Closed_DayDreamin_right.png?v=1647622420",
+        "img":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_DreamLashes_PDP_Closed_DayDreamin_right.png?v=1647622420",
+        "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
+        "price": 300
+    },{
+        "id":21,
+        "title": "Lash & Brow Boosting Serum",
+        "subtitle": "flourshing",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LashBrowSerum_PDP_Open_left.png?v=1647291171",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LashBrowSerum_PDP_Open_left.png?v=1647291171",
+        "description": "A peptide infused, biotin-formulated serum that will help promote thicker, longer visible lashes in as little as 4 weeks",
+        "price": 745
+    },{
+        "id":22,
+        "title": "Calming Face Mist",
+        "subtitle": "mist thing",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_FaceMist_PDP_Open.png?v=1647291159",
+        "img":"https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_FaceMist_PDP_Open.png?v=1647291159",
+        "description": "A burst of cosmic calm for stressed-out skin. A calming scent of natural lavender and essential oils.",
+        "price": 445
+    },{
+        "id":23,
+        "title": "Metallic Gel Eyeshadow",
+        "subtitle": "midnight shadow",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
+        "description": "This ultra-fine star like eyeshadow will give your lids a brand-new wash, that's guaranteed to leave a comfortable multi-dimensional finish",
+        "price": 300
+    },{
+        "id":24,
+        "title": "Cooling Blurring Undereye Balm",
+        "subtitle": "full night's sleep",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
+        "description": "This botanically-powered cooling balm will offer instant results. Centella Asiatica along with caffeine, helps to soothe imperfections and melt away puffy looks on the delicate eye area ",
+        "price": null
+    },{
+        "id":25,
+        "title": "Eyeshadow Gloss",
+        "subtitle": "midnight shadows",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_EyeGloss_PDP_Closed_left.png?v=1647291184",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_EyeGloss_PDP_Closed_left.png?v=1647291184",
+        "description": "Get the glossy lid look with this crystal clear,flexible eyeshadow gel.",
+        "price": 300
+    },{
+        "id":26,
+        "title": "Cheek and Lipstick",
+        "subtitle": "eclipse",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LipCheek_PDP_Closed_StandingO.png?v=1647873144",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LipCheek_PDP_Closed_StandingO.png?v=1647873144",
+        "description": "Two in one balm, that's easy to use, when you want a healthy flush of natural looking colors on your lips and cheek",
+        "price": 335
+    },{
+        "id":27,
+        "title": "Lip Oil",
+        "subtitle": "essential drip",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipOil_PDP_Open_LavendarKiss_left.png?v=1655397026",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipOil_PDP_Open_LavendarKiss_left.png?v=1655397026",
+        "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, high-shine finish.",
+        "price": 295
+    },{
+        "id":28,
+        "title": "Classic Lipstick",
+        "subtitle": "on your collar",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_Lipstick_PDP_Open_puckerup.png?v=1655141382",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_Lipstick_PDP_Open_puckerup.png?v=1655141382",
+        "description": "A must have lipstick, with a satin finish,infused with milk, delivering vivid pigments ",
+        "price": 355
+    },{
+        "id":29,
+        "title": "Lip Balm",
+        "subtitle": "everything nice",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipBalm_PDP_Open_left.png?v=1657117585",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipBalm_PDP_Open_left.png?v=1657117585",
+        "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
+        "price": 440
+    },{
+        "id":30,
+        "title": "Lip Liner Pencil",
+        "subtitle": "at the borderline",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipLiner_PDP_Open_EQ_right.png?v=1655144315",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipLiner_PDP_Open_EQ_right.png?v=1655144315",
+        "description": "A next level highlighter, used on the cheeks, eyes and body. Infused with vegetable driven emollients, this product applies like a second skin and leaves a dewy luminous highlight that will last.",
+        "price": 260
+    },{
+        "id":31,
+        "title": "Liquid Lipstick",
+        "subtitle": "on your collar",
+        "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LiquidLipstick_PDP_Open_wifey_right.png?v=1655144058",
+        "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LiquidLipstick_PDP_Open_wifey_right.png?v=1655144058",
+        "description": "Long wearing eyeliner inspired by Ariana's signature bold look.",
+        "price": 335
     }
   ]
 }

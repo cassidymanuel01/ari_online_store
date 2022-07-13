@@ -65,10 +65,10 @@ export default {
     },
     computed:{
         singleInfo(){
-            return this.$store.state.albums;
+            return this.$store.state.singleAlbum;
         },
         singleSongInfo(){
-            return this.$store.state.albums.songList;
+            return this.$store.state.singleAlbum.songList;
         },
     }
 }

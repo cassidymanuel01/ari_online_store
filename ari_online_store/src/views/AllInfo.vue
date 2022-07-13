@@ -46,7 +46,31 @@
                 </div>
             </div>
             <div class="row my-5 pb-5">
-                <div v-for="album in albums" :key="album.id" class="col-md-4 p-1">
+                <div v-for="album in albums.slice(0,6)" :key="album.id" class="col-md-4">
+                    <router-link style="text-decoration:none;color:inherit;" :to="{name:'single', params:{id: album.id}}">
+                    <div class="itemContainer">
+                        <div class="row mx-auto">
+                            <div id="titles" class="col-6 ps-2 pt-3">
+                                <h6>{{album.releaseYear}}</h6>
+                                <h5 style="height:48px">{{album.title}}</h5>
+                            </div>
+                        </div>
+                        <img class="px-3 img-fluid" :src="album.coverImage" alt="Makeup">
+                        <div class="row mx-auto">
+                            <div class="col-md-12 d-flex justify-content-end w-100">
+                                <button id="cartButton" class="px-2 py-1 mb-3 me-2"><i class="bi bi-cart pe-1"></i> R{{album.price}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    </router-link>
+                </div>
+                <div class="row my-5 pt-5">
+                    <div class="col-md-12 d-flex flex-column justify-content-start align-content-start">
+                        <h1 class="display-5">View our Makeup</h1>
+                        <h3 class="display-6">Chapter 1</h3>
+                    </div>
+                </div>
+                <div v-for="album in albums.slice(6,17)" :key="album.id" class="col-md-4 p-1">
                     <router-link style="text-decoration:none;color:inherit;" :to="{name:'single', params:{id: album.id}}">
                     <div class="itemContainer">
                         <div class="row mx-auto">
@@ -123,6 +147,7 @@ export default {
 
     #hoverInfo{
         font-size: 24px;
+        color: black;
     }
 
     .imgContainer{
