@@ -4,17 +4,17 @@
       <nav class="navbar navbar-expand">
         <div class="container-fluid">
           <a class="navbar-brand px-3" href="#">Just Like Magic</a>
-          <button
+          <!-- <button
             class="px-3"
             type="button"
             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
           >
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> -->
         </div>
       </nav>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Just Like Magic</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -37,9 +37,8 @@
                 <a class="nav-link" href="/contact">Contact</a>
               </li>
             </ul>
-  </div>
-</div>
-
+  </div> -->
+<!-- </div> -->
       <h1
         class="typewrite d-flex justify-content-center text-center"
         data-period="500"
@@ -49,7 +48,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   components: {},
@@ -150,13 +148,13 @@ button{
 }
 
 .home {
-  height: 100vh;
   background: url("https://i.postimg.cc/dVtG2RBJ/02-Ariana-Grande-press-photo-2020-cr-Dave-Meyers-billboard-1548-1603458811-compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   width: 100vw;
+  height: 110vh;
 }
 
 .typewrite {

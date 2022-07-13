@@ -6,11 +6,12 @@ import Register from '../views/RegisterView.vue'
 import Login from '../views/LoginView.vue'
 import YourProfile from '../views/YourProfileView.vue'
 import SingleItem from '../views/SingleItemView.vue'
+import ContactPage from '../views/ContactPage.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomeView',
     component: HomeView
   },
   {
@@ -44,7 +45,13 @@ const routes = [
     path: '/allInfo/:id',
     name: 'single',
     component: SingleItem,
-  }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactPage,
+  },
+  
 ]
 
 const router = createRouter({
