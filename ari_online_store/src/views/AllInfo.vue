@@ -1,9 +1,7 @@
 <template>
   <div class="AllProperties">
-    <div class="container mx-auto">
-      <div v-if="albums">
-        <div class="row">
-          <div class="col-md-4">
+    <div v-if="albums">
+        <div class="wrapper mt-5 mx-3">
             <div class="imgContainer">
               <img
                 class="img-fluid"
@@ -18,8 +16,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
             <div class="imgContainer">
               <img
                 class="img-fluid"
@@ -34,8 +30,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
             <div class="imgContainer">
               <img
                 class="img-fluid"
@@ -51,19 +45,17 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row my-5 pt-5">
-          <div
-            class="col-md-12 d-flex justify-content-center align-content-center"
-          >
-            <h2>View our albums</h2>
+          <div class="container">
+            <div class="row my-5 pt-5">
+          <div class="col-md-12 d-flex justify-content-center align-content-center">
+            <h2 class="display-5">View our albums</h2>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.slice(0,6)" :key="album.id" class="col-md-4">
             <router-link class="m-0 p-0"
               style="text-decoration: none; color: inherit"
-              :to="{ name: 'single', params: { id: album.id } }"
+              :to="{ name: 'single', params: { id: album.id },props:[album.id , album.category] }"
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
@@ -80,7 +72,7 @@
                 <div class="row mx-auto">
                   <div class="col-md-12 d-flex justify-content-end w-100">
                     <button id="cartButton" class="px-2 py-1 mb-3 me-2">
-                      <i class="bi bi-cart pe-1"></i> {{ album.price }}
+                      <i class="bi bi-cart pe-1"></i> R{{ album.price }}
                     </button>
                   </div>
                 </div>
@@ -88,9 +80,146 @@
             </router-link>
           </div>
         </div>
+        <div class="row my-5 pt-5">
+          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+            <h2 class="display-5">View our Makeup</h2>
+            <h3 class="display-6">Chapter 1</h3>
+          </div>
+        </div>
+        <div class="row my-5 pb-5">
+          <div v-for="album in albums.filter((x) => {return x.chapter == 1})" :key="album.id" class="col-md-4">
+            <router-link class="m-0 p-0"
+              style="text-decoration: none; color: inherit"
+              :to="{ name: 'single', params: { id: album.id } }"
+            >
+              <div class="itemContainer">
+                <div class="row mx-auto">
+                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                    <h6>{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px">{{ album.title }}</h5>
+                  </div>
+                </div>
+                <img
+                  class="px-3 img-fluid"
+                  :src="album.coverImage"
+                  alt="Makeup"
+                />
+                <div class="row mx-auto">
+                  <div class="col-md-12 d-flex justify-content-end w-100">
+                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
+                      <i class="bi bi-cart pe-1"></i> R{{ album.price }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+        </div>
+        <div class="row my-5 pt-5">
+          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+            <h3 class="display-6">Chapter 2</h3>
+          </div>
+        </div>
+        <div class="row my-5 pb-5">
+          <div v-for="album in albums.filter((x)=>{return x.chapter == 2})" :key="album.id" class="col-md-4">
+            <router-link class="m-0 p-0"
+              style="text-decoration: none; color: inherit"
+              :to="{ name: 'single', params: { id: album.id } }"
+            >
+              <div class="itemContainer">
+                <div class="row mx-auto">
+                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                    <h6>{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px">{{ album.title }}</h5>
+                  </div>
+                </div>
+                <img
+                  class="px-3 img-fluid"
+                  :src="album.coverImage"
+                  alt="Makeup"
+                />
+                <div class="row mx-auto">
+                  <div class="col-md-12 d-flex justify-content-end w-100">
+                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
+                      <i class="bi bi-cart pe-1"></i> R{{ album.price }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+        </div>
+        <div class="row my-5 pt-5">
+          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+            <h3 class="display-6">Chapter 3</h3>
+          </div>
+        </div>
+        <div class="row my-5 pb-5">
+          <div v-for="album in albums.filter((x)=>{return x.chapter == 3})" :key="album.id" class="col-md-4">
+            <router-link class="m-0 p-0"
+              style="text-decoration: none; color: inherit"
+              :to="{ name: 'single', params: { id: album.id } }"
+            >
+              <div class="itemContainer">
+                <div class="row mx-auto">
+                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                    <h6>{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px">{{ album.title }}</h5>
+                  </div>
+                </div>
+                <img
+                  class="px-3 img-fluid"
+                  :src="album.coverImage"
+                  alt="Makeup"
+                />
+                <div class="row mx-auto">
+                  <div class="col-md-12 d-flex justify-content-end w-100">
+                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
+                      <i class="bi bi-cart pe-1"></i> R{{ album.price }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+        </div>
+        <div class="row my-5 pt-5">
+          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+            <h2 class="display-5">View our Fragrances</h2>
+          </div>
+        </div>
+        <div class="row my-5 pb-5">
+          <div v-for="album in albums.filter((x)=>{return x.category=='Fragrance' })" :key="album.id" class="col-md-4">
+            <router-link class="m-0 p-0"
+              style="text-decoration: none; color: inherit"
+              :to="{ name: 'single', params: { id: album.id } }"
+            >
+              <div class="itemContainer">
+                <div class="row mx-auto">
+                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                    <h6>{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px">{{ album.title }}</h5>
+                  </div>
+                </div>
+                <img
+                  class="p-3 img-fluid"
+                  :src="album.coverImage"
+                  alt="Makeup"
+                />
+                <div class="row mx-auto">
+                  <div class="col-md-12 d-flex justify-content-end w-100">
+                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
+                      <i class="bi bi-cart pe-1"></i> R{{ album.price }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+        </div>
+          </div>
       </div>
       <div v-else>loading...</div>
-    </div>
   </div>
 </template>
 
@@ -115,6 +244,35 @@ export default {
 }
 .itemContainer img {
   transition: all 1s ease;
+}
+
+.wrapper{
+  padding-top: 2rem !important;
+  display: flex;
+  width: 100%;
+}
+.wrapper > div {
+  height: 75vh;
+}
+.wrapper > div img {
+  height: 75vh;
+  object-fit: cover;
+}
+
+@media screen and (max-width:769px) {
+  .wrapper{
+    display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+    .wrapper > div {
+      height: 45vh;
+    }
+    .wrapper > div img {
+      height: 45vh;
+      object-fit: cover;
+    }
 }
 
 * {

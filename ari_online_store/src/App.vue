@@ -17,5 +17,14 @@ export default({
 
 <style>
 
+nav {
+  padding: 30px;
+  background-color: white;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
 </style>
 

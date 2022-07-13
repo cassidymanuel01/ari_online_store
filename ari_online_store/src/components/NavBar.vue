@@ -1,26 +1,17 @@
 <template>
-    <!-- <div id="Background" class="container white pullRightLeft fixed-top fs-5 text-white">
-  Just Like Magic
-  <a href="/">HOME</a>
-  <a href="/allInfo">ALL PRODUCTS</a>
-  <a href="/register">Register</a>
-  <a href="/login">Login</a>
-  <a href="/admin">ADMIN</a>
-  <a href="/about">ABOUT</a>
-  <a href="/contact">CONTACT</a> -->
   <nav class="p-0 navbar text-center fixed-top navbar-expand-lg navbar-dark">
         <div class="bg-dark container pullRightLeft p-3 mt-1">
             <a href="/" class="mx-auto navbar-brand"> Just Like Magic </a>
             <button class="mx-auto navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse">
                 <div id="navBarSize" class="navbar-nav mx-auto">
                     <div class="navbar-nav d-flex">
                         <a href="/">HOME</a>
                         <a href="/allInfo">ALL PRODUCTS</a>
-                        <a href="/register">Register</a>
-                        <a href="/login">Login</a>
+                        <a href="/register">REGISTER</a>
+                        <a href="/login">LOGIN</a>
                         <a href="/admin">ADMIN</a>
                         <a href="/about">ABOUT</a>
                         <a href="/contact">CONTACT</a>
@@ -36,24 +27,23 @@
   </div>
   <div class="offcanvas-body">
      <ul class="navbar-nav w-100 border-2 border-dark d-flex justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link" href="/">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/allInfo">ALL PRODUCTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/admin">Admin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-              </li>
-            </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/allInfo">ALL PRODUCTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin">ADMIN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">CONTACT</a>
+        </li>
+      </ul>
   </div>
-  <!-- </div> -->
 </div>
 </template>
 <script>
@@ -115,18 +105,18 @@ const routes = [
 export default {
     
 }
-function changeBg(){
-    var navbar = document.getElementById('Background');
-    var scrollValue = window.scrollY;
-    if (scrollValue < 700){
-        navbar.classList.remove('white')
-    }
-    else{
-        navbar.classList.add('white')
-    }
-}
-window.addEventListener('scroll', changeBg);
-window.addEventListener('load', changeBg);
+// function changeBg(){
+//     var navbar = document.getElementById('Background');
+//     var scrollValue = window.scrollY;
+//     if (scrollValue < 700){
+//         navbar.classList.remove('white')
+//     }
+//     else{
+//         navbar.classList.add('white')
+//     }
+// }
+// window.addEventListener('scroll', changeBg);
+// window.addEventListener('load', changeBg);
 </script>
 
 <style>
