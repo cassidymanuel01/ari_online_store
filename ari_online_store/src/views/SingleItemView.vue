@@ -2,8 +2,7 @@
   <div class="singleItem">
     <div v-if="singleInfo">
       <div
-        class="container mx-auto pt-2 d-flex justify-content-center flex-column px-2"
-      >
+        class="container mx-auto pt-2 d-flex justify-content-center flex-column px-2">
       <img src="../assets/Vinyl.webp" id="Vinyl" class="img-fluid" alt="">
         <div class="row mb-5 pb-2">
           <div id="image" class="col-md-6">
