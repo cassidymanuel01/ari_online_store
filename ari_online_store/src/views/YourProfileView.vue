@@ -1,6 +1,8 @@
 <template>
   <div class="yourProfile">
-    
+    <div class="container">
+      
+    </div>
   </div>
 </template>
 
