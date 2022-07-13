@@ -40,12 +40,12 @@
   </div>
 </template>
 <script>
-import Footer from "../components/Footer.vue"
+import Footer from '../components/footer.vue'
 export default {
   components: { Footer }
 };
 </script>
-<style>
+<style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
 main {

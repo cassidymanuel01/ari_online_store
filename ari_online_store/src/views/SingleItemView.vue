@@ -15,7 +15,7 @@
             <div class="row">
               <div class="col-md-12">
                 <h1 class="text-center fw-bold pb-1">{{ singleInfo.title }}</h1>
-                <h6 class="fw-bold text-center">{{ singleInfo.releaseYear }}</h6>
+                <h6 class="fw-bold text-center">{{ singleInfo.subtitle }}</h6>
                 <div class="row py-3">
                   <h4 class="fw-bold text-center">Tracklist:</h4>
                   <div id="slist" class="col-md-6">
@@ -76,10 +76,10 @@ export default {
   },
   computed: {
     singleInfo() {
-      return this.$store.state.albums;
+      return this.$store.state.singleAlbum;
     },
     singleSongInfo() {
-      return this.$store.state.albums.songList;
+      return this.$store.state.singleAlbum.songList;
     },
   },
 };

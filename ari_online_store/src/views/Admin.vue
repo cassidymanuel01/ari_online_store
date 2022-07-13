@@ -132,5 +132,10 @@ export default {
 </script>
 
 <style>
-
+@media screen and (max-width:769px) {
+    tr{
+    display: flex;
+    flex-direction: column;
+}
+}
 </style>

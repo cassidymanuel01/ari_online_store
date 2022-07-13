@@ -74,7 +74,7 @@ export default createStore({
       })
       .then(() => context.dispatch('getAlbums'))
     },
-    addItem(context,[image,coverImage,title,price,releaseYear,songAmount]){
+    addItem(context,[image,coverImage,title,price,subtitle,songAmount]){
       fetch('http://localhost:3000/allInfo', {
         method:'POST',
         body:JSON.stringify({
@@ -82,7 +82,7 @@ export default createStore({
           coverImage: coverImage,
           title: title,
           price: price,
-          releaseYear: releaseYear,
+          subtitle: subtitle,
           songAmount: songAmount
 
         }),

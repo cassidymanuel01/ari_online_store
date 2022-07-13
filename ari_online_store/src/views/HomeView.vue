@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <nav class="navbar navbar-expand">
         <div class="container-fluid">
-          <a class="navbar-brand px-3" href="#">Just Like Magic</a>
+          <!-- <a class="navbar-brand px-3" href="#">Just Like Magic</a> -->
           <!-- <button
             class="px-3"
             type="button"
@@ -49,8 +49,9 @@
   </div>
 </template>
 <script>
+import Admin from './Admin.vue';
 export default {
-  components: {},
+  components: {Admin},
 };
 </script>
 

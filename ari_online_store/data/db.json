@@ -21,7 +21,7 @@
       "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
       "title": "Positions (Deluxe)",
       "price": 102020,
-      "releaseYear": 2021,
+      "subtitle": 2021,
       "songAmount": 19,
       "id": 2,
       "category": "Album"
@@ -32,7 +32,7 @@
       "price": 100,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fvli9QVX/SharedImage-110621.png?t=f3d5b7429800867398db",
       "img": "https://i.scdn.co/image/ab67616d0000b273c3af0c2355c24ed7023cd394",
-      "releaseYear": 2018,
+      "subtitle": 2018,
       "songList": [
         "Raindrops (an angel cried) (explicit)",
         "blazed (feat. Pharrell Williams)",
@@ -57,7 +57,7 @@
       "price": 100,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fJ0J9QVX/SharedImage-110620.png?t=ae27a2b6a60dff035c73",
       "img": "https://i.scdn.co/image/ab67616d0000b273c80df9fb1b8755271cec9785",
-      "releaseYear": 2016,
+      "subtitle": 2016,
       "songList": [
         "Moonlight",
         "Dangerous Woman",
@@ -84,7 +84,7 @@
       "price": 100,
       "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
       "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
-      "releaseYear": 2014,
+      "subtitle": 2014,
       "songList": [
         "Intro",
         "Problem",
@@ -108,7 +108,7 @@
       "price": 100,
       "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
       "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
-      "releaseYear": 2014,
+      "subtitle": 2014,
       "songList": [
         "Intro",
         "Problem",
@@ -135,7 +135,7 @@
       "price": 100,
       "coverImage": "https://cdn.shopify.com/s/files/1/0491/7398/7484/products/P0602577974557_1_1445x.png?v=1643990442",
       "img": "https://i.scdn.co/image/ab67616d0000b2734bb9f35da9ff34b1e2314d8e",
-      "releaseYear": 2013,
+      "subtitle": 2013,
       "songList": [
         "Honeymoon Avenue",
         "Baby I",

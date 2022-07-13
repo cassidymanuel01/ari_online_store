@@ -1,11 +1,59 @@
 <template>
-    <div id="Background" class="container white pullRightLeft fixed-top fs-5 text-white">
+    <!-- <div id="Background" class="container white pullRightLeft fixed-top fs-5 text-white">
   Just Like Magic
   <a href="/">HOME</a>
-  <a href="">ARTICLES</a>
-  <a href="">PORTFOLIO</a>
+  <a href="/allInfo">ALL PRODUCTS</a>
+  <a href="/register">Register</a>
+  <a href="/login">Login</a>
+  <a href="/admin">ADMIN</a>
   <a href="/about">ABOUT</a>
-  <a href="/contact">CONTACT</a>
+  <a href="/contact">CONTACT</a> -->
+  <nav class="p-0 navbar text-center fixed-top navbar-expand-lg navbar-dark">
+        <div class="bg-dark container pullRightLeft p-3 mt-1">
+            <a href="/" class="mx-auto navbar-brand"> Just Like Magic </a>
+            <button class="mx-auto navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div id="navBarSize" class="navbar-nav mx-auto">
+                    <div class="navbar-nav d-flex">
+                        <a href="/">HOME</a>
+                        <a href="/allInfo">ALL PRODUCTS</a>
+                        <a href="/register">Register</a>
+                        <a href="/login">Login</a>
+                        <a href="/admin">ADMIN</a>
+                        <a href="/about">ABOUT</a>
+                        <a href="/contact">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Just Like Magic</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     <ul class="navbar-nav w-100 border-2 border-dark d-flex justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="/">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/allInfo">ALL PRODUCTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+  </div>
+  <!-- </div> -->
 </div>
 </template>
 <script>
@@ -88,10 +136,10 @@ font-family: 'Nunito', sans-serif;
 font-weight: bolder;
 }
 
-.white{
-     transition: 10s;
+.white a, .white{
+     /* transition: 10s; */
      background: white;
-     color: black;
+     color: black !important;
      /* background: linear-gradient(#28D084,lightgrey); */
  }
 

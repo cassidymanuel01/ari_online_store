@@ -10,14 +10,14 @@
                             <form id="EditItem" @submit="preventDefault"> 
                                 <label class="form-label" for="Title">Title</label>
                                 <input v-model="album.title" class="form-control" type="text" placeholder="Enter the Title">
+                                <label class="form-label" for="SubTitle">SubTitle</label>
+                                <input v-model="album.subTitle" class="form-control" type="number" placeholder="Enter the Release Year">
                                 <label class="form-label" for="Image">Image</label>
                                 <input v-model="album.img" class="form-control" type="text" placeholder="Enter the Image URL">
                                 <label class="form-label" for="Cover Image">CoverImage</label>
                                 <input v-model="album.coverImage" class="form-control" type="text" placeholder="Enter the Vinyl Image URL">
                                 <label class="form-label" for="Price">Price</label>
                                 <input v-model="album.price" class="form-control" type="number" placeholder="Enter the Price">
-                                <label class="form-label" for="Release Year">Release Year</label>
-                                <input v-model="album.releaseYear" class="form-control" type="number" placeholder="Enter the Release Year">
                                 <label class="form-label" for="Song Amount">Song Amount</label>
                                 <input v-model="album.songAmount" class="form-control" type="number" placeholder="Enter the Song Amount">
                                 <label class="form-label" for="Category">Category</label>
