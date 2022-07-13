@@ -1,0 +1,219 @@
+{
+  "users": [
+    {
+      "firstName": "First",
+      "surname": "Surname",
+      "email": "admin@email.com",
+      "password": "admin123",
+      "id": 1
+    },
+    {
+      "firstName": "Bob",
+      "surname": "Bobson",
+      "email": "bob@gmail.com",
+      "password": "bob123",
+      "id": 2
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Positions",
+      "price": "price",
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
+      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+      "releaseYear": 2020,
+      "songList": [
+        "Shut Up (explicit)",
+        "34 + 35 (explicit)",
+        "Motive (with Doja Cat) (explicit)",
+        "Just Like Magic (explicit)",
+        "Off the Table (with The Weeknd)",
+        "Six Thirty (explicit)",
+        "Safety Net (feat. Ty Dolla $ign)",
+        "My Hair",
+        "Nasty (explicit)",
+        "Westside",
+        "Love Language (explicit)",
+        "Positions (explicit)",
+        "Obvious (explicit)",
+        "POV"
+      ],
+      "songAmount": 14
+    },
+    {
+      "id": 2,
+      "title": "Positions (Deluxe)",
+      "price": "price",
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
+      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+      "releaseYear": 2021,
+      "songList": [
+        "Shut Up (explicit)",
+        "34 + 35 (explicit)",
+        "Motive (with Doja Cat) (explicit)",
+        "Just Like Magic (explicit)",
+        "Off the Table (with The Weeknd)",
+        "Six Thirty (explicit)",
+        "Safety Net (feat. Ty Dolla $ign)",
+        "My Hair",
+        "Nasty (explicit)",
+        "Westside",
+        "Love Language (explicit)",
+        "Positions (explicit)",
+        "Obvious (explicit)",
+        "POV",
+        "Someone Like u - Interlude",
+        "Test Drive",
+        "34 + 35 (feat. Doja Cat, Megan Thee Stallion)(explicit)",
+        "Worst Behaviour (explicit)",
+        "Main Thing"
+      ],
+      "songAmount": 19
+    },
+    {
+      "id": 3,
+      "title": "Thank u, next",
+      "price": "price",
+      "releaseYear": 2019,
+      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fSob7QVX/SharedImage-110618.png?t=290487e4116e5ee7a527",
+      "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
+      "songList": [
+        "Imagine (explicit)",
+        "Needy (explicit)",
+        "NASA",
+        "Bloodline (explicit)",
+        "Fake Smile (explicit)",
+        "Bad Idea",
+        "Make Up (explicit)",
+        "Ghostin",
+        "In My Head (explicit)",
+        "Thank u, next",
+        "Break Up With Your Girlfriend, I'm Bored (explicit)"
+      ],
+      "songAmount": 12
+    },
+    {
+      "id": 4,
+      "title": "Sweetner",
+      "price": "price",
+      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fvli9QVX/SharedImage-110621.png?t=f3d5b7429800867398db",
+      "img": "https://i.scdn.co/image/ab67616d0000b273c3af0c2355c24ed7023cd394",
+      "releaseYear": 2018,
+      "songList": [
+        "Raindrops (an angel cried) (explicit)",
+        "blazed (feat. Pharrell Williams)",
+        "R.E.M (explicit)",
+        "God is a Woman (explicit)",
+        "Sweetner",
+        "Successful (explicit)",
+        "Everytime (explicit)",
+        "Breathin (explicit)",
+        "No Tears Left to Cry",
+        "Better Off (explicit)",
+        "Goodnight n Go (explicit)",
+        "Pete Davidson (explicit)",
+        "Get Well Soon (explicit)"
+      ],
+      "songAmount": 13
+    },
+    {
+      "id": 5,
+      "title": "Dangerous Woman",
+      "price": "price",
+      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fJ0J9QVX/SharedImage-110620.png?t=ae27a2b6a60dff035c73",
+      "img": "https://i.scdn.co/image/ab67616d0000b273c80df9fb1b8755271cec9785",
+      "releaseYear": 2016,
+      "songList": [
+        "Moonlight",
+        "Dangerous Woman",
+        "Be Alright",
+        "Into You",
+        "Side To Side (explicit)",
+        "Let Me Love You",
+        "Greedy",
+        "Leave Me Lonely",
+        "Everyday (explicit)",
+        "Sometimes",
+        "I Don't Care (explicit)",
+        "Bad Decisions (explicit)",
+        "Touch It",
+        "Knew Better / Forever Boy",
+        "Thinking Bout You (explicit)"
+      ],
+      "songAmount": 15
+    },
+    {
+      "id": 6,
+      "title": "My Everything",
+      "price": "price",
+      "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
+      "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
+      "releaseYear": 2014,
+      "songList": [
+        "Intro",
+        "Problem",
+        "One Last Time",
+        "Why Try",
+        "Break Free",
+        "Best Mistake",
+        "Be My Baby",
+        "Break Your Heart Right Back",
+        "Love Me Harder",
+        "Just A Little Bit of Your Heart",
+        "Hands on Me",
+        "My Everything"
+      ],
+      "songAmount": 12
+    },
+    {
+      "id": 7,
+      "title": "My Everything (Deluxe)",
+      "price": "price",
+      "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
+      "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
+      "releaseYear": 2014,
+      "songList": [
+        "Intro",
+        "Problem",
+        "One Last Time",
+        "Why Try",
+        "Break Free",
+        "Best Mistake",
+        "Be My Baby",
+        "Break Your Heart Right Back",
+        "Love Me Harder",
+        "Just A Little Bit of Your Heart",
+        "Hands on Me",
+        "My Everything",
+        "Bang Bang",
+        "Only 1",
+        "You Don't Know Me"
+      ],
+      "songAmount": 15
+    },
+    {
+      "id": 8,
+      "title": "Your's truly",
+      "price": "price",
+      "coverImage": "https://cdn.shopify.com/s/files/1/0491/7398/7484/products/P0602577974557_1_1445x.png?v=1643990442",
+      "img": "https://i.scdn.co/image/ab67616d0000b2734bb9f35da9ff34b1e2314d8e",
+      "releaseYear": 2013,
+      "songList": [
+        "Honeymoon Avenue",
+        "Baby I",
+        "Right There",
+        "Tattooed Heart",
+        "Lovin' It",
+        "Piano",
+        "Daydreamin'",
+        "The Way",
+        "You'll Never Know",
+        "Almost is Never Enough",
+        "Popular Song",
+        "Better Left Unsaid"
+      ],
+      "songAmount": 12
+    }
+  ]
+}
