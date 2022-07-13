@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="admin">
     <div class="container">
 
@@ -45,3 +46,15 @@ export default {
 <style>
 
 </style>
+=======
+  <div class="container">
+
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>
+>>>>>>> 339845cb6a11befe5dca7ef9e146f20404577cf9
