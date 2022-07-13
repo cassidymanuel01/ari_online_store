@@ -26,7 +26,7 @@
               <input class=""  type="textarea" placeholder="comment" />
             </div>
              <div class="row N ">
-                <button id="send" class="fs-5" type="button">send <i class="fa-regular fa-paper-plane fs-6"></i></button>
+                <button id="send" class="fs-5" type="button">send <i class="fa-regular fa-paper-plane fs-5"></i></button>
              </div>
           </div>
       <div class="col-md-6" id="icon">
@@ -36,32 +36,33 @@
         </div>
       </form>
     </main>
-    <footer></footer>
+     <Footer />
   </div>
 </template>
 <script>
+import Footer from "../components/Footer.vue"
 export default {
-   
+  components: { Footer }
 };
 </script>
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-  height: 85vh;
+  height: 104vh;
   width: 100%;
 }
 #body {
   width: 100%;
-  background-color: lightgrey;
+  background: linear-gradient(lightgrey,#28D084);
 }
 body {
   background-color: lightgrey;
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
+  height: 110vh;
   user-select: none;
 }
 #background {
@@ -85,12 +86,12 @@ input{
 
 input[type="text"]::placeholder {
   color: #28D084;
-font-family: 'Kalam', cursive;
+font-family: 'Nunito', sans-serif;
 }
 
 input[type="text"]{
 color: #28D084;
-font-family: 'Kalam', cursive;
+font-family: 'Nunito', sans-serif;
 border: 1px solid black;
 width: 50%;
 }
@@ -100,7 +101,7 @@ input[type="textarea"]::placeholder {
   vertical-align: text-top;
   padding-bottom: 10px;
   transform: translateY(-30px);
-font-family: 'Kalam', cursive;
+font-family: 'Nunito', sans-serif;
 }
 
 
@@ -109,7 +110,7 @@ input[type="textarea"] {
   color: #28D084;
   border: 1px solid black;
   height: 100px;
-  font-family: 'Kalam', cursive;
+ font-family: 'Nunito', sans-serif;
   width: 50%;
 }
 
@@ -117,30 +118,28 @@ input[type="textarea"]::text{
   color: #28D084;
   height: 100px;
   transform: translateY(-30px);
-  font-family: 'Kalam', cursive;
+ font-family: 'Nunito', sans-serif;
 
 }
 
 .c {
   width: 100%;
   padding: 50px;
-  color:#28D084;
-  font-family: 'Kalam', cursive;
+  color:white;
+  font-family: 'Nunito', sans-serif;
+  text-shadow: 0vw 0vw 1vw #28D084 ;
 }
 
 
 
 label {
   font-size: large;
-  color: #28D084;font-family: 'Kalam', cursive;
+  color: white;
+  font-family: 'Nunito', sans-serif;
 }
 
-footer {
-  background-color: #28D084;
-  height: 200px;
-}
 #left{
-    border-right: 5px solid #28D084  ;
+    border-right: 5px solid white ;
 }
 .N{
   display: flex;  
@@ -155,7 +154,7 @@ img{
     border-radius: 50%;
     width: 75%;
     height: auto;
-    box-shadow: 0vw 0vw 1vw #28D084 ;
+    box-shadow: 0vw 0vw 1vw white ;
 }
 
 #icon{
@@ -166,15 +165,15 @@ img{
 #send{
     margin-top: 6% ;
     width:50%;
-    color: white;
-    background-color: #28D084;
+    color: #28D084;
+    background-color: white;
     border: none;
     border-radius: 50px;
-    font-family: 'Kalam', cursive;
+    font-family: 'Nunito', sans-serif;
 }
 
 #send:hover{
-  box-shadow: 0vw 0vw 1vw #28D084 ;  
+  box-shadow: 0vw 0vw 1vw white;  
   transition: all 1s;
 }
 

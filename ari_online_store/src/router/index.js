@@ -6,11 +6,12 @@ import Register from '../views/RegisterView.vue'
 import Login from '../views/LoginView.vue'
 import YourProfile from '../views/YourProfileView.vue'
 import SingleItem from '../views/SingleItemView.vue'
+import ContactPage from '../views/ContactPage.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'contact',
+    name: 'HomeView',
     component: HomeView
   },
   {
@@ -19,7 +20,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  
   },{
     path: '/allInfo',
     name: 'AllInfo',
@@ -44,7 +45,13 @@ const routes = [
     path: '/allInfo/:id',
     name: 'single',
     component: SingleItem,
-  }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactPage,
+  },
+  
 ]
 
 const router = createRouter({

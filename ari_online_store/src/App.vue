@@ -1,10 +1,13 @@
 <template>
+<NavBar/>
   <router-view />
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
 export default({
-  computed:{
+ components:{NavBar},
+ computed:{
     user(){
       return this.$store.state.user;
     }  },
@@ -16,8 +19,3 @@ export default({
 
 </style>
 
-<script>
-export default {
-  
-}
-</script>
