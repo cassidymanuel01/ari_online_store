@@ -1,44 +1,6 @@
 <template>
   <div class="home">
     <div class="container mx-auto">
-      <nav class="navbar navbar-expand">
-        <div class="container-fluid">
-          <!-- <a class="navbar-brand px-3" href="#">Just Like Magic</a> -->
-          <!-- <button
-            class="px-3"
-            type="button"
-            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button> -->
-        </div>
-      </nav>
-
-<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Just Like Magic</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-     <ul class="navbar-nav w-100 border-2 border-dark d-flex justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/products">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/admin">Admin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-              </li>
-            </ul>
-  </div> -->
-<!-- </div> -->
       <h1
         class="typewrite d-flex justify-content-center text-center"
         data-period="500"
@@ -62,6 +24,7 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 nav {
@@ -149,13 +112,13 @@ button{
 }
 
 .home {
-  background: url("https://i.postimg.cc/dVtG2RBJ/02-Ariana-Grande-press-photo-2020-cr-Dave-Meyers-billboard-1548-1603458811-compressed.jpg");
+  background: linear-gradient(rgba(128, 128, 128, 0.2),rgba(0, 128, 0, 0.2)), url("https://i.postimg.cc/dVtG2RBJ/02-Ariana-Grande-press-photo-2020-cr-Dave-Meyers-billboard-1548-1603458811-compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
 }
 
 .typewrite {

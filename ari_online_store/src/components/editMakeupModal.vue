@@ -1,5 +1,5 @@
 <template>
-  <div class="modal fade" :id="'album_'+album.id" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal fade" :id="'makeup_'+album.id" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -11,15 +11,17 @@
                                 <label class="form-label" for="Title">Title</label>
                                 <input v-model="album.title" class="form-control" type="text" placeholder="Enter the Title">
                                 <label class="form-label" for="SubTitle">Subtitle</label>
-                                <input v-model="album.subtitle" class="form-control" type="number" placeholder="Enter the Subtitle">
+                                <input v-model="album.subtitle" class="form-control" type="text" placeholder="Enter the Subtitle">
                                 <label class="form-label" for="Image">Image</label>
                                 <input v-model="album.img" class="form-control" type="text" placeholder="Enter the Image URL">
                                 <label class="form-label" for="Cover Image">CoverImage</label>
                                 <input v-model="album.coverImage" class="form-control" type="text" placeholder="Enter the Vinyl Image URL">
                                 <label class="form-label" for="Price">Price</label>
                                 <input v-model="album.price" class="form-control" type="number" placeholder="Enter the Price">
-                                <label class="form-label" for="Song Amount">Song Amount</label>
-                                <input v-model="album.songAmount" class="form-control" type="number" placeholder="Enter the Song Amount">
+                                <label class="form-label" for="Description">Description</label>
+                                <textarea v-model="album.description" class="form-control" type="text" placeholder="Enter the Description"></textarea>
+                                <label class="form-label" for="Song Amount">Chapter</label>
+                                <input v-model="album.chapter" class="form-control" type="number" placeholder="Enter the Chapter Number">
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -35,7 +37,7 @@
 export default {
     props: ['album'],
     mounted(){
-        console.log(this.album.id)
+        console.log(this.album.description)
     },
     methods:{
         editItem(){

@@ -4,7 +4,7 @@ import AllProps from '../views/AllInfo.vue'
 import Admin from '../views/Admin.vue'
 import Register from '../views/RegisterView.vue'
 import Login from '../views/LoginView.vue'
-import YourProfile from '../views/YourProfileView.vue'
+import Cart from '../views/Cart.vue'
 import SingleItem from '../views/SingleItemView.vue'
 import ContactPage from '../views/ContactPage.vue'
 
@@ -38,9 +38,9 @@ const routes = [
     name: 'login',
     component: Login
   },{
-    path: '/yourProfile',
-    name: 'yourProfile',
-    component: YourProfile
+    path: '/cart',
+    name: 'cart',
+    component: Cart
   },{
     path: '/allInfo/:id',
     name: 'single',

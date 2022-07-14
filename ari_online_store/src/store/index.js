@@ -21,6 +21,8 @@ export default createStore({
       state.singleAlbum = singleAlbum
     },
     signIn(state,user){
+      localStorage.clear();
+      localStorage.setItem('user',JSON.stringify(user));
       state.user = user
     }
   },
@@ -74,7 +76,7 @@ export default createStore({
       })
       .then(() => context.dispatch('getAlbums'))
     },
-    addItem(context,[image,coverImage,title,price,subtitle,songAmount]){
+    addAlbumItem(context,[title,subtitle,image,coverImage,price,songAmount,newCategory]){
       fetch('http://localhost:3000/allInfo', {
         method:'POST',
         body:JSON.stringify({
@@ -83,8 +85,45 @@ export default createStore({
           title: title,
           price: price,
           subtitle: subtitle,
-          songAmount: songAmount
-
+          songAmount: songAmount,
+          category: newCategory
+        }),
+        headers:{
+          'Content-type' : 'application/json; charset=UTF-8'
+        },
+      })
+      .then(() => context.dispatch('getAlbums'))
+    },
+    addMakeupItem(context,[title,subtitle,image,coverImage,price,description,newCategory,newChapter]){
+      fetch('http://localhost:3000/allInfo', {
+        method:'POST',
+        body:JSON.stringify({
+          img: image,
+          coverImage: coverImage,
+          title: title,
+          price: price,
+          subtitle: subtitle,
+          description: description,
+          chapter: newChapter,
+          category: newCategory
+        }),
+        headers:{
+          'Content-type' : 'application/json; charset=UTF-8'
+        },
+      })
+      .then(() => context.dispatch('getAlbums'))
+    },
+    addFragranceItem(context,[title,subtitle,image,coverImage,price,description,newCategory]){
+      fetch('http://localhost:3000/allInfo', {
+        method:'POST',
+        body:JSON.stringify({
+          img: image,
+          coverImage: coverImage,
+          title: title,
+          price: price,
+          subtitle: subtitle,
+          description: description,
+          category: newCategory
         }),
         headers:{
           'Content-type' : 'application/json; charset=UTF-8'

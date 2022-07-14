@@ -1,6 +1,6 @@
 <template>
   <div id="body" class="about container">
-    <div id="about-section" class="container row mx-auto">
+    <div id="about-section" class="row mx-auto">
     <div id="about" class="col-sm-6 mx-auto">
       <p class="text-start">About...</p>
       <h1>"Just Like Magic"</h1>
@@ -95,8 +95,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title text-center">Cassidy Manuel</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               </button>
             </div>
             <div class="modal-body row">
@@ -120,8 +119,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title text-center">Reagan Carolussen</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               </button>
             </div>
             <div class="modal-body row">
@@ -145,8 +143,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title text-center">Mikhail Thomas</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               </button>
             </div>
             <div class="modal-body row">
@@ -170,8 +167,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title text-center">Jared Isaacs</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               </button>
             </div>
             <div class="modal-body row">
@@ -183,8 +179,8 @@
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="#"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="_blank" href="#"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -192,7 +188,16 @@
     </div>
     </div>
   </div>
+    <Footer/>
+
 </template>
+
+<script>
+  import Footer from '../components/footer.vue'
+  export default {
+  components:{Footer}
+}
+</script>
 // style //
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
@@ -252,7 +257,7 @@ h3{
 }
 #carousel{
   margin-bottom: 20px;
-  min-height: 340px;
+  min-height: 255px;
   padding-bottom: 50px;
 }
 #carousel p{
@@ -266,14 +271,15 @@ h3{
   border-radius: 50%;
   height: 10px;
   width: 10px;
-  }
-  a{
-    color: black;
+}
+a{
+  color: black;
   }
   #professionalImage{
     max-height: 414px;
     max-width: 100%;
     aspect-ratio: 1 !important;
     object-fit: cover;
+    cursor: pointer;
   }
 </style>

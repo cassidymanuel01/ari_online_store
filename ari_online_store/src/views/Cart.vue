@@ -1,5 +1,5 @@
 <template>
-  <div class="yourProfile">
+  <div class="cart">
     <div class="container">
       
     </div>

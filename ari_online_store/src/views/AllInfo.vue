@@ -1,7 +1,8 @@
 <template>
   <div class="AllProperties">
     <div v-if="albums">
-        <div class="wrapper mt-5 mx-3">
+        <div class="wrapper mt-5 mx-auto">
+          <a href="#albumsContainer">
             <div class="imgContainer">
               <img
                 class="img-fluid"
@@ -16,37 +17,43 @@
                 </div>
               </div>
             </div>
-            <div class="imgContainer">
-              <img
-                class="img-fluid"
-                src="https://pbs.twimg.com/media/FFuVnvyWUAoiKMO.jpg:large"
-                alt="Albums"
-              />
-              <div class="onHover">
-                <div class="row">
-                  <div class="col-md-12">
-                    <span id="hoverInfo">Albums</span>
+            </a>
+            <a href="">
+              <div class="imgContainer">
+                <img
+                  class="img-fluid"
+                  src="https://pbs.twimg.com/media/FFuVnvyWUAoiKMO.jpg:large"
+                  alt="Albums"
+                />
+                <div class="onHover">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <span id="hoverInfo">Albums</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="imgContainer">
-              <img
-                class="img-fluid"
-                src="https://vioralondon.com/wp-content/uploads/2020/10/Best-Ariana-Grande-Perfumes-Reviewed-image.jpg"
-                alt="Fragrances"
-              />
-              <div class="onHover">
-                <div class="row">
-                  <div class="col-md-12">
-                    <span id="hoverInfo">Fragrances</span>
+            </a>
+            <a href="">
+              <div class="imgContainer">
+                <img
+                  class="img-fluid"
+                  src="https://vioralondon.com/wp-content/uploads/2020/10/Best-Ariana-Grande-Perfumes-Reviewed-image.jpg"
+                  alt="Fragrances"
+                />
+                <div class="onHover">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <span id="hoverInfo">Fragrances</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
+          <div id="albumsContainer"></div>
           <div class="container">
-            <div class="row my-5 pt-5">
+            <div class="row my-3 pt-2">
           <div class="col-md-12 d-flex justify-content-center align-content-center">
             <h2 class="display-5">View our albums</h2>
           </div>
@@ -218,13 +225,16 @@
           </div>
         </div>
           </div>
+          <Footer />
       </div>
       <div v-else>loading...</div>
   </div>
 </template>
 
 <script>
+import Footer from '../components/footer.vue';
 export default {
+  components:{Footer},
   mounted() {
     this.$store.dispatch("getAlbums");
   },
@@ -232,6 +242,9 @@ export default {
     albums() {
       return this.$store.state.albums;
     },
+    user(){
+      return this.$store.state.user;
+    }
   },
 };
 </script>
@@ -247,18 +260,17 @@ export default {
 }
 
 .wrapper{
-  padding-top: 2rem !important;
+  padding-top: 2.35rem !important;
   display: flex;
   width: 100%;
 }
-.wrapper > div {
-  height: 75vh;
+.wrapper > a >div{
+  height: 89vh;
 }
-.wrapper > div img {
-  height: 75vh;
+.wrapper > a >div img {
+  height: 89vh;
   object-fit: cover;
 }
-
 @media screen and (max-width:769px) {
   .wrapper{
     display: flex;
@@ -266,10 +278,10 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-    .wrapper > div {
+    .wrapper > a >div {
       height: 45vh;
     }
-    .wrapper > div img {
+    .wrapper > a >div img {
       height: 45vh;
       object-fit: cover;
     }
@@ -294,11 +306,10 @@ export default {
 #titles h6 {
   font-style: italic;
 }
-
-    #hoverInfo{
-        font-size: 24px;
-        color: black;
-    }
+#hoverInfo{
+  font-size: 24px;
+  color: black;
+  }
 .col-md-4 {
   margin: 0;
   padding: 0;

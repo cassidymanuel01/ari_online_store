@@ -7,23 +7,27 @@
     <header></header>
     <main>
       <form id="background">
-        <div id="width">
-       <div class="text-center c display-1">Contact</div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mt-4">
+              <div class="text-center c display-1 mt-4">Contact</div>
+            </div>
+          </div>
           <div id="boxOfInput" class="row">  
             <div class="col-md-6" id="left">
             <div class="row N">
               <label class="w-75 text-center" >Full Name:</label>
-              <input class="" type="text" placeholder="what's your first name?" />
+              <input class="form-control fw-bold" type="text" placeholder="what's your first name?" />
             </div>
             <br>
             <div class="row N ">
               <label class="w-75 text-center" >Email Address:</label>
-              <input class=""  type="text" placeholder="you@example.com" />
+              <input class="form-control fw-bold"  type="text" placeholder="you@example.com" />
             </div>
             <br> 
             <div class="row N ">
               <label class="w-75 text-center" >Message:</label>
-              <input class=""  type="textarea" placeholder="comment" />
+              <input class="form-control fw-bold"  type="textarea" placeholder="comment" />
             </div>
              <div class="row N ">
                 <button id="send" class="fs-5" type="button">send <i class="fa-regular fa-paper-plane fs-5"></i></button>
@@ -124,7 +128,6 @@ input[type="textarea"]::text{
 
 .c {
   width: 100%;
-  padding: 50px;
   color:white;
   font-family: 'Nunito', sans-serif;
   text-shadow: 0vw 0vw 1vw #28D084 ;
@@ -200,6 +203,15 @@ input{
     object-fit: cover;
     border-radius: 50%;
     width: 100%;
+    height: auto;
+    box-shadow: 0vw 0vw 1vw #28D084 ;
+ }
+}
+@media(min-width:1025px){
+ img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 65%;
     height: auto;
     box-shadow: 0vw 0vw 1vw #28D084 ;
 

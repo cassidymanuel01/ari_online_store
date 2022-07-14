@@ -15,10 +15,13 @@
         </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
+import Footer from '../components/footer.vue'
 export default {
+  components:{Footer},
   data(){
     return{
       name: null,
@@ -58,7 +61,7 @@ input{
   border-right: hidden  !important;
   border-bottom: solid!important;
   max-width: 400px;
-  
+  background-color: rgb(245, 245, 245);
 }
 button{
   width: 100px !important;

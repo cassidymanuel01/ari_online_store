@@ -1,8 +1,11 @@
 {
+  "cart": [
+    {}
+  ],
   "users": [
     {
-      "firstName": "First",
-      "surname": "Surname",
+      "firstName": "Admin",
+      "surname": "Nimda",
       "email": "admin@email.com",
       "password": "admin123",
       "id": 1
@@ -17,13 +20,84 @@
   ],
   "allInfo": [
     {
-      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
-      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
-      "title": "Positions (Deluxe)",
-      "subtitle": "2020",
+      "id": 1,
+      "title": "Positions",
       "price": 100,
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
+      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+      "subtitle": 2020,
+      "songList": [
+        "Shut Up (explicit)",
+        "34 + 35 (explicit)",
+        "Motive (with Doja Cat) (explicit)",
+        "Just Like Magic (explicit)",
+        "Off the Table (with The Weeknd)",
+        "Six Thirty (explicit)",
+        "Safety Net (feat. Ty Dolla $ign)",
+        "My Hair",
+        "Nasty (explicit)",
+        "Westside",
+        "Love Language (explicit)",
+        "Positions (explicit)",
+        "Obvious (explicit)",
+        "POV"
+      ],
+      "songAmount": 14,
+      "category": "Album"
+    },
+    {
+      "id": 2,
+      "title": "Positions (Deluxe)",
+      "price": 100,
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
+      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+      "subtitle": 2021,
+      "songList": [
+        "Shut Up (explicit)",
+        "34 + 35 (explicit)",
+        "Motive (with Doja Cat) (explicit)",
+        "Just Like Magic (explicit)",
+        "Off the Table (with The Weeknd)",
+        "Six Thirty (explicit)",
+        "Safety Net (feat. Ty Dolla $ign)",
+        "My Hair",
+        "Nasty (explicit)",
+        "Westside",
+        "Love Language (explicit)",
+        "Positions (explicit)",
+        "Obvious (explicit)",
+        "POV",
+        "Someone Like u - Interlude",
+        "Test Drive",
+        "34 + 35 (feat. Doja Cat, Megan Thee Stallion)(explicit)",
+        "Worst Behaviour (explicit)",
+        "Main Thing"
+      ],
       "songAmount": 19,
-      "id": 2
+      "category": "Album"
+    },
+    {
+      "id": 3,
+      "title": "Thank u, next",
+      "price": 100,
+      "subtitle": 2019,
+      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fSob7QVX/SharedImage-110618.png?t=290487e4116e5ee7a527",
+      "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
+      "songList": [
+        "Imagine (explicit)",
+        "Needy (explicit)",
+        "NASA",
+        "Bloodline (explicit)",
+        "Fake Smile (explicit)",
+        "Bad Idea",
+        "Make Up (explicit)",
+        "Ghostin",
+        "In My Head (explicit)",
+        "Thank u, next",
+        "Break Up With Your Girlfriend, I'm Bored (explicit)"
+      ],
+      "songAmount": 12,
+      "category": "Album"
     },
     {
       "id": 4,
@@ -161,7 +235,7 @@
       "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, high-shine finish.",
       "price": 345,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 10,
@@ -172,7 +246,7 @@
       "description": "An ultra-smooth matte formula with rich colors that delivers an instant, longlasting color that stays comfortably in place.",
       "price": 350,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 11,
@@ -183,7 +257,7 @@
       "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
       "price": 440,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 12,
@@ -194,7 +268,7 @@
       "description": "A next level highlighter, used on the cheeks, eyes and body. Infused with vegetable driven emollients, this product applies like a second skin and leaves a dewy luminous highlight that will last.",
       "price": 405,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 13,
@@ -205,7 +279,7 @@
       "description": "Long wearing eyeliner inspired by Ariana's signature bold look.",
       "price": 350,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 14,
@@ -215,8 +289,8 @@
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipMarker_PDP_Open_bookednbusy_77ea0dba-1a33-4694-bcb6-8c0dc64af2c0.png?v=1639766462",
       "description": "A longwearing color with a modern take and natural finish.",
       "price": 295,
-      "category": "Album",
-      "chapter" : 1
+      "category": "Makeup",
+      "chapter": 1
     },
     {
       "id": 15,
@@ -227,7 +301,7 @@
       "description": "Infused with a 100% naturally derived bamboo powder this mascarra will volumize and nourish your lashes. An all new clean flourshing lengthening mascara.",
       "price": 275,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 16,
@@ -238,7 +312,7 @@
       "description": "Longwearing, ultra-creamy and smudge-free Kohl eyeliner pencil, inspired by Ariana.",
       "price": 315,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 17,
@@ -249,7 +323,7 @@
       "description": "Super comfortable and crystal clear, this lip gloss delivers fuller-looking lips. Wear with a lip color or alone for the ultimate wet look.",
       "price": 315,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 18,
@@ -260,7 +334,7 @@
       "description": "Longwearing, powerfully pigmented,water proof and in a range of matte finishes. The luxe liquid",
       "price": 295,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 19,
@@ -271,7 +345,7 @@
       "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
       "price": 295,
       "category": "Makeup",
-      "chapter" : 1
+      "chapter": 1
     },
     {
       "id": 20,
@@ -296,7 +370,7 @@
       "chapter": 2
     },
     {
-      "id": 21,
+      "id": 22,
       "title": "Lash & Brow Boosting Serum",
       "subtitle": "flourshing",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LashBrowSerum_PDP_Open_left.png?v=1647291171",
@@ -307,7 +381,7 @@
       "chapter": 2
     },
     {
-      "id": 22,
+      "id": 23,
       "title": "Calming Face Mist",
       "subtitle": "mist thing",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_FaceMist_PDP_Open.png?v=1647291159",
@@ -318,7 +392,7 @@
       "chapter": 2
     },
     {
-      "id": 23,
+      "id": 24,
       "title": "Metallic Gel Eyeshadow",
       "subtitle": "midnight shadow",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
@@ -329,7 +403,7 @@
       "chapter": 2
     },
     {
-      "id": 24,
+      "id": 25,
       "title": "Cooling Blurring Undereye Balm",
       "subtitle": "full night's sleep",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
@@ -340,7 +414,7 @@
       "chapter": 2
     },
     {
-      "id": 25,
+      "id": 26,
       "title": "Eyeshadow Gloss",
       "subtitle": "midnight shadows",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_EyeGloss_PDP_Closed_left.png?v=1647291184",
@@ -351,7 +425,7 @@
       "chapter": 2
     },
     {
-      "id": 26,
+      "id": 27,
       "title": "Cheek and Lipstick",
       "subtitle": "eclipse",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LipCheek_PDP_Closed_StandingO.png?v=1647873144",
@@ -362,7 +436,7 @@
       "chapter": 2
     },
     {
-      "id": 27,
+      "id": 28,
       "title": "Lip Oil",
       "subtitle": "essential drip",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipOil_PDP_Open_LavendarKiss_left.png?v=1655397026",
@@ -373,7 +447,7 @@
       "chapter": 3
     },
     {
-      "id": 28,
+      "id": 29,
       "title": "Classic Lipstick",
       "subtitle": "on your collar",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_Lipstick_PDP_Open_puckerup.png?v=1655141382",
@@ -384,7 +458,7 @@
       "chapter": 3
     },
     {
-      "id": 29,
+      "id": 30,
       "title": "Lip Balm",
       "subtitle": "everything nice",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipBalm_PDP_Open_left.png?v=1657117585",
@@ -395,7 +469,7 @@
       "chapter": 3
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "Lip Liner Pencil",
       "subtitle": "at the borderline",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LipLiner_PDP_Open_EQ_right.png?v=1655144315",
@@ -406,7 +480,7 @@
       "chapter": 3
     },
     {
-      "id": 31,
+      "id": 32,
       "title": "Liquid Lipstick",
       "subtitle": "on your collar",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_OnYourCollar_LiquidLipstick_PDP_Open_wifey_right.png?v=1655144058",
@@ -415,8 +489,9 @@
       "price": 335,
       "category": "Makeup",
       "chapter": 3
-    },{
-      "id": 32,
+    },
+    {
+      "id": 33,
       "title": "Ari Fragrance",
       "subtitle": "women",
       "coverImage": "https://media.ulta.com/i/ulta/2293165?w=845&h=845",
@@ -424,8 +499,9 @@
       "description": "Ari Perfume",
       "price": 215,
       "category": "Fragrance"
-    },{
-      "id": 33,
+    },
+    {
+      "id": 34,
       "title": "God is a Woman",
       "subtitle": "female",
       "coverImage": "https://media.ulta.com/i/ulta/2586366?w=659&h=659",
@@ -433,8 +509,9 @@
       "description": "God is a Woman Perfume",
       "price": 285,
       "category": "Fragrance"
-    },{
-      "id": 34,
+    },
+    {
+      "id": 35,
       "title": "R.E.M",
       "subtitle": "sweet",
       "coverImage": "https://media.ulta.com/i/ulta/2570225?w=720",
@@ -442,17 +519,19 @@
       "description": "R.E.M Perfume",
       "price": 265,
       "category": "Fragrance"
-    },{
-      "id": 35,
-        "title": "Thank U, Next",
-        "subtitle": "sweet",
-        "coverImage": "https://media.ulta.com/i/ulta/2551015?w=720",
-        "img": "https://media.ulta.com/i/ulta/2551015?w=720",
-        "description": "Thank U, Next Perfume",
-        "price": 315,
-        "category": "Fragrance"
-    },{
+    },
+    {
       "id": 36,
+      "title": "Thank U, Next",
+      "subtitle": "sweet",
+      "coverImage": "https://media.ulta.com/i/ulta/2551015?w=720",
+      "img": "https://media.ulta.com/i/ulta/2551015?w=720",
+      "description": "Thank U, Next Perfume",
+      "price": 315,
+      "category": "Fragrance"
+    },
+    {
+      "id": 37,
       "title": "Cloud",
       "subtitle": "sweet",
       "coverImage": "https://media.ulta.com/i/ulta/2536711?w=720",
@@ -460,8 +539,9 @@
       "description": "Cloud Perfume",
       "price": 245,
       "category": "Fragrance"
-    },{
-      "id": 37,
+    },
+    {
+      "id": 38,
       "title": "Moonlight",
       "subtitle": "powdery",
       "coverImage": "https://media.ulta.com/i/ulta/2515153?w=720",

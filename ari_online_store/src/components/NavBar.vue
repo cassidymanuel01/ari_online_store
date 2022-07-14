@@ -1,20 +1,26 @@
 <template>
-  <nav class="p-0 navbar text-center fixed-top navbar-expand-lg navbar-dark">
-        <div class="bg-dark container pullRightLeft p-3 mt-1">
+  <nav id="nav" class="p-0 navbar text-center fixed-top navbar-expand-lg navbar-dark">
+        <div class="container pullRightLeft p-3 mt-1">
             <a href="/" class="mx-auto navbar-brand"> Just Like Magic </a>
             <button class="mx-auto navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse">
                 <div id="navBarSize" class="navbar-nav mx-auto">
-                    <div class="navbar-nav d-flex">
+                    <div class="navbar-nav d-flex align-items-center">
                         <a href="/">HOME</a>
-                        <a href="/allInfo">ALL PRODUCTS</a>
-                        <a href="/register">REGISTER</a>
-                        <a href="/login">LOGIN</a>
-                        <a href="/admin">ADMIN</a>
+                        <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
+                        <a v-if="!user" href="/register">REGISTER</a>
+                        <a v-if="!user" href="/login">LOGIN</a>
+                        <div v-if="user">
+                        <a v-if="user[0].firstName=='First'" href="/admin">ADMIN</a>
+                        </div>
                         <a href="/about">ABOUT</a>
                         <a href="/contact">CONTACT</a>
+                    </div>
+                    <div class="navbar-nav d-flex">
+                        <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href="/"><i class="bi bi-cart"></i></a>
+                        <a v-if="user" href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
                     </div>
                 </div>
             </div>
@@ -26,97 +32,32 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-     <ul class="navbar-nav w-100 border-2 border-dark d-flex justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/allInfo">ALL PRODUCTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin">ADMIN</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">CONTACT</a>
-        </li>
-      </ul>
+     <div class="navbar-nav gap-5 d-flex flex-column justify-content-center h-100 fs-3 align-items-center">
+      <a href="/">HOME</a>
+      <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
+      <a v-if="!user" href="/register">REGISTER</a>
+      <a v-if="!user" href="/login">LOGIN</a>
+        <div v-if="user">
+          <a v-if="user[0].firstName=='First'" href="/admin">ADMIN</a>
+        </div>
+        <a href="/about">ABOUT</a>
+        <a href="/contact">CONTACT</a>
+        <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a>
+        <a v-if="user" href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
+      </div>
+    </div>
   </div>
-</div>
+  
 </template>
 <script>
 
-import HomeView from '../views/HomeView.vue'
-import AllProps from '../views/AllInfo.vue'
-import Admin from '../views/Admin.vue'
-import Register from '../views/RegisterView.vue'
-import Login from '../views/LoginView.vue'
-import YourProfile from '../views/YourProfileView.vue'
-import SingleItem from '../views/SingleItemView.vue'
-import ContactPage from '../views/ContactPage.vue'
-
-const routes = [
-  {
-    path: '/',
-    name: 'HomeView',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-  
-  },{
-    path: '/allInfo',
-    name: 'AllInfo',
-    component: AllProps
-  },{
-    path: '/admin',
-    name: 'Admin',
-    component: Admin
-  },{
-    path: '/register',
-    name: 'register',
-    component: Register
-  },{
-    path: '/login',
-    name: 'login',
-    component: Login
-  },{
-    path: '/yourProfile',
-    name: 'yourProfile',
-    component: YourProfile
-  },{
-    path: '/allInfo/:id',
-    name: 'single',
-    component: SingleItem,
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: ContactPage,
-  },
-  
-]
 export default {
-    
+    computed:{
+    user(){
+      return this.$store.state.user;
+    }
+  }
 }
-// function changeBg(){
-//     var navbar = document.getElementById('Background');
-//     var scrollValue = window.scrollY;
-//     if (scrollValue < 700){
-//         navbar.classList.remove('white')
-//     }
-//     else{
-//         navbar.classList.add('white')
-//     }
-// }
-// window.addEventListener('scroll', changeBg);
-// window.addEventListener('load', changeBg);
 </script>
 
 <style>
@@ -124,6 +65,11 @@ export default {
 *{
 font-family: 'Nunito', sans-serif;
 font-weight: bolder;
+}
+
+#nav{
+  transition: all 0.4s ease;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .white a, .white{
