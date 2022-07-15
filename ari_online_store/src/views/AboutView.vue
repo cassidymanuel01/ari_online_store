@@ -76,16 +76,16 @@
     <h1>THE TEAM</h1>
     <div class="row">
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#CassidyModal">
-        <img id="professionalImage" src="../assets/Cassidy2.jpg" alt="CassidyImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Cassidy2.jpg" alt="CassidyImage" class="img-fluid my-3">
       </div>
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#ReaganModal">
-        <img id="professionalImage" src="../assets/Reagan.jpg" alt="ReaganImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Reagan.jpg" alt="ReaganImage" class="img-fluid my-3">
       </div>
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#MikhailModal">
-        <img id="professionalImage" src="../assets/Mikhail2.jpg" alt="MikhailImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Mikhail2.jpg" alt="MikhailImage" class="img-fluid my-3">
       </div>
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#JaredModal">
-        <img id="professionalImage" src="../assets/Jared2.jpg" alt="JaredImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Jared2.jpg" alt="JaredImage" class="img-fluid my-3">
         </div>
     </div>
     <div id="modals">
@@ -100,15 +100,15 @@
             </div>
             <div class="modal-body row">
               <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+                <p>I am 19 years old and currently a student at Life Choices Coding Academy. I am respectful, dedicated and a team player. I always keep a positive mindset when I approach situations. I also always try to enjoy the little things in life. I have always been fascinated by coding ever since I realised that it was not as hard and bad as I thought it would be. I feel that coding is fun. Since then, I have developed an interest in coding.</p>
               </div>
               <div class="col-md-6">
                 <img class="img-fluid" src="../assets/Cassidy2.jpg" alt="CassidyImage">
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <a target="_blank" href="https://www.linkedin.com/in/cassidy-manuel-08b537245/"><button type="button" class="btn btn-primary"><i class="bi bi-linkedin"></i></button></a><a target="_blank" href="https://github.com/cassidymanuel01">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-github"></i></button></a>
             </div>
           </div>
         </div>
@@ -124,15 +124,15 @@
             </div>
             <div class="modal-body row">
               <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+                <p>I am a hard-working, multi-talented individual. I love talking to people and learning new things. I spend a lot of my free time discovering new things as well as developing new hobbies. My passion for programming came when I discovered my love for solving problems and logic-based puzzles. Programming was the one thing that made me feel like I was doing something I genuinely liked.</p>
               </div>
               <div class="col-md-6">
                 <img class="img-fluid" src="../assets/Reagan.jpg" alt="ReaganImage">
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <a target="_blank" href="https://www.linkedin.com/in/reagan-carolussen-03054823a/"><button type="button" class="btn btn-primary"><i class="bi bi-linkedin"></i></button></a>
+              <a target="_blank" href="https://github.com/Reagan701/"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-github"></i></button></a>
             </div>
           </div>
         </div>
@@ -148,15 +148,15 @@
             </div>
             <div class="modal-body row">
               <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+                <p>I am an aspiring web developer taking part in the Life Choices coding internship. I am an athletic, respectful, hardworking and dedicated young man who is committed to improving as a person no matter how difficult the journey is. I grew up in Cape Town, South Africa where i currently reside. I am a practicing massage therapist and I'm currently taking part in the holistic massage course at Healing Hands Academy. I am a jiu jitsu practitioner and coach at Estrategia bjj, this is where I found my passion for coaching, health and fitness. I am using all of these activities to learn lessons that will help me pursue my long term goal of becoming independant.</p>
               </div>
               <div class="col-md-6">
                 <img class="img-fluid" src="../assets/Mikhail2.jpg" alt="MikhailImage">
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="https://www.linkedin.com/in/mikhail-thomas-177065208/"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href="https://github.com/MikhailThomas"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -172,15 +172,15 @@
             </div>
             <div class="modal-body row">
               <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ipsum dolorem distinctio animi, nam libero natus recusandae suscipit id. Consectetur laborum numquam iure expedita quis fugiat, beatae incidunt dolor.</p>
+                <p>Jared Isaacs is a part-time web-developer, app developer and a pinch of graphic designer, since not only does he create them, but design the layout and graphics for them, which gives it that final touch. His passionate about software development, thus large projects gives him the ways and means of learning new methods of coding, new coding techniques and most of all feeds the spermologist within him.</p>
               </div>
               <div class="col-md-6">
                 <img class="img-fluid" src="../assets/Jared2.jpg" alt="JaredImage">
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href="#"><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="_blank" href="#"><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="https://www.linkedin.com/in/jared-isaacs-854514245/"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="_blank" href="https://github.com/AkutoBlade"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@
 
 </template>
 
-<script>
+<script scoped>
   import Footer from '../components/footer.vue'
   export default {
   components:{Footer}
@@ -281,5 +281,7 @@ a{
     aspect-ratio: 1 !important;
     object-fit: cover;
     cursor: pointer;
+    border: solid #28D084 3px;
+    border-radius: 10%;
   }
 </style>

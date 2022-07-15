@@ -83,7 +83,7 @@
         </div>
         <div class="row my-5 pb-5">
           <div
-            v-for="album in albums.slice(0, 6)"
+            v-for="album in albums.filter((x) => {return x.category=='Album'})"
             :key="album.id"
             class="col-md-4"
           >
@@ -100,7 +100,7 @@
                 <div class="row mx-auto">
                   <div id="titles" class="col-6 ps-2 pt-3">
                     <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                    <h5 style="height: 48px" class="fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -174,7 +174,7 @@
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
             <router-link
               class="m-0 p-0"
               style="text-decoration: none; color: inherit"
@@ -259,7 +259,7 @@
             <h2 class="display-5">View our Fragrances</h2>
           </div>
         </div>
-        <div class="row my-5 pb-5">
+        <div class="row mt-5">
           <div
             v-for="album in albums.filter((x) => {
               return x.category == 'Fragrance';
@@ -345,6 +345,11 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap");
+
+div.container{
+  padding-right:2rem;
+  padding-left:2rem;
+}
 
 .itemContainer:hover img {
   transform: translate(0px, -20px);

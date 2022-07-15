@@ -23,9 +23,10 @@ export default createStore({
     setSingleAlbum(state, singleAlbum) {
       state.singleAlbum = singleAlbum
     },
-    signIn(state, user) {
-      localStorage.clear();
-      localStorage.setItem('user', JSON.stringify(user));
+    signIn(state,user){
+      state.user = user
+    },
+    setCart(state,user){
       state.user = user
     },
     sortPropertiesByPrice: (state) => {
