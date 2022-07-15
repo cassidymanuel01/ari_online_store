@@ -18,7 +18,7 @@
               </div>
             </div>
             </a>
-            <a href="">
+            <a href="#makeupContainer">
               <div class="imgContainer">
                 <img
                   class="img-fluid"
@@ -34,7 +34,7 @@
                 </div>
               </div>
             </a>
-            <a href="">
+            <a href="#fragranceContainer">
               <div class="imgContainer">
                 <img
                   class="img-fluid"
@@ -88,6 +88,7 @@
           </div>
         </div>
         <div class="row my-5 pt-5">
+        <div id="makeupContainer" class="pt-5"></div>
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
             <h2 class="display-5">View our Makeup</h2>
             <h3 class="display-6">Chapter 1</h3>
@@ -192,6 +193,7 @@
         </div>
         <div class="row my-5 pt-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+          <div id="fragranceContainer" class="p-5">.</div>
             <h2 class="display-5">View our Fragrances</h2>
           </div>
         </div>
@@ -250,6 +252,12 @@ export default {
 </script>
 
 <style scoped>
+
+div.container{
+  padding-right:1rem;
+  padding-left:1rem;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap");
 
 .itemContainer:hover img {

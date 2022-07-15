@@ -34,6 +34,10 @@ export default {
 </script>
 
 <style scoped>
+div.container{
+  padding-right:2rem;
+  padding-left:2rem;
+}
 #form{
   border: hidden;
   border-radius: 10px;

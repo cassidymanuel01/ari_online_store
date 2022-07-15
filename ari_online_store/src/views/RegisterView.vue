@@ -39,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+div.container{
+  padding-right:1rem;
+  padding-left:1rem;
+}
 
 .form{
   padding-top: 30px;

@@ -1,12 +1,12 @@
 <template>
   <div id="body" class="about container">
     <div id="about-section" class="row mx-auto">
-    <div id="about" class="col-sm-6 mx-auto">
+    <div id="about" class="col-md-6 mx-auto">
       <p class="text-start">About...</p>
       <h1>"Just Like Magic"</h1>
       <p>In the winter of 2022 4 goated developers noticed a gap in the Ariana Grande paraphernalia market, with the extremely high demand for these products 'The Goats' created an online store to sell strictly Ariana Grande products. Why? you may ask... for the love of code.</p>
     </div>
-    <div id="polaroid" class="card col-sm-6 mx-auto">
+    <div id="polaroid" class="card col-md-6 mx-auto">
       <i class="bi bi-instagram"></i>
       <a target="blank" href="https://www.instagram.com/arianagrande"><img id="image" src="../assets/About-Images/Polaroid-of-ari.jpg" 
       class="card-img-top" alt=""></a>
@@ -202,6 +202,11 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Righteous&display=swap');
+
+div.container{
+  padding-right:2rem;
+  padding-left:2rem;
+}
 
 #body{
   font-family: 'Nunito', sans-serif;

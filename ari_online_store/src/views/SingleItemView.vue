@@ -79,51 +79,31 @@
               :alt="singleInfo.title"
             />
           </div>
-          <div class="thing col-md-6 border border-1 border-dark shadow shadow-lg d-flex flex-column justify-content-center align-items-center">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="text-center fw-bold pb-1">{{ singleInfo.title }}</h1>
-                <h6 class="fw-bold text-center">{{ singleInfo.subtitle }}</h6>
-                <div class="py-3">
-                  <h4 class="fw-bold text-center">Wear With These</h4>
-                  <div class="wrapper">
-                    <div v-for="makeup in singleInfo" :key="makeup.id">
-                      {{makeup}}
-                    </div>
-                  </div>
-                  <div id="slist" class="col-md-6">
-                    <!-- <p
-                      v-for="song in singleSongInfo.slice(0, singleSongInfo.length/2)"
-                      :key="song[i]"
-                    >
-                      {{ song }}
-                    </p> -->
-                  </div>
-                  <div id="slist" class="col-md-6">
-                    <!-- <p
-                      v-for="song in singleSongInfo.slice(singleSongInfo.length/2,singleSongInfo.length)"
-                      :key="song[i]"
-                    >
-                      {{ song }}
-                    </p> -->
-                  </div>
+          <div class="thing col-md-6 border border-1 border-dark shadow shadow-lg">
+            <div class="row h-100 w-100">
+              <div class="col-md-12 h-100 w-100 d-flex flex-column justify-content-evenly align-items-center">
+                <div>
+                  <h1 class="fs-1 text-center fw-bold pb-1">{{ singleInfo.title }}</h1>
+                  <h6 class="fs-1 fw-bold text-center">{{ singleInfo.subtitle }}</h6>
+                </div>
+                <div>
+                  <h5 class="fs-4 fw-bold text-center fst-italic"> "{{singleInfo.description}}" </h5>
                 </div>
                 <div
-                  class="d-flex justify-content-center align-items-center gap-2 pb-2"
                 >
                   <div>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
+                    <i class="fa-2x bi bi-star-fill"></i>
+                    <i class="fa-2x bi bi-star-fill"></i>
+                    <i class="fa-2x bi bi-star-fill"></i>
+                    <i class="fa-2x bi bi-star-fill"></i>
+                    <i class="fa-2x bi bi-star"></i>
                   </div>
                   <div>
-                    <span class="fs-5 fw-bold">45+ ratings</span>
+                    <span class="fs-4 fw-bold">90+ ratings</span>
                   </div>
                 </div>
                 <div class="col-md-6 mt-3 mx-auto fs-5 d-flex flex-column justify-content-center align-items-center">
-                  <button id="cartButton" class="py-2 px-1 fw-bold">
+                  <button id="cartButton" class="py-2 px-1 fs-4 fw-bold">
                     <i class="bi bi-cart"></i> Add to cart - R{{singleInfo.price}}
                   </button>
                 </div>
@@ -147,37 +127,17 @@
             />
           </div>
           <div class="thing col-md-6 border border-1 border-dark shadow shadow-lg d-flex flex-column justify-content-center align-items-center">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="text-center fw-bold pb-1">{{ singleInfo.title }}</h1>
-                <h6 class="fw-bold text-center">{{ singleInfo.subtitle }}</h6>
-                <div class="py-3">
-                  <h4 class="fw-bold text-center">Wear With These</h4>
-                  <div class="wrapper">
-                    <!-- <div v-for="makeup in singleInfo" :key="makeup.id">
-                      {{makeup}}
-                    </div> -->
-                  </div>
-                  <div id="slist" class="col-md-6">
-                    <!-- <p
-                      v-for="song in singleSongInfo.slice(0, singleSongInfo.length/2)"
-                      :key="song[i]"
-                    >
-                      {{ song }}
-                    </p> -->
-                  </div>
-                  <div id="slist" class="col-md-6">
-                    <!-- <p
-                      v-for="song in singleSongInfo.slice(singleSongInfo.length/2,singleSongInfo.length)"
-                      :key="song[i]"
-                    >
-                      {{ song }}
-                    </p> -->
-                  </div>
+            <div class="row h-100 w-100">
+              <div class="col-md-12 h-100 w-100 d-flex flex-column justify-content-evenly align-items-center">
+                <div>
+                  <h1 class="text-center fw-bold pb-1">{{ singleInfo.title }}</h1>
+                  <h6 class="fw-bold text-center">{{ singleInfo.subtitle }}</h6>  
                 </div>
                 <div
-                  class="d-flex justify-content-center align-items-center gap-2 pb-2"
                 >
+                <div>
+                  <h5 class="fs-4 fw-bold text-center fst-italic"> "{{singleInfo.description}}" </h5>
+                </div>
                   <div>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
