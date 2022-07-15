@@ -1,6 +1,8 @@
 {
   "cart": [
-    {}
+    {
+      
+    }
   ],
   "users": [
     {
@@ -8,7 +10,8 @@
       "surname": "Nimda",
       "email": "admin@email.com",
       "password": "admin123",
-      "id": 1
+      "id": 1,
+      "isAdmin":true
     },
     {
       "firstName": "Bob",
@@ -16,6 +19,34 @@
       "email": "bob@gmail.com",
       "password": "bob123",
       "id": 2
+    },
+    {
+      "firstName": "Jared",
+      "surname": "Isaacs",
+      "email": "rared.isaacs@gmail.com",
+      "password": "Assassin 3.0",
+      "id": 3
+    },
+    {
+      "firstName": "Jared",
+      "surname": "Isaacs",
+      "email": "rared.isaacs@gmail.com",
+      "password": "Assassin 3.0",
+      "id": 4
+    },
+    {
+      "firstName": "Jared",
+      "surname": "Isaacs",
+      "email": "rared.isaacs@gmail.com",
+      "password": "ASSASSIN",
+      "id": 5
+    },
+    {
+      "firstName": "Jared",
+      "surname": "Isaacs",
+      "email": "rared.isaacs@gmail.com",
+      "password": "1234",
+      "id": 6
     }
   ],
   "allInfo": [

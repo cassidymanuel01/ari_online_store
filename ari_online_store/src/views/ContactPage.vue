@@ -214,6 +214,19 @@ input{
     width: 65%;
     height: auto;
     box-shadow: 0vw 0vw 1vw #28D084 ;
+ }
+
+}
+
+@media(min-width:454px) and (max-width:768px){
+ img{
+  margin-top: 80px;
+    object-fit: cover;
+    border-radius:0% !important;
+    width: 65%;
+    height: auto;
+    box-shadow: 0vw 0vw 1vw #28D084 ;
+ }
 
 }
 
@@ -226,8 +239,6 @@ input[type="textarea"] {
 }
 input[type="text"]{
 width: 75%;
-}
-
 }
 
 @media(max-width:768px){

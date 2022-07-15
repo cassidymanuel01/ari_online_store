@@ -12,20 +12,48 @@
                         <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
                         <a v-if="!user" href="/register">REGISTER</a>
                         <a v-if="!user" href="/login">LOGIN</a>
-                        <div v-if="user">
-                        <a v-if="user[0].firstName=='First'" href="/admin">ADMIN</a>
-                        </div>
+                        <a v-if="admin" href="/admin">ADMIN</a>
                         <a href="/about">ABOUT</a>
                         <a href="/contact">CONTACT</a>
                     </div>
                     <div class="navbar-nav d-flex">
-                        <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href="/"><i class="bi bi-cart"></i></a>
+                        <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" href="/"><i class="bi bi-cart"></i></a>
                         <a v-if="user" href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     <!-- <div class="col-md-4"> -->
+              <div class="itemContainer">
+                <div class="row mx-auto">
+                  <div id="titles" class="col-6 ps-2 pt-3">
+                    <h6>title</h6>
+                    <h5 style="height: 48px">title</h5>
+                  </div>
+                </div>
+                <img
+                  class="px-3 img-fluid"
+                  src="album.coverImage"
+                  alt="Makeup"
+                />
+                <div class="row mx-auto">
+                  <div class="col-md-12 d-flex justify-content-end w-100">
+                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
+                      <i class="bi bi-cart pe-1"></i> Rprice
+                    </button>
+                  </div>
+                </div>
+              </div>
+          <!-- </div> -->
+    </div>
+</div>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Just Like Magic</h5>
@@ -37,13 +65,12 @@
       <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
       <a v-if="!user" href="/register">REGISTER</a>
       <a v-if="!user" href="/login">LOGIN</a>
-        <div v-if="user">
-          <a v-if="user[0].firstName=='First'" href="/admin">ADMIN</a>
-        </div>
+      <a v-if="user" href="/login">LOGIN</a>
+          <a v-if="admin" href="/admin">ADMIN</a>
         <a href="/about">ABOUT</a>
         <a href="/contact">CONTACT</a>
-        <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a>
-        <a v-if="user" href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
+        <!-- <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a> -->
+        <a v-if="user" href="#">{{firstName}} _ {{surname}}</a>
       </div>
     </div>
   </div>
@@ -55,6 +82,19 @@ export default {
     computed:{
     user(){
       return this.$store.state.user;
+    },
+    admin(){
+      if(this.$store.state.user != null)
+      return this.$store.state.user[0].isAdmin;
+    },
+    firstName(){
+      return this.$store.state.user[0].firstName;
+    },
+    surname(){
+      return this.$store.state.user[0].surname;
+    },
+    cart(){
+      return this.$store.state.cart;
     }
   }
 }
