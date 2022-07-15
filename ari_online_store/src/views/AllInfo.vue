@@ -55,11 +55,11 @@
           <div class="container">
             <div class="row my-3 pt-2">
           <div class="col-md-12 d-flex justify-content-center align-content-center">
-            <h2 class="display-5">View our albums</h2>
+            <h2 class="display-5 fw-bold">View our albums</h2>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.slice(0,6)" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.slice(0,6)" :key="album.id" class="col-md-4 border border-4 border-white">
             <router-link class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id },props:[album.id , album.category] }"
@@ -68,7 +68,7 @@
                 <div class="row mx-auto">
                   <div id="titles" class="col-6 ps-2 pt-3">
                     <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                    <h5 style="height: 48px" class="fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -89,12 +89,12 @@
         </div>
         <div class="row my-5 pt-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-            <h2 class="display-5">View our Makeup</h2>
-            <h3 class="display-6">Chapter 1</h3>
+            <h2 class="display-5 fw-bold">View our Makeup</h2>
+            <h3 class="display-6 fw-bold">Chapter 1</h3>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x) => {return x.chapter == 1})" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.filter((x) => {return x.chapter == 1})" :key="album.id" class="col-md-4 border border-4 border-white">
             <router-link class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
@@ -124,11 +124,11 @@
         </div>
         <div class="row my-5 pt-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-            <h3 class="display-6">Chapter 2</h3>
+            <h3 class="display-6 fw-bold">Chapter 2</h3>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x)=>{return x.chapter == 2})" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.filter((x)=>{return x.chapter == 2})" :key="album.id" class="col-md-4 border border-4 border-white">
             <router-link class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
@@ -158,11 +158,11 @@
         </div>
         <div class="row my-5 pt-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-            <h3 class="display-6">Chapter 3</h3>
+            <h3 class="display-6 fw-bold">Chapter 3</h3>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x)=>{return x.chapter == 3})" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.filter((x)=>{return x.chapter == 3})" :key="album.id" class="col-md-4 border border-4 border-white">
             <router-link class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
@@ -192,11 +192,11 @@
         </div>
         <div class="row my-5 pt-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-            <h2 class="display-5">View our Fragrances</h2>
+            <h2 class="display-5 fw-bold">View our Fragrances</h2>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x)=>{return x.category=='Fragrance' })" :key="album.id" class="col-md-4">
+          <div v-for="album in albums.filter((x)=>{return x.category=='Fragrance' })" :key="album.id" class="col-md-4 border border-4 border-white">
             <router-link class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
@@ -358,4 +358,6 @@ export default {
 .imgContainer:hover .onHover {
   opacity: 1;
 }
+
+
 </style>

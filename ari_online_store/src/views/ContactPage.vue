@@ -89,19 +89,19 @@ input{
 
 
 input[type="text"]::placeholder {
-  color: #28D084;
+  color: black;
 font-family: 'Nunito', sans-serif;
 }
 
 input[type="text"]{
-color: #28D084;
+color: black;
 font-family: 'Nunito', sans-serif;
 border: 1px solid black;
 width: 50%;
 }
 
 input[type="textarea"]::placeholder {
-  color: #28D084;
+  color:black;
   vertical-align: text-top;
   padding-bottom: 10px;
   transform: translateY(-30px);
@@ -111,7 +111,7 @@ font-family: 'Nunito', sans-serif;
 
 
 input[type="textarea"] {
-  color: #28D084;
+  color:black;
   border: 1px solid black;
   height: 100px;
  font-family: 'Nunito', sans-serif;
@@ -119,7 +119,7 @@ input[type="textarea"] {
 }
 
 input[type="textarea"]::text{
-  color: #28D084;
+  color: black;
   height: 100px;
   transform: translateY(-30px);
  font-family: 'Nunito', sans-serif;
@@ -128,16 +128,16 @@ input[type="textarea"]::text{
 
 .c {
   width: 100%;
-  color:white;
+  color:black;
   font-family: 'Nunito', sans-serif;
-  text-shadow: 0vw 0vw 1vw #28D084 ;
+  text-shadow: 0vw 0vw 1vw white ;
 }
 
 
 
 label {
   font-size: large;
-  color: white;
+  color: black;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -168,7 +168,7 @@ img{
 #send{
     margin-top: 6% ;
     width:50%;
-    color: #28D084;
+    color: black;
     background-color: white;
     border: none;
     border-radius: 50px;
@@ -214,6 +214,10 @@ input{
     width: 65%;
     height: auto;
     box-shadow: 0vw 0vw 1vw #28D084 ;
+ }
+}
+
+@media(min-width:768px){
 
 }
 
@@ -226,8 +230,6 @@ input[type="textarea"] {
 }
 input[type="text"]{
 width: 75%;
-}
-
 }
 
 @media(max-width:768px){
