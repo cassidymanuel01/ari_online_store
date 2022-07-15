@@ -1,24 +1,24 @@
 <template>
   <div class="AllProperties">
     <div v-if="albums">
-        <div class="wrapper mt-5 mx-auto">
-          <a href="#albumsContainer">
-            <div class="imgContainer">
-              <img
-                class="img-fluid"
-                src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F11%2F03%2Frem-beauty.jpg"
-                alt="Makeup"
-              />
-              <div class="onHover">
-                <div class="row">
-                  <div class="col-md-12">
-                    <span id="hoverInfo">Makeup</span>
-                  </div>
+      <div class="wrapper mt-5 mx-auto">
+        <a href="#albumsContainer">
+          <div class="imgContainer">
+            <img
+              class="img-fluid"
+              src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F11%2F03%2Frem-beauty.jpg"
+              alt="Makeup"
+            />
+            <div class="onHover">
+              <div class="row">
+                <div class="col-md-12">
+                  <span id="hoverInfo">Makeup</span>
                 </div>
               </div>
             </div>
-            </a>
-            <a href="#makeupContainer">
+          </div>
+        </a>
+        <a href="#makeupContainer">
               <div class="imgContainer">
                 <img
                   class="img-fluid"
@@ -33,8 +33,8 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="#fragranceContainer">
+        </a>
+        <a href="#fragranceContainer">
               <div class="imgContainer">
                 <img
                   class="img-fluid"
@@ -49,26 +49,58 @@
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div id="albumsContainer"></div>
-          <div class="container">
-            <div class="row my-3 pt-2">
-          <div class="col-md-12 d-flex justify-content-center align-content-center">
+        </a>
+      </div>
+<div class="display-5 text-center p-5 h-50">Search</div>
+      <form class="d-flex justify-content-center align-items-center h-50 p-5" role="search">
+        <input
+          class="form-control me-2 w-50"
+          type="search"
+          v-model="search"
+          placeholder="Search..."
+        />
+        <button
+          class="btn btn-outline-dark"
+          @click="sortPrice"
+          type="submit"
+        >
+          SortBy
+        </button>
+      </form>
+      <!-- <select v-model="All">
+            <option value="All">All</option>
+             <option value="albums">albums</option>
+              <option value="price">price</option>
+          </select> -->
+      <div id="albumsContainer"></div>
+      <div class="container">
+        <div class="row my-3 pt-2">
+          <div
+            class="col-md-12 d-flex justify-content-center align-content-center"
+          >
             <h2 class="display-5">View our albums</h2>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.slice(0,6)" :key="album.id" class="col-md-4">
-            <router-link class="m-0 p-0"
+          <div
+            v-for="album in albums.filter((x) => {return x.category=='Album'})"
+            :key="album.id"
+            class="col-md-4"
+          >
+            <router-link
+              class="m-0 p-0"
               style="text-decoration: none; color: inherit"
-              :to="{ name: 'single', params: { id: album.id },props:[album.id , album.category] }"
+              :to="{
+                name: 'single',
+                params: { id: album.id },
+                props: [album.id, album.category],
+              }"
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
                   <div id="titles" class="col-6 ps-2 pt-3">
                     <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                    <h5 style="height: 48px" class="fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -95,14 +127,24 @@
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x) => {return x.chapter == 1})" :key="album.id" class="col-md-4">
-            <router-link class="m-0 p-0"
+          <div
+            v-for="album in albums.filter((x) => {
+              return x.chapter == 1;
+            })"
+            :key="album.id"
+            class="col-md-4"
+          >
+            <router-link
+              class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                  <div
+                    id="titles"
+                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                  >
                     <h6>{{ album.subtitle }}</h6>
                     <h5 style="height: 48px">{{ album.title }}</h5>
                   </div>
@@ -124,19 +166,25 @@
           </div>
         </div>
         <div class="row my-5 pt-5">
-          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+          <div
+            class="col-md-12 d-flex flex-column justify-content-center align-content-center"
+          >
             <h3 class="display-6">Chapter 2</h3>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x)=>{return x.chapter == 2})" :key="album.id" class="col-md-4">
-            <router-link class="m-0 p-0"
+          <div v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
+            <router-link
+              class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                  <div
+                    id="titles"
+                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                  >
                     <h6>{{ album.subtitle }}</h6>
                     <h5 style="height: 48px">{{ album.title }}</h5>
                   </div>
@@ -158,19 +206,31 @@
           </div>
         </div>
         <div class="row my-5 pt-5">
-          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
+          <div
+            class="col-md-12 d-flex flex-column justify-content-center align-content-center"
+          >
             <h3 class="display-6">Chapter 3</h3>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x)=>{return x.chapter == 3})" :key="album.id" class="col-md-4">
-            <router-link class="m-0 p-0"
+          <div
+            v-for="album in albums.filter((x) => {
+              return x.chapter == 3;
+            })"
+            :key="album.id"
+            class="col-md-4"
+          >
+            <router-link
+              class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                  <div
+                    id="titles"
+                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                  >
                     <h6>{{ album.subtitle }}</h6>
                     <h5 style="height: 48px">{{ album.title }}</h5>
                   </div>
@@ -197,15 +257,25 @@
             <h2 class="display-5">View our Fragrances</h2>
           </div>
         </div>
-        <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x)=>{return x.category=='Fragrance' })" :key="album.id" class="col-md-4">
-            <router-link class="m-0 p-0"
+        <div class="row mt-5">
+          <div
+            v-for="album in albums.filter((x) => {
+              return x.category == 'Fragrance';
+            })"
+            :key="album.id"
+            class="col-md-4"
+          >
+            <router-link
+              class="m-0 p-0"
               style="text-decoration: none; color: inherit"
               :to="{ name: 'single', params: { id: album.id } }"
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start">
+                  <div
+                    id="titles"
+                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                  >
                     <h6>{{ album.subtitle }}</h6>
                     <h5 style="height: 48px">{{ album.title }}</h5>
                   </div>
@@ -226,27 +296,47 @@
             </router-link>
           </div>
         </div>
-          </div>
-          <Footer />
       </div>
-      <div v-else>loading...</div>
+      <Footer />
+    </div>
+    <div v-else>loading...</div>
   </div>
 </template>
 
 <script>
-import Footer from '../components/footer.vue';
+import Footer from "../components/footer.vue";
 export default {
-  components:{Footer},
+  data() {
+    return {
+      search: "",
+      // All:""
+    };
+  },
+  methods: {
+    sortPrice() {
+      this.$store.commit("sortPropertiesByPrice");
+    },
+  },
+  components: { Footer },
   mounted() {
     this.$store.dispatch("getAlbums");
   },
   computed: {
     albums() {
-      return this.$store.state.albums;
+      return this.$store.state.albums?.filter((album) => {
+        let isMatch = true;
+        if (!album.title?.toLowerCase().includes(this.search.toLowerCase())) {
+          isMatch = false;
+        }
+        // if(this.album !== "All" && this.album !== album.price){
+        //   isMatch= false;
+        // }
+        return isMatch;
+      });
     },
-    user(){
+    user() {
       return this.$store.state.user;
-    }
+    },
   },
 };
 </script>
@@ -260,6 +350,11 @@ div.container{
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap");
 
+div.container{
+  padding-right:2rem;
+  padding-left:2rem;
+}
+
 .itemContainer:hover img {
   transform: translate(0px, -20px);
 }
@@ -267,32 +362,32 @@ div.container{
   transition: all 1s ease;
 }
 
-.wrapper{
+.wrapper {
   padding-top: 2.35rem !important;
   display: flex;
   width: 100%;
 }
-.wrapper > a >div{
+.wrapper > a > div {
   height: 89vh;
 }
-.wrapper > a >div img {
+.wrapper > a > div img {
   height: 89vh;
   object-fit: cover;
 }
-@media screen and (max-width:769px) {
-  .wrapper{
+@media screen and (max-width: 769px) {
+  .wrapper {
     display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-    .wrapper > a >div {
-      height: 45vh;
-    }
-    .wrapper > a >div img {
-      height: 45vh;
-      object-fit: cover;
-    }
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wrapper > a > div {
+    height: 45vh;
+  }
+  .wrapper > a > div img {
+    height: 45vh;
+    object-fit: cover;
+  }
 }
 
 * {
@@ -314,10 +409,10 @@ div.container{
 #titles h6 {
   font-style: italic;
 }
-#hoverInfo{
+#hoverInfo {
   font-size: 24px;
   color: black;
-  }
+}
 .col-md-4 {
   margin: 0;
   padding: 0;
@@ -365,5 +460,9 @@ div.container{
 
 .imgContainer:hover .onHover {
   opacity: 1;
+}
+
+.btn{
+  width: 9%;
 }
 </style>
