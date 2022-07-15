@@ -24,7 +24,7 @@
             <router-link v-if="!user" to="/register">REGISTER</router-link>
             <router-link v-if="!user" to="/login">LOGIN</router-link>
             <div v-if="user">
-              <a v-if="user[0].firstName == 'Admin'" href="/admin">ADMIN</a>
+              <router-link v-if="user[0].firstName == 'Admin'" href="/admin">ADMIN</router-link>
             </div>
             <router-link to="/about">ABOUT</router-link>
             <router-link to="/contact">CONTACT</router-link>
