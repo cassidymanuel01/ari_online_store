@@ -1,14 +1,22 @@
 <template>
   <div class="AllProperties">
-    <div v-if="albums">
+    <div id="allItemsContainer" v-if="albums">
       <div class="wrapper mt-5 mx-auto">
         <a href="#albumsContainer">
           <div class="imgContainer">
-            <img
-              class="img-fluid"
-              src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F11%2F03%2Frem-beauty.jpg"
-              alt="Makeup"
-            />
+            <img class="img-fluid" src="https://pbs.twimg.com/media/FFuVnvyWUAoiKMO.jpg:large" alt="Albums"/>
+            <div class="onHover">
+              <div class="row">
+                <div class="col-md-12">
+                  <span id="hoverInfo">Albums</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#makeupContainer">
+          <div class="imgContainer">
+            <img class="img-fluid" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F11%2F03%2Frem-beauty.jpg" alt="Makeup" />
             <div class="onHover">
               <div class="row">
                 <div class="col-md-12">
@@ -18,69 +26,37 @@
             </div>
           </div>
         </a>
-        <a href="#makeupContainer">
-              <div class="imgContainer">
-                <img
-                  class="img-fluid"
-                  src="https://pbs.twimg.com/media/FFuVnvyWUAoiKMO.jpg:large"
-                  alt="Albums"
-                />
-                <div class="onHover">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <span id="hoverInfo">Albums</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </a>
         <a href="#fragranceContainer">
-              <div class="imgContainer">
-                <img
-                  class="img-fluid"
-                  src="https://vioralondon.com/wp-content/uploads/2020/10/Best-Ariana-Grande-Perfumes-Reviewed-image.jpg"
-                  alt="Fragrances"
-                />
-                <div class="onHover">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <span id="hoverInfo">Fragrances</span>
-                    </div>
+          <div class="imgContainer">
+            <img class="img-fluid" src="https://vioralondon.com/wp-content/uploads/2020/10/Best-Ariana-Grande-Perfumes-Reviewed-image.jpg" alt="Fragrances"/>
+            <div class="onHover">
+              <div class="row">
+                  <div class="col-md-12">
+                    <span id="hoverInfo">Fragrances</span>
                   </div>
                 </div>
               </div>
+            </div>
         </a>
       </div>
-<div class="display-5 text-center p-5 h-50">Search</div>
+    <div class="display-5 text-center p-5 h-50">Search</div>
       <div class="d-flex justify-content-center align-items-center h-50 p-5" role="search">
-        <input
-          class="form-control me-2 w-50"
-          type="search"
-          v-model="search"
-          placeholder="Search..."
-        />
-        <button @click="sortPrice"
-          class="btn btn-outline-dark"
-          type="submit"
-        >
+        <input class="form-control me-2 w-50" type="search" v-model="search" placeholder="Search..." />
+        <button @click="sortPrice" class="btn btn-outline-dark" type="submit" >
           Sort By Price
         </button>
       </div>
-      <div id="albumsContainer"></div>
       <div class="container">
-        <div class="row my-3 pt-2">
-          <div
-            class="col-md-12 d-flex justify-content-center align-content-center"
-          >
-            <h2 class="display-5">View our albums</h2>
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center align-content-center">
+            <h2 id="albumsContainer" class="display-5">View our albums</h2>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div style="border:5px solid white"
+          <div
             v-for="album in albums.filter((x) => {return x.category=='Album'})"
             :key="album.id"
-            class="col-md-4"
-          >
+            class="col-md-4">
             <router-link
               class="m-0 p-0"
               style="text-decoration: none; color: inherit"
@@ -113,15 +89,14 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5 pt-5">
-        <div id="makeupContainer" class="p-5"></div>
+        <div class="row my-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-            <h2 class="display-5">View our Makeup</h2>
+            <h2 id="makeupContainer" class="display-5">View our Makeup</h2>
             <h3 class="display-6">Chapter 1</h3>
           </div>
         </div>
-        <div class="row my-5 pb-5">
-          <div style="border:5px solid white"
+        <div class="row my-5 pb-4">
+          <div
             v-for="album in albums.filter((x) => {
               return x.chapter == 1;
             })"
@@ -135,10 +110,7 @@
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div
-                    id="titles"
-                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
-                  >
+                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start" >
                     <h6>{{ album.subtitle }}</h6>
                     <h5 style="height: 48px">{{ album.title }}</h5>
                   </div>
@@ -159,15 +131,15 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5 pt-5">
+        <div class="row my-5 py-3">
           <div
             class="col-md-12 d-flex flex-column justify-content-center align-content-center"
           >
             <h3 class="display-6">Chapter 2</h3>
           </div>
         </div>
-        <div class="row my-5 pb-5">
-          <div style="border:5px solid white;" v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
+        <div class="row my-5 pb-4">
+          <div v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
             <router-link
               class="m-0 p-0" 
               style="text-decoration: none; color: inherit "
@@ -207,7 +179,7 @@
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div style="border:5px solid white"
+          <div
             v-for="album in albums.filter((x) => {
               return x.chapter == 3;
             })"
@@ -245,14 +217,13 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5 pt-5">
+        <div class="row my-5 pt-4">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-          <div id="fragranceContainer" class="p-5">.</div>
-            <h2 class="display-5">View our Fragrances</h2>
+            <h2 id="fragranceContainer" class="display-5">View our Fragrances</h2>
           </div>
         </div>
-        <div class="row mt-5">
-          <div style="border:5px solid white"
+        <div class="row mt-5 pb-5">
+          <div
             v-for="album in albums.filter((x) => {
               return x.category == 'Fragrance';
             })"
@@ -343,6 +314,20 @@ export default {
 
 <style scoped>
 
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#allItemsContainer{
+  background: linear-gradient(#81d084d5,#28d084);
+}
+
+#albumsContainer,#makeupContainer,#fragranceContainer{
+  scroll-margin-top: 100px;
+}
+
 div.container{
   padding-right:1rem;
   padding-left:1rem;
@@ -416,6 +401,7 @@ div.container{
 .col-md-4 {
   margin: 0;
   padding: 0;
+  
 }
 #albumImage {
   width: 100%;
@@ -439,7 +425,10 @@ div.container{
 }
 
 .itemContainer {
-  background-color: rgba(185, 185, 185, 0.7);
+  background-color: rgb(113 151 119);
+  border-radius: 15px;
+  margin: 1px;
+  border: 5px solid white;
 }
 .onHover {
   /* background-color: rgba(95, 95, 95, 0.2); */

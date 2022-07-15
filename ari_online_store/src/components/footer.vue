@@ -5,33 +5,33 @@
         <div class="col-xs-12 col-md-6">
           <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li class="fs-6"><router-link to="/" ><i class="fa fa-angle-double-right"></i>Home</router-link></li>
+            <li class="fs-6"><router-link to="/about"><i class="fa fa-angle-double-right"></i>About</router-link></li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-6">
           <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-6"><a href="/login"><i class="fa fa-angle-double-right"></i>Login</a></li>
-            <li class="fs-6"><a href="/register"><i class="fa fa-angle-double-right"></i>Register</a></li>
+            <li class="fs-6"><router-link to="/login"><i class="fa fa-angle-double-right"></i>Login</router-link></li>
+            <li class="fs-6"><router-link to="/register"><i class="fa fa-angle-double-right"></i>Register</router-link></li>
           </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-          <ul class="list-unstyled list-inline social text-center fs-6">
-            <li class="list-inline-item"><a href="/"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
-            <li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+          <ul id="this" class="list-unstyled list-inline social text-center fs-6">
+            <li class="list-inline-item"><a href="#this"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#this"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#this"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#this"><i class="fa fa-google-plus"></i></a></li>
+            <li class="list-inline-item"><a href="#this"><i class="fa fa-envelope"></i></a></li>
           </ul>
         </div>
         <br>
       </div>  
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6"><u class="sub"><a href="https://www.nationaltransaction.com/">Ariana Corporation</a></u> is a Registered MSP/ISO , Inc. Western Cape</p>
+          <p class="h6"><u class="sub"><a target="_blank" href="https://en.wikipedia.org/wiki/Ariana_Grande">Ariana Corporation</a></u> is a Registered MSP/ISO , Inc. Western Cape</p>
           <p class="h6">@copy All right Reversed.<a class="text-green ml-2" href="https://www.lifechoices.co.za/" target="_blank">Life-Choices</a></p>
         </div>
         <br>
@@ -146,7 +146,7 @@ div.container{
   padding-top:7.5rem;
   padding-right:2rem;
   padding-left:2rem;
-  padding-bottom:7.5rem;
+  padding-bottom:0rem;
 }
 
 </style>

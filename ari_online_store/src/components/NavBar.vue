@@ -23,15 +23,13 @@
             <router-link to="/allInfo" v-if="user">ALL PRODUCTS</router-link>
             <router-link v-if="!user" to="/register">REGISTER</router-link>
             <router-link v-if="!user" to="/login">LOGIN</router-link>
-            <div v-if="user">
-              <router-link v-if="user[0].firstName == 'Admin'" href="/admin">ADMIN</router-link>
-            </div>
+            <router-link v-if="admin" href="/admin">ADMIN</router-link>
             <router-link to="/about">ABOUT</router-link>
             <router-link to="/contact">CONTACT</router-link>
           </div>
           <div class="navbar-nav d-flex">
             <a v-if="user" href="#"
-              >{{ user[0].firstName }} _ {{ user[0].surname }}</a
+              >{{ firstName }} _ {{ surname }}</a
             >
           </div>
         </div>
@@ -52,11 +50,11 @@
                     <h5 style="height: 48px">title</h5>
                   </div>
                 </div>
-                <img
+                <!-- <img
                   class="px-3 img-fluid"
                   src="album.coverImage"
                   alt="Makeup"
-                />
+                /> -->
                 <div class="row mx-auto">
                   <div class="col-md-12 d-flex justify-content-end w-100">
                     <button id="cartButton" class="px-2 py-1 mb-3 me-2">
@@ -96,14 +94,15 @@ export default {
       return this.$store.state.user;
     },
     admin(){
-      if(this.$store.state.user != null)
-      return this.$store.state.user[0].isAdmin;
+      if(this.$store.state.user !=null){
+        return this.$store.state.user.isAdmin;
+      }
     },
     firstName(){
-      return this.$store.state.user[0].firstName;
+      return this.$store.state.user.firstName;
     },
     surname(){
-      return this.$store.state.user[0].surname;
+      return this.$store.state.user.surname;
     },
     cart(){
       return this.$store.state.cart;

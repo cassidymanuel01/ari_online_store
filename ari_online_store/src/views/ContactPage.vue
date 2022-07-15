@@ -78,12 +78,10 @@ body {
 }
 
 div.container{
+  padding-top:0rem;
   padding-right: 2rem;
   padding-left: 2rem;
 }
-
-
-
 input{
   height: 50px;
   gap: 10px;

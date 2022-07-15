@@ -5,8 +5,7 @@
       "surname": "Nimda",
       "email": "admin@email.com",
       "password": "admin123",
-      "id": 1,
-      "isAdmin": true
+      "id": 1
     },
     {
       "firstName": "Bob",
@@ -14,20 +13,6 @@
       "email": "bob@gmail.com",
       "password": "bob123",
       "id": 2
-    },
-    {
-      "firstName": "Jared",
-      "surname": "Isaacs",
-      "email": "rared@gmail.com",
-      "password": null,
-      "id": 3
-    },
-    {
-      "firstName": "Jared",
-      "surname": "Isaacs",
-      "email": "rared@gmail.com",
-      "password": "123",
-      "id": 4
     }
   ],
   "allInfo": [
@@ -190,15 +175,15 @@
       "category": "Album"
     },
     {
-      "id": 9,
-      "title": "Plumping Lip Gloss",
-      "subtitle": "on your collar",
-      "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipGloss_PDP_Closed_jellysandals_left_51dbc4d1-8293-42e4-9c66-e3d5981d5299.png?v=1652280205",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipGloss_PDP_Closed_jellysandals_left_51dbc4d1-8293-42e4-9c66-e3d5981d5299.png?v=1652280205",
-      "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, high-shine finish.",
+      "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_LipGloss_PDP_Closed_jellysandals_left_51dbc4d1-8293-42e4-9c66-e3d5981d5299.png?v=1652280205",
+      "title": "Plumping Lip Gloss",
       "price": 345,
+      "subtitle": "on your collar",
+      "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, low-shine finish.",
       "category": "Makeup",
-      "chapter": 1
+      "chapter": 1,
+      "id": 9
     },
     {
       "id": 10,
@@ -256,15 +241,15 @@
       "chapter": 1
     },
     {
-      "id": 15,
-      "title": "Volumizing Mascara",
-      "subtitle": "flourishing",
-      "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Mascara_PDP_Open_Volumizing_left_21688645-484d-4667-97f7-b35a8ad5c007.png?v=1639766058",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Mascara_PDP_Open_Volumizing_left_21688645-484d-4667-97f7-b35a8ad5c007.png?v=1639766058",
-      "description": "Infused with a 100% naturally derived bamboo powder this mascarra will volumize and nourish your lashes. An all new clean flourshing lengthening mascara.",
+      "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Mascara_PDP_Open_Volumizing_left_21688645-484d-4667-97f7-b35a8ad5c007.png?v=1639766058",
+      "title": "Volumizing Mascara",
       "price": 275,
+      "subtitle": "flourishinin",
+      "description": "Infused with a 100% naturally derived bamboo powder this mascarra will volumize and nourish your lashes. An all new clean flourshing lengthening mascara.",
       "category": "Makeup",
-      "chapter": 1
+      "chapter": 1,
+      "id": 15
     },
     {
       "id": 16,
@@ -454,14 +439,14 @@
       "chapter": 3
     },
     {
-      "id": 34,
-      "title": "God is a Woman",
-      "subtitle": "female",
-      "coverImage": "https://media.ulta.com/i/ulta/2586366?w=659&h=659",
       "img": "https://media.ulta.com/i/ulta/2586366?w=659&h=659",
+      "coverImage": "https://media.ulta.com/i/ulta/2586366?w=659&h=659",
+      "title": "God is a Woman",
+      "price": 290,
+      "subtitle": "male",
       "description": "God is a Woman Perfume",
-      "price": 285,
-      "category": "Fragrance"
+      "category": "Fragrance",
+      "id": 34
     },
     {
       "id": 35,

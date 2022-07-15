@@ -15,6 +15,11 @@ function changeBg(){
 window.addEventListener('scroll',changeBg)
 export default({
  components:{NavBar},
+ computed:{
+  users(){
+    return this.$store.state.user;
+  }
+ }
 })
 </script>
 

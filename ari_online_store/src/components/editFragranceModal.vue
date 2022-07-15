@@ -39,7 +39,7 @@ export default {
     },
     methods:{
         editItem(){
-            this.$store.dispatch("editItem",this.album);
+            this.$store.dispatch("editFragranceItem",this.album);
         }
     }
 }

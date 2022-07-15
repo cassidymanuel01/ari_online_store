@@ -14,11 +14,7 @@
               <th scope="col">Song Amount/Chapter</th>
               <th scope="col">Category</th>
               <th id="add-btn" scope="col">
-                <button
-                  id="add"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addModal"
-                >
+                <button id="add" data-bs-toggle="modal" data-bs-target="#addModal">
                   <i class="fa-2x bi bi-plus-square"></i>
                 </button>
               </th>
@@ -28,93 +24,47 @@
             <tr class="">
               <h1 class="fw-bold display-6 pt-2 ">Albums</h1>
             </tr>
-            <tr
-              v-for="album in albums.filter((x) => {
+            <tr v-for="album in albums.filter((x) => {
                 return x.category == 'Album';
               })"
-              :key="album.id"
-            >
+              :key="album.id" >
               <th scope="row">{{ album.id }}</th>
-              <td>
-                <img :src="album.img" :alt="album.title" class="img-fluid" />
-              </td>
-              <td>
-                <img
-                  :src="album.coverImage"
-                  :alt="album.title"
-                  class="img-fluid"
-                />
-              </td>
+              <td><img :src="album.img" :alt="album.title" class="img-fluid"/></td>
+              <td><img :src="album.coverImage" :alt="album.title" class="img-fluid"/></td>
               <td>{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
               <td>{{ album.songAmount }}</td>
               <td>{{ album.category }}</td>
               <td>
-                <button
-                  class="p-1"
-                  id="deleteButton"
-                  @click="deleteItem(album.id)"
-                  type="button"
-                >
+                <button class="p-1" id="deleteButton" @click="deleteItem(album.id)" type="button">
                   Delete
                 </button>
-                <button
-                  class="p-1"
-                  id="editButton"
-                  data-bs-toggle="modal"
-                  :data-bs-target="'#album_' + album.id"
-                  type="button"
-                >
+                <button class="p-1" id="editButton" data-bs-toggle="modal" :data-bs-target="'#album_' + album.id" type="button">
                   Edit
                 </button>
               </td>
               <editModal :album="album" />
             </tr>
-            <tr>
-              <th class="trh"><h1 class="fw-bold display-6">Makeup</h1></th>
-            </tr>
-            <tr>
-              <th class="trh"><h2 class="fw-bold display-6 fs-4">Chapter 1</h2></th>
-            </tr>
-            <tr
-              v-for="album in albums.filter((x) => {
+            <tr> <th class="trh"><h1 class="fw-bold display-6">Makeup</h1></th> </tr>
+            <tr> <th class="trh"><h2 class="fw-bold display-6 fs-4">Chapter 1</h2></th> </tr>
+            <tr v-for="album in albums.filter((x) => {
                 return x.chapter == 1;
               })"
-              :key="album.id"
-            >
+              :key="album.id">
               <th scope="row">{{ album.id }}</th>
-              <td>
-                <img :src="album.img" :alt="album.title" class="img-fluid" />
-              </td>
-              <td>
-                <img
-                  :src="album.coverImage"
-                  :alt="album.title"
-                  class="img-fluid"
-                />
-              </td>
+              <td> <img :src="album.img" :alt="album.title" class="img-fluid"/> </td>
+              <td> <img :src="album.coverImage" :alt="album.title" class="img-fluid"/> </td>
               <td>{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
               <td>{{ album.chapter }}</td>
               <td>{{ album.category }}</td>
               <td>
-                <button
-                  class="p-1"
-                  id="deleteButton"
-                  @click="deleteItem(album.id)"
-                  type="button"
-                >
+                <button class="p-1" id="deleteButton" @click="deleteItem(album.id)" type="button">
                   Delete
                 </button>
-                <button
-                  class="p-1"
-                  id="editButton"
-                  data-bs-toggle="modal"
-                  :data-bs-target="'#makeup_' + album.id"
-                  type="button"
-                >
+                <button class="p-1" id="editButton" data-bs-toggle="modal" :data-bs-target="'#makeup_' + album.id" type="button">
                   Edit
                 </button>
               </td>
@@ -279,7 +229,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form id="AddItem" @submit="preventDefault">
+                <form id="AddItem" @submit.prevent>
                   <label class="form-label" for="Title">Title</label>
                   <input
                     v-model="newTitle"
@@ -308,7 +258,7 @@
                     type="number"
                     placeholder="Enter the Price"
                   />
-                  <div v-if="newCategory == 'Album'">
+                  <div v-if="this.newCategory == 'Album'">
                     <label class="form-label" for="Subtitle">Subtitle</label>
                     <input
                       v-model="newSubtitle"
@@ -326,13 +276,13 @@
                       placeholder="Enter the Song Amount"
                     />
                   </div>
-                  <div v-if="newCategory == 'Fragrance'">
+                  <div v-else-if="this.newCategory == 'Fragrance'">
                     <label class="form-label" for="Subtitle">Subtitle</label>
                     <input
                       v-model="newSubtitle"
                       class="form-control"
                       type="text"
-                      placeholder="Enter the Subtitle Year"
+                      placeholder="Enter the Subtitle"
                     />
                     <label class="form-label" for="Description"
                       >Description</label
@@ -416,7 +366,7 @@ export default {
       newCoverImage: null,
       newPrice: null,
       newSongAmount: null,
-      newCategory: null,
+      newCategory: "Album",
       newDescription: null,
       newChapter: null,
     };
@@ -435,45 +385,7 @@ export default {
       return this.$store.state.albums;
     },
   },
-  methods: {
-    deleteItem(id) {
-      this.$store.dispatch("deleteItem", id);
-    },
-    addItem() {
-      if (this.newCategory == "Album") {
-        this.$store.dispatch("addAlbumItem", [
-          this.newTitle,
-          this.newSubtitle,
-          this.newImgURL,
-          this.newCoverImage,
-          this.newPrice,
-          this.newSongAmount,
-          this.newCategory,
-        ]);
-      } else if (this.newCategory == "Makeup") {
-        this.$store.dispatch("addMakeupItem", [
-          this.newTitle,
-          this.newSubtitle,
-          this.newImgURL,
-          this.newCoverImage,
-          this.newPrice,
-          this.newDescription,
-          this.newCategory,
-          this.newChapter,
-        ]);
-      } else {
-        this.$store.dispatch("addFragranceItem", [
-          this.newTitle,
-          this.newSubtitle,
-          this.newImgURL,
-          this.newCoverImage,
-          this.newPrice,
-          this.newDescription,
-          this.newCategory,
-        ]);
-      }
-    },
-    methods:{
+  methods:{
         deleteItem(id){
             this.$store.dispatch('deleteItem', id )
         },
@@ -489,14 +401,9 @@ export default {
         
     }
     }
-}
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
 tr {
   background-color: white !important;
 }

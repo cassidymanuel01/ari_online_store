@@ -1,5 +1,5 @@
 <template>
-  <div class="singleItem vh-100 mt-5 pt-5">
+  <div class="singleItem mt-5">
     <div class="h-100" v-if="singleInfo">
         <div v-if="singleInfo.category == 'Album'" class="container h-100 mx-auto my-auto pt-2 d-flex justify-content-center flex-column px-2">
         <div class="row mb-5 pb-2">
@@ -21,29 +21,21 @@
                 <h1 class="text-center fw-bold pb-1">{{ singleInfo.title }}</h1>
                 <h6 class="fw-bold text-center">{{ singleInfo.subtitle }}</h6>
                 <div class="row py-3">
-                  <h4 class="fw-bold text-center">Tracklist:</h4>
+                  <h4 class="fw-bold text-center tracklist">Tracklist:</h4>
                   <div class="d-flex" v-if="singleInfo.songList !=undefined">
                     <div id="slist" class="col-md-6">
-                      <p
-                        v-for="song in singleSongInfo.slice(0, singleSongInfo.length/2)"
-                        :key="song[i]"
-                      >
-                        {{ song }}
-                      </p>
+                      <ol>
+                        <li style="text-align:start;" v-for="song in singleSongInfo.slice(0, singleSongInfo.length/2)" :key="song[i]" > -{{ song }}</li>
+                      </ol>
                     </div>
                     <div id="slist" class="col-md-6">
-                      <p
-                        v-for="song in singleSongInfo.slice(Math.ceil(singleSongInfo.length/2),singleSongInfo.length)"
-                        :key="song[i]"
-                      >
-                        {{ song }}
-                      </p>
+                      <ol :start="singleSongInfo.length/2+1">
+                        <li style="text-align:start;" v-for="song in singleSongInfo.slice(Math.ceil(singleSongInfo.length/2),singleSongInfo.length)" :key="song[i]" > -{{ song }}</li>
+                      </ol>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="d-flex justify-content-center align-items-center gap-2 pb-2"
-                >
+                <div class="ratingsHolder d-flex justify-content-center align-items-center gap-2 pb-2">
                   <div>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -55,7 +47,7 @@
                     <span class="fs-5 fw-bold">45+ ratings</span>
                   </div>
                 </div>
-                <div class="col-md-6 mt-3 mx-auto fs-5 d-flex flex-column justify-content-center align-items-center">
+                <div>
                   <button id="cartButton" class="py-2 px-1 fw-bold">
                     <i class="bi bi-cart"></i> Add to cart - R{{singleInfo.price}}
                   </button>
@@ -192,6 +184,7 @@ export default {
   margin: 0;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+  
 }
   @keyframes rotate {
     from{transform:rotate(0deg) ;}
@@ -211,9 +204,7 @@ h1 {
 
 .thing{
     border-radius: 20px;
-    z-index: 1;
     background-color:white;
-
 }
 
 .img-fluid {
@@ -225,7 +216,6 @@ p {
 }
 
 #Vinyl{
-  margin-top: 10px;
   width:100px;
 }
 
@@ -245,9 +235,27 @@ p {
   color: white;
   border: white;
 }
+
 @media screen and (max-width:991px){
   #Vinyl{
     display: none;
+    }
 }
+@media screen and (min-width:992px) and (max-width:1199px){
+  #Vinyl{
+    width: 65px;
+  }
+  .thing{
+    height: 448px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .ratingsHolder{
+    margin-top:2rem;
+  }
+  .tracklist{
+    padding-bottom: 1.5rem;
+  }
 }
 </style>

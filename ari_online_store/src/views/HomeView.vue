@@ -112,7 +112,7 @@ button{
 }
 
 .home {
-  background: url("https://i.postimg.cc/dVtG2RBJ/02-Ariana-Grande-press-photo-2020-cr-Dave-Meyers-billboard-1548-1603458811-compressed.jpg");
+  background: linear-gradient(rgba(211, 211, 211, 0.33),#28d08433), url("https://i.postimg.cc/dVtG2RBJ/02-Ariana-Grande-press-photo-2020-cr-Dave-Meyers-billboard-1548-1603458811-compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
