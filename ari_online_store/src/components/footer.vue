@@ -3,39 +3,39 @@
     <div class="container">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
         <div class="col-xs-12 col-sm-4 col-md-4">
-          <h5 class="fs-2">Quick links</h5>
+          <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-4"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li class="fs-4"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li class="fs-4"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-            <li class="fs-4"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-            <li class="fs-4" ><a href=""><i class="fa fa-angle-double-right"></i>Videos</a></li>
+            <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+            <li class="fs-6" ><a href=""><i class="fa fa-angle-double-right"></i>Videos</a></li>
           </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4">
-          <h5 class="fs-2">Quick links</h5>
+          <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-4"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li class="fs-4"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li class="fs-4"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-            <li class="fs-4"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-            <li class="fs-4" ><a href=""><i class="fa fa-angle-double-right"></i>Videos</a></li>
+            <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+            <li class="fs-6" ><a href=""><i class="fa fa-angle-double-right"></i>Videos</a></li>
           </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4">
-          <h5 class="fs-2">Quick links</h5>
+          <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-4"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li class="fs-4"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li class="fs-4"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-            <li class="fs-4"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-            <li class="fs-4" ><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+            <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+            <li class="fs-6" ><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
           </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-          <ul class="list-unstyled list-inline social text-center">
+          <ul class="list-unstyled list-inline social text-center fs-6">
             <li class="list-inline-item"><a href="/"><i class="fa fa-facebook"></i></a></li>
             <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
             <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
@@ -46,9 +46,9 @@
         <br>
       </div>  
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white fs-6">
-          <p class="h6"><u class="sub"><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-          <p class="h6">@copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6"><u class="sub"><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Western Cape [a wholly owned subsidiary of SA Bancorp, Minneapolis, MN]</p>
+          <p class="h6">@copy All right Reversed.<a class="text-green ml-2" href="https://www.lifechoices.co.za/" target="_blank">Life-Choices</a></p>
         </div>
         <br>
       </div>  
@@ -72,13 +72,13 @@ footer {
 
 /* Footer */
 section {
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 section .section-title {
     text-align: center;
     color:  #28D084;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 #footer {
@@ -88,7 +88,7 @@ section .section-title {
 #footer h5{
   padding-left: 10px;
     border-left: 3px solid #28D084 ;
-    padding-bottom: 6px;
+    padding-bottom: 0px;
     margin-bottom: 20px;
     color:#28D084 ;
 }
@@ -156,6 +156,10 @@ section .section-title {
 
 .sub{
     color: #28D084;
+}
+
+div.container{
+  padding:9em;
 }
 
 </style>
