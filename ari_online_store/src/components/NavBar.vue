@@ -12,15 +12,13 @@
                         <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
                         <a v-if="!user" href="/register">REGISTER</a>
                         <a v-if="!user" href="/login">LOGIN</a>
-                        <div v-if="user">
-                        <a v-if="user[0].firstName=='First'" href="/admin">ADMIN</a>
-                        </div>
+                        <a v-if="admin" href="/admin">ADMIN</a>
                         <a href="/about">ABOUT</a>
                         <a href="/contact">CONTACT</a>
                     </div>
-                    <div class="navbar-nav d-flex">
+                    <div v-if="user" class="navbar-nav d-flex">
                         <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href="/"><i class="bi bi-cart"></i></a>
-                        <a v-if="user" href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
+                        <a href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
                     </div>
                 </div>
             </div>
@@ -37,13 +35,12 @@
       <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
       <a v-if="!user" href="/register">REGISTER</a>
       <a v-if="!user" href="/login">LOGIN</a>
-        <div v-if="user">
-          <a v-if="user[0].firstName=='First'" href="/admin">ADMIN</a>
-        </div>
+      <a v-if="user" href="/login">LOGIN</a>
+          <a v-if="admin" href="/admin">ADMIN</a>
         <a href="/about">ABOUT</a>
         <a href="/contact">CONTACT</a>
-        <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a>
-        <a v-if="user" href="#">{{user[0].firstName}} _ {{user[0].surname}}</a>
+        <!-- <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a> -->
+        <a v-if="user" href="#">{{firstName}} _ {{surname}}</a>
       </div>
     </div>
   </div>
@@ -55,6 +52,19 @@ export default {
     computed:{
     user(){
       return this.$store.state.user;
+    },
+    admin(){
+      if(this.$store.state.user != null)
+      return this.$store.state.user[0].isAdmin;
+    },
+    firstName(){
+      return this.$store.state.user[0].firstName;
+    },
+    surname(){
+      return this.$store.state.user[0].surname;
+    },
+    cart(){
+      return this.$store.state.cart;
     }
   }
 }

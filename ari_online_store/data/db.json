@@ -1,6 +1,8 @@
 {
   "cart": [
-    {}
+    {
+      
+    }
   ],
   "users": [
     {
@@ -8,7 +10,8 @@
       "surname": "Nimda",
       "email": "admin@email.com",
       "password": "admin123",
-      "id": 1
+      "id": 1,
+      "isAdmin":true
     },
     {
       "firstName": "Bob",
