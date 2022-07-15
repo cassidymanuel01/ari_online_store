@@ -67,11 +67,11 @@
           SortBy
         </button>
       </form>
-      <!-- <select v-model="All">
-            <option value="All">All</option>
-             <option value="albums">albums</option>
+        <!-- <select v-model="All">
+              <option value="All">All</option>
+              <option value="albums">albums</option>
               <option value="price">price</option>
-          </select> -->
+        </select> -->
       <div id="albumsContainer"></div>
       <div class="container">
         <div class="row my-3 pt-2">
