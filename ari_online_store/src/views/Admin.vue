@@ -5,17 +5,17 @@
         <div v-if="albums">
 
             <table class="table">
-                <thead class="table-dark">
+                <thead class="table">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Image</th>
-                        <th scope="col">CoverImage</th>
+                        <th scope="col">Cover Image</th>
                         <th scope="col">Title</th>
                         <th scope="col">Subtitle</th>
                         <th scope="col">Price</th>
                         <th scope="col">Song Amount/Chapter</th>
                         <th scope="col">Category</th>
-                        <th scope="col"><button data-bs-toggle="modal" data-bs-target="#addModal">Add</button></th>
+                        <th id="add-btn" scope="col"><button id="add" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa-2x bi bi-plus-square"></i></button></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -107,7 +107,7 @@
                         <td>{{album.chapter}}</td>
                         <td>{{album.category}}</td>
                         <td>
-                            <button class="p-1" @click="deleteItem(album.id)" type="button"> Delete </button>
+                            <button id="f-delete" class="p-1" @click="deleteItem(album.id)" type="button"> Delete </button>
                             <button class="p-1" id="editButton" data-bs-toggle="modal" :data-bs-target="'#fragrance_'+album.id" type="button"> Edit </button>
                         </td>
                         <editFragranceModal :album="album" />
@@ -231,17 +231,39 @@ export default {
     margin: 0;
     padding: 0;
 }
-
+th{
+    background-color: white;
+}
+#add-btn{
+    background: rgb(199, 199, 199)
+}
+#add{
+    
+    color: white;
+    border: hidden;
+}
+#add:hover{
+}
+#f-delete{
+    background-color: rgb(183, 20, 20)!important;
+    border: hidden!important;
+    color:white;
+    transition: all 0.3s ease;
+}
+#f-delete:hover{
+    background-color: rgb(255, 0, 0)!important;
+    border: hidden!important;
+}
 #deleteButton{
     width: 100% !important;
-    background-color: rgb(255, 100, 234)!important;
+    background-color: rgb(183, 20, 20)!important;
     border: hidden!important;
     color:white;
     transition: all 0.3s ease;
 }
 #deleteButton:hover{
     width: 100% !important;
-    background-color: rgb(214, 84, 197)!important;
+    background-color: rgb(255, 0, 0)!important;
     border: hidden!important;
 }
 
@@ -252,13 +274,6 @@ tr:nth-child(2n-1){
     background: #28D084;
 }
 
-/* button{
-    width: 100px !important;
-    border-radius: 20px !important;
-    background-color: #28D084!important;
-    border: hidden!important;
-} */
-
 #editButton:nth-child(2n){
     width: 100% !important;
     background-color: #28D084!important;
@@ -266,7 +281,7 @@ tr:nth-child(2n-1){
 }
 tr:nth-child(2n-1) #editButton{
     width: 100% !important;
-    background-color: #5c5c5c!important;
+    background-color: #b5abab!important;
     border: hidden!important;
 }
 
