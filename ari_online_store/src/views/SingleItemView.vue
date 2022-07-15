@@ -1,7 +1,7 @@
 <template>
-  <div class="singleItem mt-5 pt-5">
-    <div v-if="singleInfo">
-        <div v-if="singleInfo.category == 'Album'" class="container mx-auto pt-2 d-flex justify-content-center flex-column px-2">
+  <div class="singleItem vh-100 mt-5 pt-5">
+    <div class="h-100" v-if="singleInfo">
+        <div v-if="singleInfo.category == 'Album'" class="container h-100 mx-auto my-auto pt-2 d-flex justify-content-center flex-column px-2">
         <div class="row mb-5 pb-2">
           <div id="image" class="col-lg-6">
             <img
@@ -10,7 +10,7 @@
               :alt="singleInfo.title"
             />
           </div>
-          <div class="thing col-lg-6 border border-1 border-dark shadow shadow-lg d-flex flex-column justify-content-center align-items-center">
+          <div class="thing py-2 col-lg-6 border border-1 border-dark shadow shadow-lg d-flex flex-column justify-content-evenly align-items-center">
             <div class="row w-100 h-100">
               <div class="col-md-12">
                 <div class="row">
@@ -33,7 +33,7 @@
                     </div>
                     <div id="slist" class="col-md-6">
                       <p
-                        v-for="song in singleSongInfo.slice(singleSongInfo.length/2,singleSongInfo.length)"
+                        v-for="song in singleSongInfo.slice(Math.ceil(singleSongInfo.length/2),singleSongInfo.length)"
                         :key="song[i]"
                       >
                         {{ song }}
@@ -70,7 +70,7 @@
           </div>
         </div> -->
         </div>
-        <div v-if="singleInfo.category == 'Makeup'" class="container mx-auto pt-2 d-flex justify-content-center flex-column px-2">
+        <div v-if="singleInfo.category == 'Makeup'" class="container h-100 mx-auto pt-2 d-flex justify-content-center flex-column px-2">
         <div class="row mb-5 pb-2">
           <div id="image" class="col-md-6">
             <img
@@ -117,7 +117,7 @@
           </div>
         </div> -->
         </div>
-        <div v-if="singleInfo.category == 'Fragrance'" class="container mx-auto pt-2 d-flex justify-content-center flex-column px-2">
+        <div v-if="singleInfo.category == 'Fragrance'" class="container h-100 mx-auto pt-2 d-flex justify-content-center flex-column px-2">
         <div class="row mb-5 pb-2">
           <div id="image" class="col-md-6">
             <img

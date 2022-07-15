@@ -6,7 +6,7 @@
   <div id="body">
     <header></header>
     <main>
-      <form id="background">
+      <form action="https://formspree.io/f/xzbolnow" method="POST" id="background">
         <div class="container">
           <div class="row">
             <div class="col-md-12 mt-4">
@@ -17,20 +17,20 @@
             <div class="col-md-6" id="left">
             <div class="row N">
               <label class="w-75 text-center" >Full Name:</label>
-              <input class="form-control fw-bold" type="text" placeholder="what's your first name?" />
+              <input name="Name" class="form-control fw-bold" type="text" placeholder="what's your name?" />
             </div>
             <br>
             <div class="row N ">
               <label class="w-75 text-center" >Email Address:</label>
-              <input class="form-control fw-bold"  type="text" placeholder="you@example.com" />
+              <input name="Email" class="form-control fw-bold"  type="text" placeholder="you@example.com" />
             </div>
             <br> 
             <div class="row N ">
               <label class="w-75 text-center" >Message:</label>
-              <input class="form-control fw-bold"  type="textarea" placeholder="comment" />
+              <input name="Comment" class="form-control fw-bold"  type="textarea" placeholder="comment" />
             </div>
              <div class="row N ">
-                <button id="send" class="fs-5" type="button">send <i class="fa-regular fa-paper-plane fs-5"></i></button>
+                <button id="send" class="fs-5" type="submit">send <i class="fa-regular fa-paper-plane fs-5"></i></button>
              </div>
           </div>
       <div class="col-md-6" id="icon">
@@ -75,6 +75,11 @@ body {
     align-items: center;
   width: 100%;
   height: 100%;
+}
+
+div.container{
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 

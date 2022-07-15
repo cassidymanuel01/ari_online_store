@@ -4,7 +4,7 @@
     class="p-0 navbar text-center fixed-top navbar-expand-lg navbar-dark"
   >
     <div class="container pullRightLeft p-3 mt-1">
-      <a href="/" class="mx-auto navbar-brand"> Just Like Magic </a>
+      <router-link to="/" class="mx-auto navbar-brand"> Just Like Magic </router-link>
       <button
         class="mx-auto navbar-toggler"
         type="button"
@@ -19,24 +19,17 @@
       <div class="collapse navbar-collapse">
         <div id="navBarSize" class="navbar-nav mx-auto">
           <div class="navbar-nav d-flex align-items-center">
-            <a href="/">HOME</a>
-            <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
-            <a v-if="!user" href="/register">REGISTER</a>
-            <a v-if="!user" href="/login">LOGIN</a>
+            <router-link to="/">HOME</router-link>
+            <router-link to="/allInfo" v-if="user">ALL PRODUCTS</router-link>
+            <router-link v-if="!user" to="/register">REGISTER</router-link>
+            <router-link v-if="!user" to="/login">LOGIN</router-link>
             <div v-if="user">
-              <a v-if="user[0].firstName == 'First'" href="/admin">ADMIN</a>
+              <a v-if="user[0].firstName == 'Admin'" href="/admin">ADMIN</a>
             </div>
-            <a href="/about">ABOUT</a>
-            <a href="/contact">CONTACT</a>
+            <router-link to="/about">ABOUT</router-link>
+            <router-link to="/contact">CONTACT</router-link>
           </div>
           <div class="navbar-nav d-flex">
-            <a
-              @click="openCart"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#cart"
-              href="/"
-              ><i class="bi bi-cart"></i
-            ></a>
             <a v-if="user" href="#"
               >{{ user[0].firstName }} _ {{ user[0].surname }}</a
             >

@@ -6,7 +6,7 @@
       "email": "admin@email.com",
       "password": "admin123",
       "id": 1,
-      "isAdmin":true
+      "isAdmin": true
     },
     {
       "firstName": "Bob",
@@ -18,94 +18,31 @@
     {
       "firstName": "Jared",
       "surname": "Isaacs",
-      "email": "rared.isaacs@gmail.com",
-      "password": "Assassin 3.0",
+      "email": "rared@gmail.com",
+      "password": null,
       "id": 3
     },
     {
       "firstName": "Jared",
       "surname": "Isaacs",
-      "email": "rared.isaacs@gmail.com",
-      "password": "Assassin 3.0",
+      "email": "rared@gmail.com",
+      "password": "123",
       "id": 4
-    },
-    {
-      "firstName": "Jared",
-      "surname": "Isaacs",
-      "email": "rared.isaacs@gmail.com",
-      "password": "ASSASSIN",
-      "id": 5
-    },
-    {
-      "firstName": "Jared",
-      "surname": "Isaacs",
-      "email": "rared.isaacs@gmail.com",
-      "password": "1234",
-      "id": 6
     }
   ],
   "allInfo": [
     {
-      "id": 1,
-      "title": "Positions",
-      "price": 100,
-      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
       "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
-      "subtitle": 2020,
-      "songList": [
-        "Shut Up (explicit)",
-        "34 + 35 (explicit)",
-        "Motive (with Doja Cat) (explicit)",
-        "Just Like Magic (explicit)",
-        "Off the Table (with The Weeknd)",
-        "Six Thirty (explicit)",
-        "Safety Net (feat. Ty Dolla $ign)",
-        "My Hair",
-        "Nasty (explicit)",
-        "Westside",
-        "Love Language (explicit)",
-        "Positions (explicit)",
-        "Obvious (explicit)",
-        "POV"
-      ],
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
+      "title": "Position",
+      "price": 235,
       "songAmount": 14,
-      "category": "Album"
-    },
-    {
-      "id": 2,
-      "title": "Positions (Deluxe)",
-      "price": 100,
-      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
-      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
-      "subtitle": 2021,
-      "songList": [
-        "Shut Up (explicit)",
-        "34 + 35 (explicit)",
-        "Motive (with Doja Cat) (explicit)",
-        "Just Like Magic (explicit)",
-        "Off the Table (with The Weeknd)",
-        "Six Thirty (explicit)",
-        "Safety Net (feat. Ty Dolla $ign)",
-        "My Hair",
-        "Nasty (explicit)",
-        "Westside",
-        "Love Language (explicit)",
-        "Positions (explicit)",
-        "Obvious (explicit)",
-        "POV",
-        "Someone Like u - Interlude",
-        "Test Drive",
-        "34 + 35 (feat. Doja Cat, Megan Thee Stallion)(explicit)",
-        "Worst Behaviour (explicit)",
-        "Main Thing"
-      ],
-      "songAmount": 19,
-      "category": "Album"
+      "id": 1
     },
     {
       "id": 3,
       "title": "Thank u, next",
-      "price": 100,
+      "price": 345,
       "subtitle": 2019,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fSob7QVX/SharedImage-110618.png?t=290487e4116e5ee7a527",
       "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
@@ -128,7 +65,7 @@
     {
       "id": 4,
       "title": "Sweetener",
-      "price": 100,
+      "price": 460,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fvli9QVX/SharedImage-110621.png?t=f3d5b7429800867398db",
       "img": "https://i.scdn.co/image/ab67616d0000b273c3af0c2355c24ed7023cd394",
       "subtitle": 2018,
@@ -153,7 +90,7 @@
     {
       "id": 5,
       "title": "Dangerous Woman",
-      "price": 100,
+      "price": 550,
       "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fJ0J9QVX/SharedImage-110620.png?t=ae27a2b6a60dff035c73",
       "img": "https://i.scdn.co/image/ab67616d0000b273c80df9fb1b8755271cec9785",
       "subtitle": 2016,
@@ -180,7 +117,7 @@
     {
       "id": 6,
       "title": "My Everything",
-      "price": 100,
+      "price": 420,
       "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
       "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
       "subtitle": 2014,
@@ -204,7 +141,7 @@
     {
       "id": 7,
       "title": "My Everything (Deluxe)",
-      "price": 100,
+      "price": 560,
       "coverImage": "https://i.ebayimg.com/images/g/F8AAAOSwzZFd0QLo/s-l500.png",
       "img": "https://i.scdn.co/image/ab67616d0000b2735b1c64d5433d4ddaaf2768b5",
       "subtitle": 2014,
@@ -231,7 +168,7 @@
     {
       "id": 8,
       "title": "Your's truly",
-      "price": 100,
+      "price": 360,
       "coverImage": "https://cdn.shopify.com/s/files/1/0491/7398/7484/products/P0602577974557_1_1445x.png?v=1643990442",
       "img": "https://i.scdn.co/image/ab67616d0000b2734bb9f35da9ff34b1e2314d8e",
       "subtitle": 2013,
@@ -435,7 +372,7 @@
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_UnderEyeBlur_PDP_Closed_right.png?v=1647291232",
       "description": "This botanically-powered cooling balm will offer instant results. Centella Asiatica along with caffeine, helps to soothe imperfections and melt away puffy looks on the delicate eye area ",
-      "price": null,
+      "price": 420,
       "category": "Makeup",
       "chapter": 2
     },

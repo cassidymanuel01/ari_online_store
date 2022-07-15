@@ -286,7 +286,11 @@ a{
     aspect-ratio: 1 !important;
     object-fit: cover;
     cursor: pointer;
-    border: solid #28D084 3px;
     border-radius: 10%;
+    border: dotted;
+    /* transition: all 0.3s linear; */
+  }
+  #professionalImage:hover{
+    border: 3px solid #28D084;
   }
 </style>

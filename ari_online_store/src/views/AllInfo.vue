@@ -52,26 +52,20 @@
         </a>
       </div>
 <div class="display-5 text-center p-5 h-50">Search</div>
-      <form class="d-flex justify-content-center align-items-center h-50 p-5" role="search">
+      <div class="d-flex justify-content-center align-items-center h-50 p-5" role="search">
         <input
           class="form-control me-2 w-50"
           type="search"
           v-model="search"
           placeholder="Search..."
         />
-        <button
+        <button @click="sortPrice"
           class="btn btn-outline-dark"
-          @click="sortPrice"
           type="submit"
         >
-          SortBy
+          Sort By Price
         </button>
-      </form>
-        <!-- <select v-model="All">
-              <option value="All">All</option>
-              <option value="albums">albums</option>
-              <option value="price">price</option>
-        </select> -->
+      </div>
       <div id="albumsContainer"></div>
       <div class="container">
         <div class="row my-3 pt-2">
@@ -82,7 +76,7 @@
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div
+          <div style="border:5px solid white"
             v-for="album in albums.filter((x) => {return x.category=='Album'})"
             :key="album.id"
             class="col-md-4"
@@ -120,14 +114,14 @@
           </div>
         </div>
         <div class="row my-5 pt-5">
-        <div id="makeupContainer" class="pt-5"></div>
+        <div id="makeupContainer" class="p-5"></div>
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
             <h2 class="display-5">View our Makeup</h2>
             <h3 class="display-6">Chapter 1</h3>
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div
+          <div style="border:5px solid white"
             v-for="album in albums.filter((x) => {
               return x.chapter == 1;
             })"
@@ -173,10 +167,10 @@
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
+          <div style="border:5px solid white;" v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
             <router-link
-              class="m-0 p-0"
-              style="text-decoration: none; color: inherit"
+              class="m-0 p-0" 
+              style="text-decoration: none; color: inherit "
               :to="{ name: 'single', params: { id: album.id } }"
             >
               <div class="itemContainer">
@@ -213,7 +207,7 @@
           </div>
         </div>
         <div class="row my-5 pb-5">
-          <div
+          <div style="border:5px solid white"
             v-for="album in albums.filter((x) => {
               return x.chapter == 3;
             })"
@@ -258,7 +252,7 @@
           </div>
         </div>
         <div class="row mt-5">
-          <div
+          <div style="border:5px solid white"
             v-for="album in albums.filter((x) => {
               return x.category == 'Fragrance';
             })"
@@ -309,12 +303,14 @@ export default {
   data() {
     return {
       search: "",
-      // All:""
+      All:"",
+      sortByPrice: false
     };
   },
   methods: {
     sortPrice() {
-      this.$store.commit("sortPropertiesByPrice");
+      this.sortByPrice = !this.sortByPrice;
+      // this.$store.commit("sortPropertiesByPrice");
     },
   },
   components: { Footer },
@@ -323,21 +319,25 @@ export default {
   },
   computed: {
     albums() {
-      return this.$store.state.albums?.filter((album) => {
-        let isMatch = true;
-        if (!album.title?.toLowerCase().includes(this.search.toLowerCase())) {
-          isMatch = false;
-        }
-        // if(this.album !== "All" && this.album !== album.price){
-        //   isMatch= false;
-        // }
-        return isMatch;
-      });
+      if(!this.sortByPrice){
+        this.$store.state.albums?.reverse();
+        return this.$store.state.albums?.filter((album) => {
+          let isMatch = true;
+          if (!album.title?.toLowerCase().includes(this.search.toLowerCase())) {
+            isMatch = false;
+          }
+          return isMatch;
+        });
+      }else{
+        return this.$store.state.albums?.sort((a,b) => {
+          return a.price - b.price;
+        });
+      }
     },
     user() {
       return this.$store.state.user;
     },
-  },
+  }
 };
 </script>
 

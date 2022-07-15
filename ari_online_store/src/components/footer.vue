@@ -2,34 +2,18 @@
     <footer>  <section id="footer">
     <div class="container">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="col-xs-12 col-md-6">
           <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
             <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
             <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-            <li class="fs-6" ><a href=""><i class="fa fa-angle-double-right"></i>Videos</a></li>
           </ul>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="col-xs-12 col-md-6">
           <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-            <li class="fs-6" ><a href=""><i class="fa fa-angle-double-right"></i>Videos</a></li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h5 class="fs-4">Quick links</h5>
-          <ul class="list-unstyled quick-links">
-            <li class="fs-6"><a href="/"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li class="fs-6"><a href="/about"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-            <li class="fs-6"><a href=""><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-            <li class="fs-6" ><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+            <li class="fs-6"><a href="/login"><i class="fa fa-angle-double-right"></i>Login</a></li>
+            <li class="fs-6"><a href="/register"><i class="fa fa-angle-double-right"></i>Register</a></li>
           </ul>
         </div>
       </div>
@@ -47,7 +31,7 @@
       </div>  
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6"><u class="sub"><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Western Cape [a wholly owned subsidiary of SA Bancorp, Minneapolis, MN]</p>
+          <p class="h6"><u class="sub"><a href="https://www.nationaltransaction.com/">Ariana Corporation</a></u> is a Registered MSP/ISO , Inc. Western Cape</p>
           <p class="h6">@copy All right Reversed.<a class="text-green ml-2" href="https://www.lifechoices.co.za/" target="_blank">Life-Choices</a></p>
         </div>
         <br>
@@ -159,7 +143,10 @@ section .section-title {
 }
 
 div.container{
-  padding:9em;
+  padding-top:7.5rem;
+  padding-right:2rem;
+  padding-left:2rem;
+  padding-bottom:7.5rem;
 }
 
 </style>
