@@ -4,7 +4,8 @@ export default createStore({
   state: {
     albums: null,
     singleAlbum: null,
-    user:null
+    user:null,
+    cart: null,
   },
   getters: {
     // getSingleAlbum(state,id){
@@ -21,8 +22,9 @@ export default createStore({
       state.singleAlbum = singleAlbum
     },
     signIn(state,user){
-      localStorage.clear();
-      localStorage.setItem('user',JSON.stringify(user));
+      state.user = user
+    },
+    setCart(state,user){
       state.user = user
     }
   },

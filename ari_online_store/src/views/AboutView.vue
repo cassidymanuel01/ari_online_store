@@ -76,16 +76,16 @@
     <h1>THE TEAM</h1>
     <div class="row">
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#CassidyModal">
-        <img id="professionalImage" src="../assets/Cassidy2.jpg" alt="CassidyImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Cassidy2.jpg" alt="CassidyImage" class="img-fluid my-3">
       </div>
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#ReaganModal">
-        <img id="professionalImage" src="../assets/Reagan.jpg" alt="ReaganImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Reagan.jpg" alt="ReaganImage" class="img-fluid my-3">
       </div>
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#MikhailModal">
-        <img id="professionalImage" src="../assets/Mikhail2.jpg" alt="MikhailImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Mikhail2.jpg" alt="MikhailImage" class="img-fluid my-3">
       </div>
       <div class="col-md-6" data-bs-toggle="modal" data-bs-target="#JaredModal">
-        <img id="professionalImage" src="../assets/Jared2.jpg" alt="JaredImage" class="img-fluid">
+        <img id="professionalImage" src="../assets/Jared2.jpg" alt="JaredImage" class="img-fluid my-3">
         </div>
     </div>
     <div id="modals">
@@ -107,8 +107,8 @@
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="https://www.linkedin.com/in/cassidy-manuel-08b537245/"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href="https://github.com/cassidymanuel01"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -131,8 +131,8 @@
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="https://www.linkedin.com/in/reagan-carolussen-03054823a/"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href="https://github.com/Reagan701/"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -155,8 +155,8 @@
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href=""><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href=""><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="https://www.linkedin.com/in/mikhail-thomas-177065208/"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a target="_blank" href="https://github.com/MikhailThomas"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -179,8 +179,8 @@
               </div>
             </div>
             <div class="modal-footer mx-auto">
-              <button type="button" class="btn btn-primary"><a target="_blank" href="#"><i class="bi bi-linkedin"></i></a></button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="_blank" href="#"><i class="bi bi-github"></i></a></button>
+              <button type="button" class="btn btn-primary"><a target="_blank" href="https://www.linkedin.com/in/jared-isaacs-854514245/"><i class="bi bi-linkedin"></i></a></button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a target="_blank" href="https://github.com/AkutoBlade"><i class="bi bi-github"></i></a></button>
             </div>
           </div>
         </div>
@@ -281,5 +281,7 @@ a{
     aspect-ratio: 1 !important;
     object-fit: cover;
     cursor: pointer;
+    border: solid #28D084 3px;
+    border-radius: 10%;
   }
 </style>
