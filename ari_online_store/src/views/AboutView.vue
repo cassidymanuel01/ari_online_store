@@ -280,18 +280,21 @@ h3{
 }
 a{
   color: black;
-  }
-  #professionalImage{
-    max-height: 414px;
-    max-width: 100%;
-    aspect-ratio: 1 !important;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 10%;
-    border: dotted;
-    /* transition: all 0.3s linear; */
-  }
-  #professionalImage:hover{
-    border: 3px solid #28D084;
-  }
+}
+#professionalImage{
+  max-height: 414px;
+  max-width: 100%;
+  aspect-ratio: 1 !important;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10%;
+  border: dotted;
+  /* transition: all 0.3s linear; */
+}
+.modal{
+  --bs-modal-width:600px;
+}
+#professionalImage:hover{
+  border: 3px solid #28D084;
+}
 </style>

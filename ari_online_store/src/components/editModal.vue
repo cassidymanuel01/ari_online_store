@@ -20,6 +20,10 @@
                                 <input v-model="album.price" class="form-control" type="number" placeholder="Enter the Price">
                                 <label class="form-label" for="Song Amount">Song Amount</label>
                                 <input v-model="album.songAmount" class="form-control" type="number" placeholder="Enter the Song Amount">
+                                <label for="songList" class="form-label">TrackList</label>
+                                <div :id="'#'+album.id">
+
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -36,10 +40,17 @@ export default {
     props: ['album'],
     mounted(){
         console.log(this.album.id)
+        this.initializeTrackList();
     },
     methods:{
         editItem(){
             this.$store.dispatch("editItem",this.album);
+        },
+        async initializeTrackList(){
+            let object = {...this.album.songList};
+            for(let i = 0;i<this.album.songAmount;i++){
+                document.getElementById(`#${this.album.id}`).innerHTML += `<input class="form-control" value="${object[i]}">`
+            }
         }
     }
 }

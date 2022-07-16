@@ -23,72 +23,80 @@
             <router-link to="/allInfo" v-if="user">ALL PRODUCTS</router-link>
             <router-link v-if="!user" to="/register">REGISTER</router-link>
             <router-link v-if="!user" to="/login">LOGIN</router-link>
-            <router-link v-if="admin" href="/admin">ADMIN</router-link>
+            <router-link v-if="admin" to="/admin">ADMIN</router-link>
             <router-link to="/about">ABOUT</router-link>
             <router-link to="/contact">CONTACT</router-link>
           </div>
           <div class="navbar-nav d-flex">
-            <a v-if="user" href="#"
-              >{{ firstName }} _ {{ surname }}</a
-            >
+            <router-link v-if="user" to="/profilePage"><i class="bi bi-person-circle"></i> {{ firstName }} _ {{ surname }}</router-link>
+            <a v-if="user" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a>
           </div>
         </div>
       </div>
     </div>
     </nav>
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-     <!-- <div class="col-md-4"> -->
-              <div class="itemContainer">
-                <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-2 pt-3">
-                    <h6>title</h6>
-                    <h5 style="height: 48px">title</h5>
-                  </div>
-                </div>
-                <!-- <img
-                  class="px-3 img-fluid"
-                  src="album.coverImage"
-                  alt="Makeup"
-                /> -->
-                <div class="row mx-auto">
-                  <div class="col-md-12 d-flex justify-content-end w-100">
-                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
-                      <i class="bi bi-cart pe-1"></i> Rprice
-                    </button>
-                  </div>
+    <div v-if="user" class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartLabel">{{$store.state.user.firstName}} {{$store.state.user.surname}}'s Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div v-if="cart">
+          <div v-if="cart.length>0">
+            <div class="row">
+            <div v-for="item in cart" :key="item.id" class="col-md-4">
+            <div class="cartItemContainer">
+              <div class="row mx-auto">
+                <div class="col-md-12 d-flex justify-content-between align-items-center py-3">
+                  <h6 class="mb-0">{{item.title}}</h6>
+                  <button type="button" class="btn-close"></button>
                 </div>
               </div>
-          <!-- </div> -->
-    </div>
-</div>
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Just Like Magic</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-     <div class="navbar-nav gap-5 d-flex flex-column justify-content-center h-100 fs-3 align-items-center">
-      <a href="/">HOME</a>
-      <a v-if="user" href="/allInfo">ALL PRODUCTS</a>
-      <a v-if="!user" href="/register">REGISTER</a>
-      <a v-if="!user" href="/login">LOGIN</a>
-      <a v-if="user" href="/login">LOGIN</a>
-          <a v-if="admin" href="/admin">ADMIN</a>
-        <a href="/about">ABOUT</a>
-        <a href="/contact">CONTACT</a>
-        <!-- <a @click="openCart" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a> -->
-        <a v-if="user" href="#">{{firstName}} _ {{surname}}</a>
+              <img class="px-3 img-fluid" :src="item.coverImage" alt="albumItem"/>
+              <div class="row ms-auto">
+                <div class="col-md-12 d-flex justify-content-between w-100">
+                  <p class="px-2 py-1 mb-3 me-2">
+                    R{{item.price}}
+                  </p>
+                  <button @click="removeFromCart(item.id)">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div v-else>
+            <h2>Your cart is empty</h2>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Just Like Magic</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="navbar-nav gap-5 d-flex flex-column justify-content-center h-100 fs-3 align-items-center">
+          <router-link to="/">HOME</router-link>
+          <router-link v-if="user" to="/allInfo">ALL PRODUCTS</router-link>
+          <router-link  v-if="!user" to="/register">REGISTER</router-link>
+          <router-link v-if="!user" to="/login">LOGIN</router-link>
+          <router-link v-if="user" to="/login">LOGIN</router-link>
+          <router-link v-if="admin" to="/admin">ADMIN</router-link>
+          <router-link to="/about">ABOUT</router-link>
+          <router-link to="/contact">CONTACT</router-link>
+          <a v-if="user" data-bs-toggle="offcanvas" data-bs-target="#cart" href=""><i class="bi bi-cart"></i></a>
+          <router-link v-if="user" to="/profilePage">{{firstName}} _ {{surname}}</router-link>
+          </div>
+        </div>
+    </div>
 </template>
 <script>
 export default {
+  mounted(){
+    this.$store.dispatch("getCart");
+  },
   computed: {
     user() {
       return this.$store.state.user;
@@ -107,6 +115,11 @@ export default {
     cart(){
       return this.$store.state.cart;
     }
+  },
+  methods:{
+    removeFromCart(item){
+      this.$store.dispatch('removeFromCart',item)
+    }
   }
 }
 </script>
@@ -116,6 +129,17 @@ export default {
 * {
   font-family: "Nunito", sans-serif;
   font-weight: bolder;
+}
+
+#currentCartButton {
+  border: 1px solid white;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  color: red;
+}
+
+#currentCartButton:hover {
+  background-color: white;
 }
 
 a {
@@ -132,12 +156,30 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+#cart{
+  --bs-offcanvas-width: 60vw;
+}
+
 .white a,
 .white {
   /* transition: 10s; */
   background: white;
   color: black !important;
   /* background: linear-gradient(#28D084,lightgrey); */
+}
+
+.cartItemContainer {
+  background-color: rgb(113 151 119);
+  border-radius: 15px;
+  margin: 1px;
+  border: 5px solid white;
+}
+
+.cartItemContainer:hover img {
+  transform: translate(0px, -20px);
+}
+.cartItemContainer img {
+  transition: all 1s ease;
 }
 
 div.pullRightLeft a:before,

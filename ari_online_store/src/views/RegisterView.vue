@@ -21,7 +21,7 @@
             </div>
         </form>
         <div v-else class="h-100 d-flex justify-content-center align-items-center flex-column">
-          <h3 class="display-3">Welcome {{$store.state.user.firstName}} {{$store.state.user.surname}}</h3>
+          <h3 class="display-3">Welcome to Just Like Magic</h3><br><h3 class="display-3"> {{$store.state.user.firstName}} {{$store.state.user.surname}}</h3>
         </div>
     </div>
   </div>
@@ -103,7 +103,7 @@ button{
 
 @media screen and (max-width:767px) {
   #register-page{
-    padding-bottom: 9rem;
+    padding-bottom: 10rem;
   }
   div.container{
     padding-top:12rem ;

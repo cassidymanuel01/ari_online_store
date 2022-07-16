@@ -21,7 +21,11 @@
                                 <label class="form-label" for="Description">Description</label>
                                 <textarea v-model="album.description" class="form-control" type="text" placeholder="Enter the Description"></textarea>
                                 <label class="form-label" for="Song Amount">Chapter</label>
-                                <input v-model="album.chapter" class="form-control" type="number" placeholder="Enter the Chapter Number">
+                                <select v-model="album.chapter" class="form-control">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
                             </form>
                         </div>
                         <div class="modal-footer">

@@ -86,7 +86,7 @@ input{
   height: 50px;
   gap: 10px;
   border-radius: 10px;
-  border: 1px solid;
+  border: 1px solid; 
   width: 50%;
 }
 
@@ -99,9 +99,11 @@ font-family: 'Nunito', sans-serif;
 input[type="text"]{
 color: black;
 font-family: 'Nunito', sans-serif;
-border: 1px solid black;
+border: 2px solid #28D084;
 width: 50%;
 }
+
+
 
 input[type="textarea"]::placeholder {
   color:black;
@@ -115,7 +117,7 @@ font-family: 'Nunito', sans-serif;
 
 input[type="textarea"] {
   color:black;
-  border: 1px solid black;
+  border: 2px solid #28D084;
   height: 100px;
  font-family: 'Nunito', sans-serif;
   width: 50%;
@@ -176,11 +178,11 @@ img{
     border: none;
     border-radius: 50px;
     font-family: 'Nunito', sans-serif;
+    transition: all 0.5s linear;
 }
 
 #send:hover{
-  box-shadow: 0vw 0vw 1vw white;  
-  transition: all 1s;
+  box-shadow: 0vw 0vw 1vw #28D084;  
 }
 
 .fa-phone-flip{

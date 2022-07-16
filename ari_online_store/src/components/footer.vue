@@ -7,13 +7,16 @@
           <ul class="list-unstyled quick-links">
             <li class="fs-6"><router-link to="/" ><i class="fa fa-angle-double-right"></i>Home</router-link></li>
             <li class="fs-6"><router-link to="/about"><i class="fa fa-angle-double-right"></i>About</router-link></li>
+            <li class="fs-6"><router-link to="/contact"><i class="fa fa-angle-double-right"></i>Contact</router-link></li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-6">
           <h5 class="fs-4">Quick links</h5>
           <ul class="list-unstyled quick-links">
-            <li class="fs-6"><router-link to="/login"><i class="fa fa-angle-double-right"></i>Login</router-link></li>
-            <li class="fs-6"><router-link to="/register"><i class="fa fa-angle-double-right"></i>Register</router-link></li>
+            <li v-if="!$store.state.user" class="fs-6"><router-link to="/login"><i class="fa fa-angle-double-right"></i>Login</router-link></li>
+            <li v-if="!$store.state.user" class="fs-6"><router-link to="/register"><i class="fa fa-angle-double-right"></i>Register</router-link></li>
+            <li v-if="$store.state.user" class="fs-6"><router-link to="/login"><i class="fa fa-angle-double-right"></i>All Products</router-link></li>
+            <li v-if="$store.state.user" class="fs-6"><router-link to="/register"><i class="fa fa-angle-double-right"></i>{{$store.state.user.firstName}} {{$store.state.user.surname}}</router-link></li>
           </ul>
         </div>
       </div>

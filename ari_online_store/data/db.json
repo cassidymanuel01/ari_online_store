@@ -5,6 +5,7 @@
       "surname": "Nimda",
       "email": "admin@email.com",
       "password": "admin123",
+      "isAdmin": true,
       "id": 1
     },
     {
@@ -15,6 +16,7 @@
       "id": 2
     }
   ],
+  "cart": [],
   "allInfo": [
     {
       "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
@@ -25,27 +27,14 @@
       "id": 1
     },
     {
-      "id": 3,
+      "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
+      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fSob7QVX/SharedImage-110618.png?t=290487e4116e5ee7a527",
       "title": "Thank u, next",
       "price": 345,
       "subtitle": 2019,
-      "coverImage": "https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.fSob7QVX/SharedImage-110618.png?t=290487e4116e5ee7a527",
-      "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
-      "songList": [
-        "Imagine (explicit)",
-        "Needy (explicit)",
-        "NASA",
-        "Bloodline (explicit)",
-        "Fake Smile (explicit)",
-        "Bad Idea",
-        "Make Up (explicit)",
-        "Ghostin",
-        "In My Head (explicit)",
-        "Thank u, next",
-        "Break Up With Your Girlfriend, I'm Bored (explicit)"
-      ],
       "songAmount": 12,
-      "category": "Album"
+      "category": "Album",
+      "id": 3
     },
     {
       "id": 4,
@@ -210,7 +199,7 @@
     {
       "id": 12,
       "title": "Highlighter Topper",
-      "subtitle": "interstellar",
+      "subtitle": "cosmic interstellar",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Highlighter_PDP_Open_misssaturn_f20c85cf-ea5e-45c8-97b3-9a65a5d426fa.png?v=1652996537",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Highlighter_PDP_Open_misssaturn_f20c85cf-ea5e-45c8-97b3-9a65a5d426fa.png?v=1652996537",
       "description": "A next level highlighter, used on the cheeks, eyes and body. Infused with vegetable driven emollients, this product applies like a second skin and leaves a dewy luminous highlight that will last.",
@@ -245,7 +234,7 @@
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Mascara_PDP_Open_Volumizing_left_21688645-484d-4667-97f7-b35a8ad5c007.png?v=1639766058",
       "title": "Volumizing Mascara",
       "price": 275,
-      "subtitle": "flourishinin",
+      "subtitle": "fresh and flourishing",
       "description": "Infused with a 100% naturally derived bamboo powder this mascarra will volumize and nourish your lashes. An all new clean flourshing lengthening mascara.",
       "category": "Makeup",
       "chapter": 1,
@@ -287,7 +276,7 @@
     {
       "id": 19,
       "title": "01_Dream Lashes",
-      "subtitle": "r.e.m",
+      "subtitle": "01 and r.e.m",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Lashes_PDP_Closed_EternallyMeowing_right_390a03b9-1c73-4313-9fa0-9fe2351508e4.png?v=1639763777",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/Rapid_Lashes_PDP_Closed_EternallyMeowing_right_390a03b9-1c73-4313-9fa0-9fe2351508e4.png?v=1639763777",
       "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
@@ -309,7 +298,7 @@
     {
       "id": 21,
       "title": "02_Dream Lashes",
-      "subtitle": "r.e.m",
+      "subtitle": "02 and r.e.m",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_DreamLashes_PDP_Closed_DayDreamin_right.png?v=1647622420",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_DreamLashes_PDP_Closed_DayDreamin_right.png?v=1647622420",
       "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
@@ -320,7 +309,7 @@
     {
       "id": 22,
       "title": "Lash & Brow Boosting Serum",
-      "subtitle": "flourshing",
+      "subtitle": "fresh and flourshing",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LashBrowSerum_PDP_Open_left.png?v=1647291171",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LashBrowSerum_PDP_Open_left.png?v=1647291171",
       "description": "A peptide infused, biotin-formulated serum that will help promote thicker, longer visible lashes in as little as 4 weeks",
@@ -331,7 +320,7 @@
     {
       "id": 23,
       "title": "Calming Face Mist",
-      "subtitle": "mist thing",
+      "subtitle": "calming and misty",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_FaceMist_PDP_Open.png?v=1647291159",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_FaceMist_PDP_Open.png?v=1647291159",
       "description": "A burst of cosmic calm for stressed-out skin. A calming scent of natural lavender and essential oils.",
@@ -375,7 +364,7 @@
     {
       "id": 27,
       "title": "Cheek and Lipstick",
-      "subtitle": "eclipse",
+      "subtitle": "moonlight eclipse",
       "coverImage": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LipCheek_PDP_Closed_StandingO.png?v=1647873144",
       "img": "https://cdn.shopify.com/s/files/1/0581/3849/3094/products/REM_Ch2_LipCheek_PDP_Closed_StandingO.png?v=1647873144",
       "description": "Two in one balm, that's easy to use, when you want a healthy flush of natural looking colors on your lips and cheek",
@@ -487,6 +476,17 @@
       "description": "Moonlight Perfume",
       "price": 295,
       "category": "Fragrance"
+    },
+    {
+      "img": null,
+      "coverImage": null,
+      "title": null,
+      "price": null,
+      "subtitle": null,
+      "description": null,
+      "chapter": 12,
+      "category": "Makeup",
+      "id": 40
     }
   ]
 }

@@ -264,7 +264,11 @@
       </div>
       <Footer />
     </div>
-    <div v-else>loading...</div>
+    <div v-else class="vh-100">
+      <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="loader"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -320,8 +324,23 @@ export default {
   scroll-behavior: smooth;
 }
 
+.loader{
+  border: 16px solid black;
+  border-top: 16px solid #28d084;
+  border-bottom: 16px solid grey;
+  border-radius: 50%;
+  height: 120px;
+  width:120px ;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
 #allItemsContainer{
-  background: linear-gradient(#81d084d5,#28d084);
+  background: linear-gradient(#20a76a,#81d084d5);
 }
 
 #albumsContainer,#makeupContainer,#fragranceContainer{
@@ -425,7 +444,7 @@ div.container{
 }
 
 .itemContainer {
-  background-color: rgb(113 151 119);
+  background-color: rgb(149 163 151);
   border-radius: 15px;
   margin: 1px;
   border: 5px solid white;

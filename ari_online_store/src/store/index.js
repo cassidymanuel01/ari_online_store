@@ -9,6 +9,7 @@ export default createStore({
     user: null,
     noUser: false,
     duplicateUser: false,
+    cart:null,
     asc: true,
   },
   getters: {
@@ -28,11 +29,14 @@ export default createStore({
     signIn(state,user){
       state.user = user
     },
-    setCart(state,user){
-      state.user = user
+    setCart(state,data){
+      state.cart = data
     },
     noUser(state,value){
       state.noUser = value
+    },
+    logOut(state){
+      state.user = null
     },
     duplicateUser(state,value){
       state.duplicateUser = value;
@@ -105,13 +109,43 @@ export default createStore({
     setNoUser(context){
       context.commit('noUser',false);
     },
+    logOut(context){
+      context.commit('logOut')
+    },
+    deleteUser(context) {
+      fetch('http://localhost:3000/users/' + context.state.user.id, {
+          method: 'Delete'
+        })
+        .then(() => context.dispatch('logOut'))
+    },
+    editUser(context,user){
+      fetch('http://localhost:3000/users/' + user.id, {
+          method: 'PUT',
+          body: JSON.stringify({
+            firstName: user.firstName,
+            surname: user.surname,
+            email: user.email,
+            password: user.password,
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          },
+        })
+        .then(() => context.dispatch('checkSignIn',[user.email,user.password]))
+    },
     deleteItem(context, id) {
       fetch('http://localhost:3000/allInfo/' + id, {
           method: 'Delete'
         })
         .then(() => context.dispatch('getAlbums'))
     },
-    addAlbumItem(context, [title, subtitle, image, coverImage, price, songAmount, newCategory]) {
+    removeFromCart(context, id) {
+      fetch('http://localhost:3000/cart/' + id, {
+          method: 'Delete'
+        })
+        .then(() => context.dispatch('getCart'))
+    },
+    addAlbumItem(context, [title, subtitle, image, coverImage, price, songAmount, newCategory,tracklist]) {
       fetch('http://localhost:3000/allInfo', {
           method: 'POST',
           body: JSON.stringify({
@@ -121,7 +155,8 @@ export default createStore({
             price: price,
             subtitle: subtitle,
             songAmount: songAmount,
-            category: newCategory
+            category: newCategory,
+            songList: tracklist
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -220,7 +255,70 @@ export default createStore({
           },
         })
         .then(() => context.dispatch('getAlbums'))
-    }
+    },
+    addAlbumToCart(context, item) {
+      fetch('http://localhost:3000/cart', {
+          method: 'POST',
+          body: JSON.stringify({
+            img: item.img,
+            coverImage: item.coverImage,
+            title: item.title,
+            price: item.price,
+            subtitle: item.subtitle,
+            songAmount: item.songAmount,
+            category: item.newCategory
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          },
+        })
+        .then(() => context.dispatch('getCart'))
+    },
+    addMakeupToCart(context, item) {
+      fetch('http://localhost:3000/cart', {
+          method: 'POST',
+          body: JSON.stringify({
+            img: item.img,
+            coverImage: item.coverImage,
+            title: item.title,
+            price: item.price,
+            subtitle: item.subtitle,
+            description: item.description,
+            chapter: item.newChapter,
+            category: item.newCategory
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          },
+        })
+        .then(() => context.commit('setCart'))
+    },
+    addFragranceToCart(context, item) {
+      fetch('http://localhost:3000/cart', {
+          method: 'POST',
+          body: JSON.stringify({
+            img: item.img,
+            coverImage: item.coverImage,
+            title: item.title,
+            price: item.price,
+            subtitle: item.subtitle,
+            description: item.description,
+            category: item.newCategory
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          },
+        })
+        .then(() => context.commit('setCart'))
+    },
+    getCart(context) {
+      fetch('http://localhost:3000/cart')
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          context.commit('setCart', data)
+        });
+    },
   },
   modules: {}
 })

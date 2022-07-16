@@ -1,5 +1,5 @@
 <template>
-  <div class="singleItem mt-5">
+  <div class="singleItem pt-5">
     <div class="h-100" v-if="singleInfo">
         <div v-if="singleInfo.category == 'Album'" class="container h-100 mx-auto my-auto pt-2 d-flex justify-content-center flex-column px-2">
         <div class="row mb-5 pb-2">
@@ -48,7 +48,7 @@
                   </div>
                 </div>
                 <div>
-                  <button id="cartButton" class="py-2 px-1 fw-bold">
+                  <button id="cartButton" @click="addAlbumToCart(singleInfo)" class="py-2 px-1 fw-bold">
                     <i class="bi bi-cart"></i> Add to cart - R{{singleInfo.price}}
                   </button>
                 </div>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mt-3 mx-auto fs-5 d-flex flex-column justify-content-center align-items-center">
-                  <button id="cartButton" class="py-2 px-1 fs-4 fw-bold">
+                  <button id="cartButton" @click="addMakeupToCart(singleInfo)" class="py-2 px-1 fs-4 fw-bold">
                     <i class="bi bi-cart"></i> Add to cart - R{{singleInfo.price}}
                   </button>
                 </div>
@@ -142,7 +142,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mt-3 mx-auto fs-5 d-flex flex-column justify-content-center align-items-center">
-                  <button id="cartButton" class="py-2 px-1 fw-bold">
+                  <button id="cartButton" @click="addFragranceToCart(singleInfo)" class="py-2 px-1 fw-bold">
                     <i class="bi bi-cart"></i> Add to cart - R{{singleInfo.price}}
                   </button>
                 </div>
@@ -174,6 +174,17 @@ export default {
       return this.$store.state.singleAlbum.songList;
     },
   },
+  methods:{
+    addAlbumToCart(item){
+      this.$store.dispatch('addAlbumToCart',item)
+    },
+    addMakeupToCart(item){
+      this.$store.dispatch('addMakeupToCart',item)
+    },
+    addFragranceToCart(item){
+      this.$store.dispatch('addFragranceToCart',item)
+    }
+  }
 };
 </script>
 
@@ -191,10 +202,6 @@ export default {
     to{transform:rotate(360deg) ;}
   }
 
-#image{
-    z-index: -4;
-}
-
 h1 {
   font-size: 30px;
   display: flex;
@@ -205,6 +212,10 @@ h1 {
 .thing{
     border-radius: 20px;
     background-color:white;
+}
+
+.singleItem{
+  background: linear-gradient(lightgrey,#28D084);
 }
 
 .img-fluid {
@@ -251,9 +262,9 @@ p {
 }
 
 @media screen and (min-width:1200px) {
-  .ratingsHolder{
+  /* .ratingsHolder{
     margin-top:2rem;
-  }
+  } */
   .tracklist{
     padding-bottom: 1.5rem;
   }
