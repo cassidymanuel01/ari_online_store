@@ -1,7 +1,7 @@
 <template>
   <div class="AllProperties">
     <div id="allItemsContainer" v-if="albums">
-      <div class="wrapper mt-5 mx-auto">
+      <div class="wrapper pt-5 mx-auto">
         <a href="#albumsContainer">
           <div class="imgContainer">
             <img class="img-fluid" src="https://pbs.twimg.com/media/FFuVnvyWUAoiKMO.jpg:large" alt="Albums"/>
@@ -31,32 +31,73 @@
             <img class="img-fluid" src="https://vioralondon.com/wp-content/uploads/2020/10/Best-Ariana-Grande-Perfumes-Reviewed-image.jpg" alt="Fragrances"/>
             <div class="onHover">
               <div class="row">
-                  <div class="col-md-12">
-                    <span id="hoverInfo">Fragrances</span>
-                  </div>
+                <div class="col-md-12">
+                  <span id="hoverInfo">Fragrances</span>
                 </div>
               </div>
             </div>
+          </div>
         </a>
       </div>
-    <div class="display-5 text-center p-5 h-50">Search</div>
-      <div class="d-flex justify-content-center align-items-center h-50 p-5" role="search">
-        <input class="form-control me-2 w-50" type="search" v-model="search" placeholder="Search..." />
-        <button @click="sortPrice" class="btn btn-outline-dark" type="submit" >
-          Sort By Price
-        </button>
+    <div class="container bg-dark mt-4 pt-4" style="border-radius:20px;">
+      <div class="row my-4">
+        <h2 class="text-white">Find What you're looking for!</h2>
       </div>
+      <h2 class="text-white">Globally</h2>
+      <div class="row gap-2 py-3">
+        <div class="col-md-5 mx-auto">
+          <input class="form-control px-2 py-1" type="text" v-model="search" placeholder="Search..." />
+        </div>
+        <div class="col-md-5 mx-auto">
+          <input class="form-control px-2 py-1" type="number" v-model="minPrice" placeholder="Your Budget" />
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-md-3 mx-auto">
+          <h2 class="text-white">Albums</h2>
+          <div class="d-flex flex-column gap-3 justify-content-center align-items-center pt-3 pb-4" role="search">
+            <input v-model="releaseYear" type="number" class="form-control px-2 py-1" placeholder="Enter the release year">
+            <input class="form-control px-2 py-1" type="number" v-model="songAmount" placeholder="Enter Song Amount" />
+          </div>
+        </div>
+        <div class="col-md-3 mx-auto">
+          <h2 class="text-white">Makeup</h2>
+          <div class="d-flex flex-column justify-content-center align-items-center pt-3 pb-4" role="search">
+              <select v-model="makeupType" class="px-2 py-1 form-control">
+                <option value="All">All</option>
+                <option value="Lip Gloss">Lip Gloss</option>
+                <option value="Lipstick">Lipstick</option>
+                <option value="Eye Shadow">Eye Shadow</option>
+                <option value="Highlighter">Highlighter</option>
+                <option value="Eyeliner">Eyeliner</option>
+                <option value="Lip Marker">Lip Marker</option>
+                <option value="Mascarra">Mascarra</option>
+                <option value="Eyelashes">Eyelashes</option>
+                <option value="Treatment">Treatment</option>
+              </select>
+          </div>
+        </div>
+        <div class="col-md-3 mx-auto">
+          <h2 class="text-white">Fragrance</h2>
+          <div class="d-flex flex-column justify-content-center align-items-center pt-3 pb-4" role="search">
+            <input class="form-control px-2 py-1" type="text" v-model="fragranceSubtitle" placeholder="Search for fragrance subtitle" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 d-flex justify-content-center align-content-center">
+        <div v-if="albums.filter((x) => {return x.category=='Album'}).length!=0" class="row">
+          <!-- Albums -->
+          <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
             <h2 id="albumsContainer" class="display-5">View our albums</h2>
           </div>
         </div>
-        <div class="row my-5 pb-5">
+        <div v-if="albums.filter((x) => {return x.category=='Album'}).length!=0" class="row my-5 pb-5">
           <div
             v-for="album in albums.filter((x) => {return x.category=='Album'})"
             :key="album.id"
-            class="col-md-4">
+            class="col-lg-4">
             <router-link
               class="m-0 p-0"
               style="text-decoration: none; color: inherit"
@@ -68,9 +109,9 @@
             >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-2 pt-3">
-                    <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px" class="fw-bold">{{ album.title }}</h5>
+                  <div id="titles" class="col-7 ps-2 pt-3">
+                    <h6 class="fs-5">{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px" class="fs-4 fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -79,8 +120,9 @@
                   alt="Makeup"
                 />
                 <div class="row mx-auto">
-                  <div class="col-md-12 d-flex justify-content-end w-100">
-                    <button id="cartButton" class="px-2 py-1 mb-3 me-2">
+                  <div class="col-md-12 pb-3 px-3 d-flex justify-content-between align-items-center w-100">
+                    <span class="fs-4 ps-3">{{album.songAmount}} <i class="bi bi-music-note-list"></i></span>
+                    <button id="cartButton" class="fs-5 px-2 py-1">
                       <i class="bi bi-cart pe-1"></i> R{{ album.price }}
                     </button>
                   </div>
@@ -89,37 +131,27 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5">
+        <div v-if="albums.filter((x) => {return x.category=='Makeup'}).length!=0" class="row my-5">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
-            <h2 id="makeupContainer" class="display-5">View our Makeup</h2>
-            <h3 class="display-6">Chapter 1</h3>
+            <h2 id="makeupContainer" v-if="albums.filter((x) => {return x.category=='Makeup'}).length!=0" class="display-5">View our Makeup</h2>
+            <h3 v-if="albums.filter((x) => {return x.chapter==1}).length!=0" class="display-6">Chapter 1</h3>
           </div>
         </div>
-        <div class="row my-5 pb-4">
+        <div v-if="albums.filter((x) => {return x.chapter==1}).length!=0" class="row my-5 pb-4">
           <div
             v-for="album in albums.filter((x) => {
               return x.chapter == 1;
-            })"
-            :key="album.id"
-            class="col-md-4"
-          >
-            <router-link
-              class="m-0 p-0"
-              style="text-decoration: none; color: inherit"
-              :to="{ name: 'single', params: { id: album.id } }"
-            >
+            })" :key="album.id" class="col-lg-4">
+            <router-link class="m-0 p-0" style="text-decoration: none; color: inherit"
+              :to="{ name: 'single', params: { id: album.id } }" >
               <div class="itemContainer">
                 <div class="row mx-auto">
-                  <div id="titles" class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start" >
-                    <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                  <div id="titles" class="col-7 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start" >
+                    <h6 style="height:48px" class="fs-5">{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px" class="fs-4 fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
-                <img
-                  class="px-3 img-fluid"
-                  :src="album.coverImage"
-                  alt="Makeup"
-                />
+                <img class="px-3" :src="album.coverImage"  alt="Makeup" />
                 <div class="row mx-auto">
                   <div class="col-md-12 d-flex justify-content-end w-100">
                     <button id="cartButton" class="px-2 py-1 mb-3 me-2">
@@ -131,15 +163,15 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5 py-3">
+        <div v-if="albums.filter((x) => {return x.chapter==2}).length!=0" class="row my-5 py-3">
           <div
             class="col-md-12 d-flex flex-column justify-content-center align-content-center"
           >
             <h3 class="display-6">Chapter 2</h3>
           </div>
         </div>
-        <div class="row my-5 pb-4">
-          <div v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-md-4">
+        <div v-if="albums.filter((x) => {return x.chapter==2}).length!=0" class="row my-5 pb-4">
+          <div v-for="album in albums.filter((x) => {return x.chapter==2})" :key="album.id" class="col-lg-4">
             <router-link
               class="m-0 p-0" 
               style="text-decoration: none; color: inherit "
@@ -149,10 +181,10 @@
                 <div class="row mx-auto">
                   <div
                     id="titles"
-                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                    class="col-7 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
                   >
-                    <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                    <h6 class="fs-5">{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px" class="fs-4 fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -171,20 +203,20 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5 pt-5">
+        <div v-if="albums.filter((x) => {return x.chapter==3}).length!=0" class="row my-5 pt-5">
           <div
             class="col-md-12 d-flex flex-column justify-content-center align-content-center"
           >
             <h3 class="display-6">Chapter 3</h3>
           </div>
         </div>
-        <div class="row my-5 pb-5">
+        <div v-if="albums.filter((x) => {return x.chapter==3}).length!=0" class="row my-5 pb-5">
           <div
             v-for="album in albums.filter((x) => {
               return x.chapter == 3;
             })"
             :key="album.id"
-            class="col-md-4"
+            class="col-lg-4"
           >
             <router-link
               class="m-0 p-0"
@@ -195,10 +227,10 @@
                 <div class="row mx-auto">
                   <div
                     id="titles"
-                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                    class="col-7 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
                   >
-                    <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                    <h6 class="fs-5">{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px" class="fs-4 fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -217,18 +249,18 @@
             </router-link>
           </div>
         </div>
-        <div class="row my-5 pt-4">
+        <div v-if="albums.filter((x) => {return x.category=='Fragrance'}).length!=0" class="row my-5 pt-4">
           <div class="col-md-12 d-flex flex-column justify-content-center align-content-center">
             <h2 id="fragranceContainer" class="display-5">View our Fragrances</h2>
           </div>
         </div>
-        <div class="row mt-5 pb-5">
+        <div v-if="albums.filter((x) => {return x.category=='Fragrance'}).length!=0" class="row mt-5 pb-5">
           <div
             v-for="album in albums.filter((x) => {
               return x.category == 'Fragrance';
             })"
             :key="album.id"
-            class="col-md-4"
+            class="col-lg-4"
           >
             <router-link
               class="m-0 p-0"
@@ -239,10 +271,10 @@
                 <div class="row mx-auto">
                   <div
                     id="titles"
-                    class="col-6 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
+                    class="col-7 ps-3 pt-3 d-flex flex-column justify-content-center align-items-start"
                   >
-                    <h6>{{ album.subtitle }}</h6>
-                    <h5 style="height: 48px">{{ album.title }}</h5>
+                    <h6 style="height: 48px" class="fs-5">{{ album.subtitle }}</h6>
+                    <h5 style="height: 48px" class="fs-4 fw-bold">{{ album.title }}</h5>
                   </div>
                 </div>
                 <img
@@ -279,13 +311,17 @@ export default {
     return {
       search: "",
       All:"",
-      sortByPrice: false
+      sortByPrice: false,
+      minPrice: null,
+      releaseYear: null,
+      songAmount: null,
+      makeupType: "All",
+      fragranceSubtitle: "",
     };
   },
   methods: {
     sortPrice() {
       this.sortByPrice = !this.sortByPrice;
-      // this.$store.commit("sortPropertiesByPrice");
     },
   },
   components: { Footer },
@@ -300,6 +336,31 @@ export default {
           let isMatch = true;
           if (!album.title?.toLowerCase().includes(this.search.toLowerCase())) {
             isMatch = false;
+          }
+          if((album.price < this.minPrice) && this.minPrice !=null){
+            isMatch = false;
+          }
+          if((album.songAmount < this.songAmount) && this.songAmount !=null){
+            isMatch = false;
+          }
+          if(typeof(album.subtitle) == 'number'){
+            if((album.subtitle < this.releaseYear) && this.releaseYear !=null){
+              isMatch = false;
+            }
+          }
+          if(this.makeupType !="All"){
+            if(album.type != this.makeupType){
+              isMatch = false;
+            }
+          }
+          if(this.fragranceSubtitle != ""){
+            if(typeof(album.subtitle) != "number"){
+              if(!album.subtitle?.includes(this.fragranceSubtitle.toLowerCase())){
+                isMatch = false;
+              }
+            }else{
+              isMatch=false;
+            }
           }
           return isMatch;
         });
@@ -317,6 +378,33 @@ export default {
 </script>
 
 <style scoped>
+
+
+@media screen and (max-width:500px) {
+  .itemContainer img {
+  transition: all 1s ease !important;
+  width:100% !important;
+  height:300px !important;
+  object-fit: contain !important;
+  }
+}
+
+input{
+color: black;
+font-family: 'Nunito', sans-serif;
+border: 2px solid #28D084;
+}
+
+input::placeholder {
+  color: black;
+font-family: 'Nunito', sans-serif;
+}
+
+select{
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  border: 2px solid #28D084;
+}
 
 *{
   margin: 0;
@@ -350,6 +438,7 @@ export default {
 div.container{
   padding-right:1rem;
   padding-left:1rem;
+  padding-top:4rem;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap");
@@ -364,6 +453,9 @@ div.container{
 }
 .itemContainer img {
   transition: all 1s ease;
+  width: 347.67px;
+  height: 392px;
+  object-fit: contain;
 }
 
 .wrapper {

@@ -47,12 +47,12 @@ export default {
         return;
       }else{
         this.$store.dispatch('registerUser',[this.name,this.surname,this.email,this.password,this.isAdmin]);
+        this.$store.dispatch('getCart');
       }
     }
   },
   computed:{
     duplicateUser(){
-      
       return this.$store.state.duplicateUser
     }
   }

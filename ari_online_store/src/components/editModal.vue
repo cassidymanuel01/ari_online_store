@@ -19,7 +19,7 @@
                                 <label class="form-label" for="Price">Price</label>
                                 <input v-model="album.price" class="form-control" type="number" placeholder="Enter the Price">
                                 <label class="form-label" for="Song Amount">Song Amount</label>
-                                <input v-model="album.songAmount" class="form-control" type="number" placeholder="Enter the Song Amount">
+                                <input @focusout="changeTrackLength" v-model="album.songAmount" class="form-control" type="number" placeholder="Enter the Song Amount">
                                 <label for="songList" class="form-label">TrackList</label>
                                 <div :id="'#'+album.id">
 
@@ -44,13 +44,28 @@ export default {
     },
     methods:{
         editItem(){
-            this.$store.dispatch("editItem",this.album);
+            let allSongs = [];
+            let T = document.getElementsByClassName(`##${this.album.id}class`);
+            console.log(T[0].value);
+            for(let i = 0; i<T.length;i++){
+                allSongs.push(T[i].value);
+            }
+            this.$store.dispatch("editItem",[this.album,allSongs]);
         },
         async initializeTrackList(){
+            document.getElementById(`#${this.album.id}`).innerHTML='';
             let object = {...this.album.songList};
             for(let i = 0;i<this.album.songAmount;i++){
-                document.getElementById(`#${this.album.id}`).innerHTML += `<input class="form-control" value="${object[i]}">`
+                if(object[i] !=undefined){
+                    document.getElementById(`#${this.album.id}`).innerHTML += `<input class="##${this.album.id}class form-control my-1" value="${object[i]}">`
+                }else{
+                    document.getElementById(`#${this.album.id}`).innerHTML += `<input class="##${this.album.id}class form-control my-1">`
+                }
             }
+        },
+        changeTrackLength(){
+            console.log('called');
+            this.initializeTrackList();
         }
     }
 }

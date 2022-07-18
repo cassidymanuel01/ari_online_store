@@ -1,9 +1,14 @@
 <template>
-  <div class="admin">
+  <div id="adminContainer" class="admin">
     <div class="container">
-      <div v-if="albums">
-        <table class="table">
-          <thead class="table">
+      <div class="row">
+        <div class="col-md-12 p-0 m-0 mx-auto">
+          <router-link class="m-0 p-0" to="/userAdmin"><button id="userAdminButton" class="btn">User Admin</button></router-link>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center flex-column h-100" v-if="albums">
+        <table class="mt-4 table table-hover table-dark table-striped">
+          <thead class="table table-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Image</th>
@@ -11,11 +16,12 @@
               <th scope="col">Title</th>
               <th scope="col">Subtitle</th>
               <th scope="col">Price</th>
-              <th scope="col">No. of Songs / Description</th>
+              <th scope="col">Tracklist / Description</th>
+              <th scope="col">No. of Songs / Type</th>
               <th scope="col">Category</th>
               <th id="add-btn" scope="col">
                 <button id="add" data-bs-toggle="modal" data-bs-target="#addModal">
-                  <i class="fa-2x bi bi-plus-square"></i>
+                  <i style="font-size:2rem" class="bi bi-plus-square"></i>
                 </button>
               </th>
             </tr>
@@ -23,7 +29,16 @@
           <tbody>
             <!-- Albums -->
             <tr>
-              <h1 class="fw-bold display-6 pt-2 ">Albums</h1>
+              <th><h1 class="fw-bold display-6 p-3">Albums</h1></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr v-for="album in albums.filter((x) => {
                 return x.category == 'Album';
@@ -32,9 +47,12 @@
               <th scope="row">{{ album.id }}</th>
               <td><img :src="album.img" :alt="album.title" class="img-fluid"/></td>
               <td><img :src="album.coverImage" :alt="album.title" class="img-fluid"/></td>
-              <td>{{ album.title }}</td>
+              <td id="breakWord" >{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
+              <td>
+                <button data-bs-toggle="modal" :data-bs-target="'#album_song' + album.id" class="btn btn-primary">view songs</button>
+              </td>
               <td>{{ album.songAmount }}</td>
               <td>{{ album.category }}</td>
               <td>
@@ -46,11 +64,34 @@
                 </button>
               </td>
               <editModal :album="album" />
+              <song-view-modal :album="album" />
             </tr>
             <!-- Makeup -->
             <!-- Chapter 1 -->
-            <tr> <th class="trh"><h1 class="fw-bold display-6">Makeup</h1></th> </tr>
-            <tr> <th class="trh"><h2 class="fw-bold display-6 fs-4">Chapter 1</h2></th> </tr>
+            <tr>
+              <th><h1 class="fw-bold display-6 p-3">Makeup</h1></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="trh"><h2 class="fw-bold display-6 fs-4 p-2">Chapter 1</h2></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
             <tr v-for="album in albums.filter((x) => {
                 return x.chapter == 1;
               })"
@@ -58,10 +99,11 @@
               <th scope="row">{{ album.id }}</th>
               <td> <img :src="album.img" :alt="album.title" class="img-fluid"/> </td>
               <td> <img :src="album.coverImage" :alt="album.title" class="img-fluid"/> </td>
-              <td>{{ album.title }}</td>
+              <td id="breakWord">{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
               <td>{{ album.description }}</td>
+              <td>{{ album.type }}</td>
               <td>{{ album.category }}</td>
               <td>
                 <button class="p-1" id="deleteButton" @click="deleteItem(album.id)" type="button">
@@ -75,7 +117,16 @@
             </tr>
             <!-- Chapter 2 -->
             <tr>
-              <th class="trh"><h2 class="fw-bold display-6 fs-4">Chapter 2</h2></th>
+              <th class="trh"><h2 class="fw-bold display-6 fs-4 p-2">Chapter 2</h2></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr
               v-for="album in albums.filter((x) => {
@@ -94,10 +145,11 @@
                   class="img-fluid"
                 />
               </td>
-              <td>{{ album.title }}</td>
+              <td id="breakWord">{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
               <td>{{ album.description }}</td>
+              <td>{{ album.type }}</td>
               <td>{{ album.category }}</td>
               <td>
                 <button
@@ -122,7 +174,16 @@
             </tr>
             <!-- Chapter 3 -->
             <tr>
-              <th class="trh"><h2 class="fw-bold display-6 fs-4">Chapter 3</h2></th>
+              <th class="trh"><h2 class="fw-bold display-6 fs-4 p-2">Chapter 3</h2></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr
               v-for="album in albums.filter((x) => {
@@ -141,10 +202,11 @@
                   class="img-fluid"
                 />
               </td>
-              <td>{{ album.title }}</td>
+              <td id="breakWord">{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
               <td>{{ album.description }}</td>
+              <td>{{ album.type }}</td>
               <td>{{ album.category }}</td>
               <td>
                 <button
@@ -169,7 +231,16 @@
             </tr>
             <!-- Fragrances -->
             <tr>
-              <th><h1 class="fw-bold display-6">Fragrances</h1></th>
+              <th><h1 class="fw-bold display-6 p-3">Fragrances</h1></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr
               v-for="album in albums.filter((x) => {
@@ -188,10 +259,11 @@
                   class="img-fluid"
                 />
               </td>
-              <td>{{ album.title }}</td>
+              <td id="breakWord">{{ album.title }}</td>
               <td>{{ album.subtitle }}</td>
               <td>R{{ album.price }}</td>
               <td>{{ album.description }}</td>
+              <td>{{album.category}}</td>
               <td>{{ album.category }}</td>
               <td>
                 <button
@@ -281,6 +353,18 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                     </select>
+                    <label class="form-label" for="Type">Type</label>
+                    <select v-model="newType" class="form-control">
+                      <option value="Lip Gloss">Lip Gloss</option>
+                      <option value="Lipstick">Lipstick</option>
+                      <option value="Eye Shadow">Eye Shadow</option>
+                      <option value="Highlighter">Highlighter</option>
+                      <option value="Eyeliner">Eyeliner</option>
+                      <option value="Lip Marker">Lip Marker</option>
+                      <option value="Mascarra">Mascarra</option>
+                      <option value="Eyelashes">Eyelashes</option>
+                      <option value="Treatment">Treatment</option>
+                    </select>
                   </div>
                   <label class="form-label" for="Category">Category</label>
                   <select v-model="newCategory" class="form-control">
@@ -317,6 +401,7 @@
 
 <script>
 import editModal from "../components/editModal.vue";
+import songViewModal from "../components/songListModal.vue";
 import editMakeupModal from "../components/editMakeupModal.vue";
 import editFragranceModal from "../components/editFragranceModal.vue";
 
@@ -332,6 +417,7 @@ export default {
       newTracklist:[],
       newCategory: "Album",
       newDescription: null,
+      newType: "Lip Gloss",
       newChapter: 1,
     };
   },
@@ -340,6 +426,7 @@ export default {
     editModal,
     editMakeupModal,
     editFragranceModal,
+    songViewModal,
   },
   mounted() {
     this.$store.dispatch("getAlbums");
@@ -351,15 +438,15 @@ export default {
   },
   methods:{
     async initializeTrackList(){
-            let songs = document.getElementsByClassName('#'+this.album.id+'song');
-            let object = {...this.album.songList};
-            for(let i = 0;i<songs.length;i++){
-                console.log(object)
-                songs[i].value = object[i];
-            }
+      let songs = document.getElementsByClassName('#'+this.album.id+'song');
+      let object = {...this.album.songList};
+      for(let i = 0;i<songs.length;i++){
+        console.log(object)
+        songs[i].value = object[i];
+        }
         },
         deleteItem(id){
-            this.$store.dispatch('deleteItem', id )
+          this.$store.dispatch('deleteItem', id )
         },
         addItem(){
           const inputs = document.getElementsByClassName("i");
@@ -374,26 +461,119 @@ export default {
             }else if(this.newCategory == "Makeup"){
               if(this.newImgURL == null){this.newImgURL = "https://cdn.pixabay.com/photo/2016/10/22/20/55/makeup-brushes-1761648_960_720.jpg"};
               if(this.newCoverImage == null){this.newCoverImage = "https://cdn.pixabay.com/photo/2016/10/22/20/55/makeup-brushes-1761648_960_720.jpg"};
-              this.$store.dispatch('addMakeupItem', [this.newTitle,this.newSubtitle,this.newImgURL,this.newCoverImage,this.newPrice,this.newDescription,this.newCategory,this.newChapter] )
+              this.$store.dispatch('addMakeupItem', [this.newTitle,this.newSubtitle,this.newImgURL,this.newCoverImage,this.newPrice,this.newDescription,this.newCategory,this.newChapter,this.newType] )
             }else{
               if(this.newCoverImage == null){this.newCoverImage = "https://cdn.pixabay.com/photo/2016/06/15/22/22/still-life-1460067_960_720.jpg"};
               if(this.newImgURL == null){this.newImgURL = "https://cdn.pixabay.com/photo/2016/06/15/22/22/still-life-1460067_960_720.jpg"};
               this.$store.dispatch('addFragranceItem', [this.newTitle,this.newSubtitle,this.newImgURL,this.newCoverImage,this.newPrice,this.newDescription,this.newCategory] )
             }
         }
-        
     }
     }
 </script>
 
+
 <style scoped>
+
+#adminContainer{
+  background: linear-gradient(#20a76a,#81d084d5);
+}
+
+@media screen and (max-width:1200px) {
+  table{
+    table-layout: fixed;
+  }
+}
+
+@media screen and (min-width:1201px) {
+  #deleteButton {
+  width: 100% !important;
+  border-radius:10% !important;
+  background-color: rgb(183, 20, 20) !important;
+  border: hidden !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+#editButton:nth-child(2n) {
+  width: 100% !important;
+  background-color: #28d084 !important;border-radius:10% !important;
+  border: hidden !important;
+  border-radius:10% !important;
+}
+
+}
+
+#deleteButton {
+  width: 100% !important;
+  border-radius:1%;
+  background-color: rgb(183, 20, 20) !important;
+  border: hidden !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+#editButton:nth-child(2n) {
+  width: 100% !important;
+  background-color: #28d084 !important;border-radius:10% !important;
+  border: hidden !important;
+  border-radius:1%;
+}
+
+@media screen and (min-width: 768px) and (max-width:924px) {
+  table{
+    width: 760px;
+  }
+  #songList{
+    padding: 0 !important;
+  }
+  #breakWord{
+    word-break: break-all;
+  }
+  #deleteButton {
+  width: 100% !important;
+  border-radius:0% !important;
+  background-color: rgb(183, 20, 20) !important;
+  border: hidden !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+#editButton:nth-child(2n) {
+  width: 100% !important;
+  background-color: #28d084 !important;border-radius:10% !important;
+  border: hidden !important;
+  border-radius:0% !important;
+}
+  
+}
+
+@media screen and (max-width:768px) {
+  #deleteButton {
+  width: 100% !important;
+  border-radius:0% !important;
+  background-color: rgb(183, 20, 20) !important;
+  border: hidden !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+#editButton:nth-child(2n) {
+  width: 100% !important;
+  background-color: #28d084 !important;border-radius:10% !important;
+  border: hidden !important;
+  border-radius:0% !important;
+}
+}
+
+#userAdminButton{
+  width: 250px !important;
+  border-radius: 10px !important;
+  background-color: rgb(90, 90, 90)!important;
+  color: white;
+  border: 2px solid black;
+}
+
 tr {
   background-color: white !important;
 }
 
-#add-btn {
-  background: rgb(199, 199, 199);
-}
 #add {
   color: white;
   border: hidden;
@@ -408,14 +588,7 @@ tr {
   background-color: rgb(255, 0, 0) !important;
   border: hidden !important;
 }
-#deleteButton {
-  width: 100% !important;
-  border-radius:10% !important;
-  background-color: rgb(183, 20, 20) !important;
-  border: hidden !important;
-  color: white;
-  transition: all 0.3s ease;
-}
+
 #deleteButton:hover {
   width: 100% !important;
   background-color: rgb(255, 0, 0) !important;
@@ -429,11 +602,7 @@ tr:nth-child(2n-1) {
   background: rgb(199, 199, 199);
 }
 
-#editButton:nth-child(2n) {
-  width: 100% !important;
-  background-color: #28d084 !important;border-radius:10% !important;
-  border: hidden !important;
-}
+
 tr:nth-child(2n-1) #editButton {
   width: 100% !important;
   background-color: #b5abab !important;

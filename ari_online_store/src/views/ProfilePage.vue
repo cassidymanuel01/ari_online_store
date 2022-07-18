@@ -10,7 +10,7 @@
                     <router-link v-if="!user.isAdmin" to="/login">
                     <button @click="deleteUser()" class="btn btn-danger">Delete Account</button></router-link>
                 </div>
-                <div id="Right" class="col-md-6">
+                <div id="Right" class="my-auto col-md-6">
                     <form class="form" @submit.prevent>
                         <h2>{{user.firstName}} {{user.surname}}</h2>
                         <label for="User First Name"></label>
@@ -21,7 +21,7 @@
                         <input class="form-control" readonly v-model="user.email" type="text">
                         <label for="User Password"></label>
                         <input id="password" @keyup="changePasswordColor" class="form-control" v-model="user.password" type="text">
-                        <button @click="confirmUserEdit(user)" class="mt-3 btn btn-primary">Confirm Edit</button>
+                        <button id="confirmButton" @click="confirmUserEdit(user)" class="mt-3 btn">Confirm Edit</button>
                     </form>
                 </div>
             </div>
@@ -67,7 +67,8 @@ export default {
             this.changePasswordColor();
         },
         logOut(){
-            this.$store.dispatch('logOut')
+            this.$store.dispatch('logOut');
+            this.$store.commit('clearCart');
         },
         deleteUser(user){
             this.$store.dispatch('deleteUser',user);
@@ -105,6 +106,19 @@ export default {
   padding-bottom: 1.45rem;
 }
 
+#confirmButton{
+  width: 150px !important;
+  border-radius: 10px !important;
+  background-color: #149e60!important;
+  color: white;
+  border: 1px solid black;
+}
+#confirmButton:hover{
+  width: 150px !important;
+  border-radius: 10px !important;
+  background-color: #12774a!important;
+}
+
 #Right{
     border-left: 2px solid black;
 }
@@ -123,8 +137,21 @@ export default {
     }
 }
 
+input{
+color: black;
+font-family: 'Nunito', sans-serif;
+border: 2px solid #28D084;
+font-weight: 500;
+}
+input::placeholder{
+color: black;
+font-family: 'Nunito', sans-serif;
+border: 2px solid #28D084;
+font-weight: 500;
+}
+
 #userIcon{
-    font-size:13rem
+    font-size:10.9rem
 }
 
 </style>

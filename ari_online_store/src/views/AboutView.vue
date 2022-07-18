@@ -43,7 +43,7 @@
         </div>
         <div class="carousel-item">
           <h3>'Jackie Goe'</h3>
-          <p>I had always tried to shop locally and had used the same music store for years. when it started to get more and more difficult to find what i was actually looking for i turned to the internet I found the site and it had everything i was looking for.</p>
+          <p>I had always tried to shop locally and had used the same music store for years. When it started to get more and more difficult to find what i was actually looking for i turned to the internet I found the site and it had everything i was looking for.</p>
           <span>
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -54,7 +54,7 @@
         </div>
         <div class="carousel-item">
           <h3>'Lee Pho'</h3>
-          <p>This is one of my favorite websites to use due to its responsiveness and beautiful about section.I am a web developer and have come accross some horrendeous websites so to see one so elegantly executed it brings joy to my heart. The product I purchased was an album that came out in 2013 and it was deliverd on time within a week i would definately reccomend it to a friend.</p>
+          <p>This is one of my favorite websites to use due to its responsiveness and beautiful about section.I am a web developer and have come across some horrendeous websites so to see one so elegantly executed, brings joy to my heart. The product I purchased was an album that came out in 2013 and it was delivered on time within a week i would definetly recommend it to a friend.</p>
           <span>
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>

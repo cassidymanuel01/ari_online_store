@@ -5,6 +5,7 @@
       "surname": "Nimda",
       "email": "admin@email.com",
       "password": "admin123",
+      "cart": [],
       "isAdmin": true,
       "id": 1
     },
@@ -13,18 +14,33 @@
       "surname": "Bobson",
       "email": "bob@gmail.com",
       "password": "bob123",
+      "cart": [],
+      "isAdmin": false,
       "id": 2
     }
   ],
   "cart": [],
   "allInfo": [
     {
+      "id":1,
+      "title": "Positions",
+      "price":300,
+      "subtitle": 2021,
       "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
       "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
-      "title": "Position",
-      "price": 235,
+      "songList": ["Shut Up (explicit)","34 + 35 (explicit)", "Motive (with Doja Cat) (explicit)", "Just Like Magic (explicit)", "Off the Table (with The Weeknd)", "Six Thirty (explicit)", "Safety Net (feat. Ty Dolla $ign)", "My Hair", "Nasty (explicit)", "Westside", "Love Language (explicit)", "Positions (explicit)", "Obvious (explicit)", "POV"],
       "songAmount": 14,
-      "id": 1
+      "category": "Album"
+    },{
+      "id":2,
+      "title": "Positions (Deluxe)",
+      "price": 390,
+      "subtitle": 2021,
+      "img": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+      "coverImage": "https://cdn.shopify.com/s/files/1/0087/7943/1993/products/positionsvinyl.png?v=1611789263",
+      "songList": ["Shut Up (explicit)","34 + 35 (explicit)", "Motive (with Doja Cat) (explicit)", "Just Like Magic (explicit)", "Off the Table (with The Weeknd)", "Six Thirty (explicit)", "Safety Net (feat. Ty Dolla $ign)", "My Hair", "Nasty (explicit)", "Westside", "Love Language (explicit)", "Positions (explicit)", "Obvious (explicit)", "POV", "Someone Like u - Interlude", "Test Drive", "34 + 35 (feat. Doja Cat, Megan Thee Stallion)(explicit)", "Worst Behaviour (explicit)", "Main Thing"],
+      "songAmount": 19,
+      "category": "Album"
     },
     {
       "img": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8",
@@ -34,6 +50,7 @@
       "subtitle": 2019,
       "songAmount": 12,
       "category": "Album",
+      "songList": ["Imagine (explicit)","Needy (explicit)", "NASA", "Bloodline (explicit)", "Fake Smile (explicit)", "Bad Idea", "Make Up (explicit)", "Ghostin", "In My Head (explicit)", "Thank u, next", "Break Up With Your Girlfriend, I'm Bored (explicit)"],
       "id": 3
     },
     {
@@ -171,6 +188,7 @@
       "subtitle": "on your collar",
       "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, low-shine finish.",
       "category": "Makeup",
+      "type": "Lip Gloss",
       "chapter": 1,
       "id": 9
     },
@@ -183,6 +201,7 @@
       "description": "An ultra-smooth matte formula with rich colors that delivers an instant, longlasting color that stays comfortably in place.",
       "price": 350,
       "category": "Makeup",
+      "type": "Lipstick",
       "chapter": 1
     },
     {
@@ -194,6 +213,7 @@
       "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
       "price": 440,
       "category": "Makeup",
+      "type": "Eye Shadow",
       "chapter": 1
     },
     {
@@ -205,6 +225,7 @@
       "description": "A next level highlighter, used on the cheeks, eyes and body. Infused with vegetable driven emollients, this product applies like a second skin and leaves a dewy luminous highlight that will last.",
       "price": 405,
       "category": "Makeup",
+      "type": "Highlighter",
       "chapter": 1
     },
     {
@@ -216,6 +237,7 @@
       "description": "Long wearing eyeliner inspired by Ariana's signature bold look.",
       "price": 350,
       "category": "Makeup",
+      "type": "Eyeliner",
       "chapter": 1
     },
     {
@@ -227,6 +249,7 @@
       "description": "A longwearing color with a modern take and natural finish.",
       "price": 295,
       "category": "Makeup",
+      "type": "Lip Marker",
       "chapter": 1
     },
     {
@@ -237,6 +260,7 @@
       "subtitle": "fresh and flourishing",
       "description": "Infused with a 100% naturally derived bamboo powder this mascarra will volumize and nourish your lashes. An all new clean flourshing lengthening mascara.",
       "category": "Makeup",
+      "type": "Mascarra",
       "chapter": 1,
       "id": 15
     },
@@ -249,6 +273,7 @@
       "description": "Longwearing, ultra-creamy and smudge-free Kohl eyeliner pencil, inspired by Ariana.",
       "price": 315,
       "category": "Makeup",
+      "type": "Eyeliner",
       "chapter": 1
     },
     {
@@ -260,6 +285,7 @@
       "description": "Super comfortable and crystal clear, this lip gloss delivers fuller-looking lips. Wear with a lip color or alone for the ultimate wet look.",
       "price": 315,
       "category": "Makeup",
+      "type": "Lip Gloss",
       "chapter": 1
     },
     {
@@ -271,6 +297,7 @@
       "description": "Longwearing, powerfully pigmented,water proof and in a range of matte finishes. The luxe liquid",
       "price": 295,
       "category": "Makeup",
+      "type": "Eye Shadow",
       "chapter": 1
     },
     {
@@ -282,6 +309,7 @@
       "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
       "price": 295,
       "category": "Makeup",
+      "type": "Eyelashes",
       "chapter": 1
     },
     {
@@ -293,6 +321,7 @@
       "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
       "price": 445,
       "category": "Makeup",
+      "type": "Eye Shadow",
       "chapter": 2
     },
     {
@@ -304,6 +333,7 @@
       "description": "Make your dream lashes a reality with these 3D, high quality lashes.",
       "price": 300,
       "category": "Makeup",
+      "type": "Eyelashes",
       "chapter": 2
     },
     {
@@ -315,6 +345,7 @@
       "description": "A peptide infused, biotin-formulated serum that will help promote thicker, longer visible lashes in as little as 4 weeks",
       "price": 745,
       "category": "Makeup",
+      "type": "Treatment",
       "chapter": 2
     },
     {
@@ -326,6 +357,7 @@
       "description": "A burst of cosmic calm for stressed-out skin. A calming scent of natural lavender and essential oils.",
       "price": 445,
       "category": "Makeup",
+      "type": "Treatment",
       "chapter": 2
     },
     {
@@ -337,6 +369,7 @@
       "description": "This ultra-fine star like eyeshadow will give your lids a brand-new wash, that's guaranteed to leave a comfortable multi-dimensional finish",
       "price": 300,
       "category": "Makeup",
+      "type": "Eye Shadow",
       "chapter": 2
     },
     {
@@ -348,6 +381,7 @@
       "description": "This botanically-powered cooling balm will offer instant results. Centella Asiatica along with caffeine, helps to soothe imperfections and melt away puffy looks on the delicate eye area ",
       "price": 420,
       "category": "Makeup",
+      "type": "Treatment",
       "chapter": 2
     },
     {
@@ -359,6 +393,7 @@
       "description": "Get the glossy lid look with this crystal clear,flexible eyeshadow gel.",
       "price": 300,
       "category": "Makeup",
+      "type": "Eye Shadow",
       "chapter": 2
     },
     {
@@ -370,6 +405,7 @@
       "description": "Two in one balm, that's easy to use, when you want a healthy flush of natural looking colors on your lips and cheek",
       "price": 335,
       "category": "Makeup",
+      "type": "Lipstick",
       "chapter": 2
     },
     {
@@ -381,6 +417,7 @@
       "description": "Infused with a blend of hydrating passionfruit and apricot oils this non-sticky formula delivers fuller-looking lips and a silky smooth, high-shine finish.",
       "price": 295,
       "category": "Makeup",
+      "type": "Lip Gloss",
       "chapter": 3
     },
     {
@@ -392,6 +429,7 @@
       "description": "A must have lipstick, with a satin finish,infused with milk, delivering vivid pigments ",
       "price": 355,
       "category": "Makeup",
+      "type": "Lipstick",
       "chapter": 3
     },
     {
@@ -403,6 +441,7 @@
       "description": "Six Mattes and shimmers that you can use to create your own vivid illusions. Inspired by Ariana's signature look, this talc-free, ultra-blendable formula will deliver a lightweight and maximum color feel.",
       "price": 440,
       "category": "Makeup",
+      "type": "Lip Gloss",
       "chapter": 3
     },
     {
@@ -414,6 +453,7 @@
       "description": "A next level highlighter, used on the cheeks, eyes and body. Infused with vegetable driven emollients, this product applies like a second skin and leaves a dewy luminous highlight that will last.",
       "price": 260,
       "category": "Makeup",
+      "type": "Lip Gloss",
       "chapter": 3
     },
     {
@@ -425,6 +465,7 @@
       "description": "Long wearing eyeliner inspired by Ariana's signature bold look.",
       "price": 335,
       "category": "Makeup",
+      "type": "Lipstick",
       "chapter": 3
     },
     {

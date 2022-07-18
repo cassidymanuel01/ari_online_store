@@ -37,28 +37,31 @@
     </nav>
     <div v-if="user" class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="cart" aria-labelledby="cartLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="cartLabel">{{$store.state.user.firstName}} {{$store.state.user.surname}}'s Cart</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 class="w-75 offcanvas-title" id="cartLabel">{{$store.state.user.firstName}} {{$store.state.user.surname}}'s Cart</h5>
+        <div class="w-100 d-flex justify-content-between align-items-center">
+          <h6 v-if="$store.state.cartTotal" class="m-0 fs-5">Total: R{{cartTotal}}</h6>
+          <h6 v-if="!$store.state.cartTotal" class="m-0 fs-5">Total: R0</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
       </div>
       <div class="offcanvas-body">
         <div v-if="cart">
-          <div v-if="cart.length>0">
+          <div v-if="cart.length">
             <div class="row">
             <div v-for="item in cart" :key="item.id" class="col-md-4">
             <div class="cartItemContainer">
               <div class="row mx-auto">
-                <div class="col-md-12 d-flex justify-content-between align-items-center py-3">
+                <div style="height:71px" class="col-md-12 d-flex justify-content-between align-items-center py-3">
                   <h6 class="mb-0">{{item.title}}</h6>
-                  <button type="button" class="btn-close"></button>
+                  <button type="button" @click="removeFromCart(item.id)" class="btn-close"></button>
                 </div>
               </div>
-              <img class="px-3 img-fluid" :src="item.coverImage" alt="albumItem"/>
+              <img class="p-3 img-fluid" :src="item.coverImage" alt="albumItem"/>
               <div class="row ms-auto">
-                <div class="col-md-12 d-flex justify-content-between w-100">
-                  <p class="px-2 py-1 mb-3 me-2">
+                <div class="col-md-12 pb-2 px-3 d-flex align-items-center justify-content-start w-100">
+                  <span>
                     R{{item.price}}
-                  </p>
-                  <button @click="removeFromCart(item.id)">Remove</button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -114,6 +117,9 @@ export default {
     },
     cart(){
       return this.$store.state.cart;
+    },
+    cartTotal(){
+      return this.$store.state.cartTotal;
     }
   },
   methods:{
@@ -175,11 +181,15 @@ a:hover {
   border: 5px solid white;
 }
 
+
 .cartItemContainer:hover img {
   transform: translate(0px, -20px);
 }
 .cartItemContainer img {
   transition: all 1s ease;
+  width: 347.67px;
+  height: 196px;
+  object-fit: contain;
 }
 
 div.pullRightLeft a:before,

@@ -26,6 +26,18 @@
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                 </select>
+                                <label class="form-label" for="Type">Type</label>
+                                <select v-model="album.type" class="form-control">
+                                    <option value="Lip Gloss">Lip Gloss</option>
+                                    <option value="Lipstick">Lipstick</option>
+                                    <option value="Eye Shadow">Eye Shadow</option>
+                                    <option value="Highlighter">Highlighter</option>
+                                    <option value="Eyeliner">Eyeliner</option>
+                                    <option value="Lip Marker">Lip Marker</option>
+                                    <option value="Mascarra">Mascarra</option>
+                                    <option value="Eyelashes">Eyelashes</option>
+                                    <option value="Treatment">Treatment</option>
+                                </select>
                             </form>
                         </div>
                         <div class="modal-footer">

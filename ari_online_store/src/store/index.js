@@ -1,6 +1,7 @@
 import {
   createStore
 } from 'vuex'
+import { toRaw } from 'vue'
 
 export default createStore({
   state: {
@@ -10,14 +11,12 @@ export default createStore({
     noUser: false,
     duplicateUser: false,
     cart:null,
+    cartTotal:null,
+    allUsers:null,
     asc: true,
   },
   getters: {
-    // getSingleAlbum(state,id){
-    //   return state.albums.find((x) =>{
-    //     return x==id;
-    //   })
-    // }
+    
   },
   mutations: {
     setAlbums(state, albums) {
@@ -32,11 +31,20 @@ export default createStore({
     setCart(state,data){
       state.cart = data
     },
+    clearCart(state){
+      state.cart = null
+    },
+    setAllUsers(state,allUsers){
+      state.allUsers = allUsers
+    },
     noUser(state,value){
       state.noUser = value
     },
     logOut(state){
       state.user = null
+    },
+    totalCalc(state,total){
+      state.cartTotal = total
     },
     duplicateUser(state,value){
       state.duplicateUser = value;
@@ -58,6 +66,14 @@ export default createStore({
         .then((data) => {
           console.log(data)
           context.commit('setAlbums', data)
+        });
+    },
+    getAllUsers(context) {
+      fetch('http://localhost:3000/users')
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          context.commit('setAllUsers', data)
         });
     },
     getSingleAlbum(context, id) {
@@ -82,7 +98,8 @@ export default createStore({
                 surname: surname,
                 email: email,
                 password: password,
-                isAdmin:isAdmin
+                isAdmin:isAdmin,
+                cart: []
               }),
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -103,6 +120,7 @@ export default createStore({
             context.commit('noUser',true);
           } else {
             context.commit('signIn', data[0]);
+            context.dispatch('getCart');
           }
         })
     },
@@ -117,6 +135,12 @@ export default createStore({
           method: 'Delete'
         })
         .then(() => context.dispatch('logOut'))
+    },
+    deleteUserWithoutLogOut(context,id) {
+      fetch('http://localhost:3000/users/' + id, {
+          method: 'Delete'
+        })
+        .then(() => context.dispatch('getAllUsers'))
     },
     editUser(context,user){
       fetch('http://localhost:3000/users/' + user.id, {
@@ -140,10 +164,27 @@ export default createStore({
         .then(() => context.dispatch('getAlbums'))
     },
     removeFromCart(context, id) {
-      fetch('http://localhost:3000/cart/' + id, {
-          method: 'Delete'
+      const obj = toRaw(context.state.user.cart)
+      console.log(id);
+      obj.splice(id-1,1);
+      obj.forEach((e,i) => {
+        e.id = i+1;
+      });
+      fetch('http://localhost:3000/users/' + context.state.user.id, {
+          method: 'PUT',
+          body: JSON.stringify({
+            firstName: context.state.user.firstName,
+            surname: context.state.user.surname,
+            email: context.state.user.email,
+            password: context.state.user.password,
+            isAdmin: context.state.user.isAdmin,
+            cart: obj
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          },
         })
-        .then(() => context.dispatch('getCart'))
+        .then((res) => res.json()).then(data => context.dispatch('getCart'));
     },
     addAlbumItem(context, [title, subtitle, image, coverImage, price, songAmount, newCategory,tracklist]) {
       fetch('http://localhost:3000/allInfo', {
@@ -164,7 +205,7 @@ export default createStore({
         })
         .then(() => context.dispatch('getAlbums'))
     },
-    addMakeupItem(context, [title, subtitle, image, coverImage, price, description, newCategory, newChapter]) {
+    addMakeupItem(context, [title, subtitle, image, coverImage, price, description, newCategory, newChapter,newType]) {
       fetch('http://localhost:3000/allInfo', {
           method: 'POST',
           body: JSON.stringify({
@@ -175,7 +216,8 @@ export default createStore({
             subtitle: subtitle,
             description: description,
             chapter: newChapter,
-            category: newCategory
+            category: newCategory,
+            type: newType
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -201,7 +243,7 @@ export default createStore({
         })
         .then(() => context.dispatch('getAlbums'))
     },
-    editItem(context, item) {
+    editItem(context, [item,songList]) {
       fetch('http://localhost:3000/allInfo/' + item.id, {
           method: 'PUT',
           body: JSON.stringify({
@@ -211,7 +253,8 @@ export default createStore({
             price: item.price,
             subtitle: item.subtitle,
             songAmount: item.songAmount,
-            category: item.category
+            category: item.category,
+            songList: songList,
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -230,7 +273,8 @@ export default createStore({
             subtitle: item.subtitle,
             description: item.description,
             category: item.category,
-            chapter: item.chapter
+            chapter: item.chapter,
+            type: item.type
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -257,66 +301,115 @@ export default createStore({
         .then(() => context.dispatch('getAlbums'))
     },
     addAlbumToCart(context, item) {
-      fetch('http://localhost:3000/cart', {
-          method: 'POST',
+      
+      const obj = toRaw(context.state.user.cart);
+      let newObject = {
+        id: obj.length+1,
+        img: item.img,
+        coverImage: item.coverImage,
+        title: item.title,
+        price: item.price,
+        subtitle: item.subtitle,
+        songAmount: item.songAmount,
+        category: item.Category
+      }
+
+      obj.push(newObject);
+
+      fetch('http://localhost:3000/users/' + context.state.user.id, {
+          method: 'PUT',
           body: JSON.stringify({
-            img: item.img,
-            coverImage: item.coverImage,
-            title: item.title,
-            price: item.price,
-            subtitle: item.subtitle,
-            songAmount: item.songAmount,
-            category: item.newCategory
+            firstName: context.state.user.firstName,
+            surname: context.state.user.surname,
+            email: context.state.user.email,
+            password: context.state.user.password,
+            isAdmin: context.state.user.isAdmin,
+            cart: obj
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
           },
         })
-        .then(() => context.dispatch('getCart'))
+        .then((res) => res.json()).then(() => context.dispatch('getCart'));
     },
     addMakeupToCart(context, item) {
-      fetch('http://localhost:3000/cart', {
-          method: 'POST',
+      const obj = toRaw(context.state.user.cart);
+      let newObject = {
+        id: obj.length+1,
+        img: item.img,
+        coverImage: item.coverImage,
+        title: item.title,
+        price: item.price,
+        subtitle: item.subtitle,
+        description: item.description,
+        chapter: item.newChapter,
+        category: item.newCategory
+      }
+
+      obj.push(newObject);
+
+      fetch('http://localhost:3000/users/' + context.state.user.id, {
+          method: 'PUT',
           body: JSON.stringify({
-            img: item.img,
-            coverImage: item.coverImage,
-            title: item.title,
-            price: item.price,
-            subtitle: item.subtitle,
-            description: item.description,
-            chapter: item.newChapter,
-            category: item.newCategory
+            firstName: context.state.user.firstName,
+            surname: context.state.user.surname,
+            email: context.state.user.email,
+            password: context.state.user.password,
+            isAdmin: context.state.user.isAdmin,
+            cart: obj
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
           },
         })
-        .then(() => context.commit('setCart'))
+        .then((res) => res.json()).then(() => context.dispatch('getCart'));
     },
     addFragranceToCart(context, item) {
-      fetch('http://localhost:3000/cart', {
-          method: 'POST',
+      const obj = toRaw(context.state.user.cart);
+      let newObject = {
+        id: obj.length+1,
+        img: item.img,
+        coverImage: item.coverImage,
+        title: item.title,
+        price: item.price,
+        subtitle: item.subtitle,
+        description: item.description,
+        category: item.newCategory
+      }
+
+      obj.push(newObject);
+
+      fetch('http://localhost:3000/users/' + context.state.user.id, {
+          method: 'PUT',
           body: JSON.stringify({
-            img: item.img,
-            coverImage: item.coverImage,
-            title: item.title,
-            price: item.price,
-            subtitle: item.subtitle,
-            description: item.description,
-            category: item.newCategory
+            firstName: context.state.user.firstName,
+            surname: context.state.user.surname,
+            email: context.state.user.email,
+            password: context.state.user.password,
+            isAdmin: context.state.user.isAdmin,
+            cart: obj
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
           },
         })
-        .then(() => context.commit('setCart'))
+        .then((res) => res.json()).then(() => context.dispatch('getCart'));
     },
     getCart(context) {
-      fetch('http://localhost:3000/cart')
+      if(!context.state.user) {return};
+      fetch('http://localhost:3000/users/'+context.state.user.id)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
-          context.commit('setCart', data)
+          console.log(data.cart)
+          let total = 0;
+          if(data.cart.length >0){
+            data.cart.forEach(i => {
+              total+=i.price;
+            });
+          }
+
+          context.commit('totalCalc',total);
+          context.commit('setCart', data.cart)
         });
     },
   },

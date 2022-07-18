@@ -7,6 +7,7 @@ import Login from '../views/LoginView.vue'
 import SingleItem from '../views/SingleItemView.vue'
 import ContactPage from '../views/ContactPage.vue'
 import ProfilePage from '../views/ProfilePage.vue'
+import UserAdmin from '../views/UserAdmin.vue'
 
 const routes = [
   {
@@ -51,6 +52,11 @@ const routes = [
     path:'/profilePage',
     name:'profilePage',
     component: ProfilePage
+  },
+  {
+    path:'/userAdmin',
+    name:'userAdmin',
+    component: UserAdmin
   }
   
 ]

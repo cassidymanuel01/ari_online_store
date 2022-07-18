@@ -17,6 +17,7 @@
       <div id="form" class="d-flex flex-column align-items-center justify-content-center" v-else>
         <h2 class="py-3">Logged in as {{this.$store.state.user.firstName}} {{this.$store.state.user.surname}}</h2>
         <button id="viewButton" class="btn btn-primary"><router-link to="/allInfo">View All Our Products</router-link></button>
+        <button id="viewButton" v-if="admin" class="btn mt-4 btn-primary"><router-link to="/admin">Go the Admin Page</router-link></button>
       </div>
     </div>
   </div>
@@ -40,6 +41,13 @@ export default {
     },
     setNone(){
       this.$store.dispatch('setNoUser',false);
+    }
+  },
+  computed:{
+    admin(){
+      if(this.$store.state.user !=null){
+        return this.$store.state.user.isAdmin;
+      }
     }
   }
 }
@@ -65,6 +73,10 @@ div.container{
   border: hidden;
   border-radius: 10px;
   padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #login_image{
   max-width: 150px;
